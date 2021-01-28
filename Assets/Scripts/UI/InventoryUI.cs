@@ -26,6 +26,11 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        Refresh();
+    }
+
     public void Refresh()
     {
         foreach (ItemUI slot in itemsToDisplay)

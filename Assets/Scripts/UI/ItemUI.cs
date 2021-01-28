@@ -14,11 +14,6 @@ public class ItemUI : MonoBehaviour
     public TextMeshProUGUI itemName; //not necessary?
     public TextMeshProUGUI itemQuantity;
 
-    private void OnEnable()
-    {
-        Refresh();
-    }
-
     public void Refresh()
     {
         if (slotItem == null)
