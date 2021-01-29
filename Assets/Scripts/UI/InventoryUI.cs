@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -10,25 +12,40 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Transform[] itemSlotsContainers;
     private List<ItemUI> itemsToDisplay;
 
+    public ItemDescriptionUI description;
+
     private void Awake()
     {
         itemsToDisplay = new List<ItemUI>();
-        foreach (Transform itemSlotsContainer in itemSlotsContainers)
+        int k = 0;
+        for (int i=0; i<itemSlotsContainers.Length; i++)
         {
-            foreach (Transform t in itemSlotsContainer)
+            for (int j=0; j<itemSlotsContainers[i].childCount; j++)
             {
-                ItemUI itemSlot = t.GetComponent<ItemUI>();
+                ItemUI itemSlot = itemSlotsContainers[i].GetChild(j).GetComponent<ItemUI>();
                 if (itemSlot != null)
                 {
                     itemsToDisplay.Add(itemSlot);
+                    itemSlot.SlotID = k++;
                 }
             }
         }
+
+        k = 0;
     }
 
     private void OnEnable()
     {
-        Refresh();
+        DisplayInventory();
+
+        ItemUI.OnHover += ShowDescription;
+        ItemUI.OnExitHover += HideDescription;
+    }
+
+    private void OnDisable()
+    {
+        ItemUI.OnHover -= ShowDescription;
+        ItemUI.OnExitHover -= HideDescription;
     }
 
     public void Refresh()
@@ -44,7 +61,20 @@ public class InventoryUI : MonoBehaviour
         int inventorySize = inventory.ItemCount;
         for(int i=0; i<inventory.maxItems; i++)
         {
+            if (inventory.ItemSlots.Count <= i) return;
             itemsToDisplay[i].Display(inventory.ItemSlots[i]);
         }
+    }
+
+    void ShowDescription(int id, InventorySlot invSlot)
+    {
+        if (invSlot == null) return;
+        if (invSlot.item == null) return;
+        description.SetText(invSlot.item.Description);
+    }
+
+    void HideDescription(int n, InventorySlot o)
+    {
+        description.SetText("");
     }
 }

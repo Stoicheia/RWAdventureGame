@@ -4,13 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ItemUI : MonoBehaviour
+public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public delegate void PointerAction(int s, InventorySlot i);
+
+    public static event PointerAction OnHover;
+    public static event PointerAction OnExitHover;
+    
     [SerializeField] private InventorySlot slotItem;
     public InventorySlot DisplayedItem => slotItem;
 
-    public SpriteRenderer itemRenderer;
+    public int SlotID;
+
+    public Image itemRenderer;
     public TextMeshProUGUI itemName; //not necessary?
     public TextMeshProUGUI itemQuantity;
 
@@ -32,5 +40,14 @@ public class ItemUI : MonoBehaviour
         slotItem = toDisplay;
         Refresh();
     }
-    
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnHover?.Invoke(SlotID, slotItem);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnExitHover?.Invoke(SlotID, slotItem);
+    }
 }

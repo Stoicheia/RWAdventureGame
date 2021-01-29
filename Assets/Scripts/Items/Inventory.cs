@@ -28,13 +28,13 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, int numberToAdd)
     {
         for (int i = 0; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].ItemID == item.ItemID)
             {
-                itemSlots[i].quantity++;
+                itemSlots[i].quantity += numberToAdd;
                 return;
             }
         }
@@ -49,12 +49,17 @@ public class Inventory : MonoBehaviour
         {
             if (itemSlots[i] == null)
             {
-                itemSlots[i] = new InventorySlot(item);
+                itemSlots[i] = new InventorySlot(item, numberToAdd);
                 return;
             }
         }
         
-        itemSlots.Add(new InventorySlot(item));
+        itemSlots.Add(new InventorySlot(item, numberToAdd));
+    }
+
+    public void AddItem(Item item)
+    {
+        AddItem(item, 1);
     }
 
     public void AddItem(int itemID)
