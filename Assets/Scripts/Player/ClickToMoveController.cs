@@ -37,8 +37,6 @@ namespace Player
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("I was clicked.  Ouch.");
-
                 Vector3 worldPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
 
                 worldPoint.z = 0.0f;
