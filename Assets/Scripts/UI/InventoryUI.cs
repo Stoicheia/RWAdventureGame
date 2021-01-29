@@ -71,24 +71,23 @@ public class InventoryUI : MonoBehaviour
         DisplayInventory();
     }
 
-    void RefreshHighlights()
+    private void RefreshHighlights()
     {
         foreach (ItemUI slot in itemsToDisplay)
         {
             if (slot.DisplayedItem.item == null) continue;
-            if (selectedItem == null)
+            if (selectedItem == null || selectedItem.item == null)
             {
-                slot.itemName.color = new Color(0, 0, 0, 1);
+                slot.Unhighlight();
                 continue;
             }
-            if (selectedItem.item == null) continue;
             if (selectedItem.ItemID == slot.DisplayedItem.ItemID && selectedSlot == slot.SlotID)
             {
-                slot.itemName.color = new Color(1, 1, 0, 1);
+                slot.Highlight();
             }
             else
             {
-                slot.itemName.color = new Color(0, 0, 0, 1);
+                slot.Unhighlight();
             }
         }
     }

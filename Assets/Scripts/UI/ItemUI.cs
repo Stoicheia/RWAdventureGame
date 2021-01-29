@@ -21,9 +21,9 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public int SlotID;
 
-    public Image itemRenderer;
-    public TextMeshProUGUI itemName; //not necessary?
-    public TextMeshProUGUI itemQuantity;
+    [SerializeField] private Image itemRenderer;
+    [SerializeField] private TextMeshProUGUI itemName; //not necessary?
+    [SerializeField] private TextMeshProUGUI itemQuantity;
 
     private LayoutGroup myLayoutGroup;
 
@@ -79,5 +79,15 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnDrop(PointerEventData eventData)
     {
         OnDropped?.Invoke(SlotID, slotItem);
+    }
+
+    public void Highlight()
+    {
+        itemName.color = new Color(1, 1, 0, 1);
+    }
+
+    public void Unhighlight()
+    {
+        itemName.color = new Color(0, 0, 0, 1);
     }
 }
