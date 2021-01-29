@@ -51,7 +51,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void Display(InventorySlot toDisplay)
     {
-        slotItem = toDisplay;
+        slotItem = toDisplay ?? new InventorySlot();
         Refresh();
     }
 

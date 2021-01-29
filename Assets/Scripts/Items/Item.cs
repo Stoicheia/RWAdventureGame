@@ -14,15 +14,17 @@ public class Item : ScriptableObject
     [SerializeField] private string itemName;
     [TextArea(2,8)]
     [SerializeField] private string description;
+
+    [SerializeField] private List<Sprite> descriptionDrawings;
     [SerializeField] private List<ItemInteractionPair> itemInteractions;
-    [SerializeField] private AudioClip narrationAudio;
+    [SerializeField] private DialogueLine narrationAudio;
     [SerializeField] private SpriteRenderer inventorySprite;
     [SerializeField] private SpriteRenderer worldSprite;
     [SerializeField] private bool consumable;
 
     public void PlayNarration(AudioSource source)
     {
-        source.clip = narrationAudio;
+        source.clip = narrationAudio.Audio;
         source.loop = false;
         source.Play();
     }
@@ -73,13 +75,19 @@ public class Item : ScriptableObject
         private set => description = value;
     }
 
+    public List<Sprite> DescriptionDrawings
+    {
+        get => descriptionDrawings;
+        private set => descriptionDrawings = value;
+    }
+
     public List<ItemInteractionPair> ItemInteractions
     {
         get => itemInteractions;
         private set => itemInteractions = value;
     }
 
-    public AudioClip NarrationAudio
+    public DialogueLine NarrationAudio
     {
         get => narrationAudio;
         private set => narrationAudio = value;
@@ -102,6 +110,7 @@ public class Item : ScriptableObject
         get => consumable;
         private set => consumable = value;
     }
+    
 
     #endregion
 

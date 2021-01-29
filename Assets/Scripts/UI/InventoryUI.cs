@@ -44,8 +44,6 @@ public class InventoryUI : MonoBehaviour
 
     private void OnEnable()
     {
-        DisplayInventory();
-
         ItemUI.OnHover += ShowDescription;
         ItemUI.OnExitHover += HideDescription;
         ItemUI.OnDropped += Rearrange;
@@ -62,11 +60,15 @@ public class InventoryUI : MonoBehaviour
         inventory.OnUpdate -= DisplayInventory;
     }
 
-    void Refresh()
+    private void Start()
+    {
+        DisplayInventory();
+    }
+
+    void RefreshHighlights()
     {
         foreach (ItemUI slot in itemsToDisplay)
         {
-            slot.Refresh();
             if (slot.DisplayedItem.item == null) continue;
             if (selectedItem == null)
             {
@@ -87,14 +89,13 @@ public class InventoryUI : MonoBehaviour
 
     public void DisplayInventory()
     {
-        int inventorySize = inventory.ItemCount;
         for(int i=0; i<inventory.maxItems; i++)
         {
-            if (inventory.ItemSlots.Count <= i){Refresh(); return;}
-            if (itemsToDisplay.Count <= i){Refresh(); return;}
+            if (inventory.ItemSlots.Count <= i){RefreshHighlights(); return;}
+            if (itemsToDisplay.Count <= i){RefreshHighlights(); return;}
             itemsToDisplay[i].Display(inventory.ItemSlots[i]);
         }
-        Refresh();
+        RefreshHighlights();
     }
 
     void ShowDescription(int id, InventorySlot invSlot)
