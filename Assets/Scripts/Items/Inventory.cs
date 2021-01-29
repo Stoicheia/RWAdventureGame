@@ -7,10 +7,36 @@ using UnityEngine.Serialization;
 
 public class Inventory : MonoBehaviour
 {
+    public delegate void UpdateAction();
+
+    public event UpdateAction OnUpdate;
+
     [SerializeField] private List<InventorySlot> itemSlots;
     public int maxItems;
 
-    public List<InventorySlot> ItemSlots => itemSlots;
+    private void OnEnable()
+    {
+        InventoryUI.OnItemUse += UseItem;
+    }
+
+    private void OnDisable()
+    {
+        InventoryUI.OnItemUse -= UseItem;
+    }
+
+    public List<InventorySlot> ItemSlots
+    {
+        get
+        {
+            return itemSlots; 
+        }
+        set
+        {
+            itemSlots = value;
+            OnUpdate?.Invoke();
+        }
+    }
+
     public int ItemCount
     {
         get
@@ -28,13 +54,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, int numberToAdd)
     {
         for (int i = 0; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].ItemID == item.ItemID)
             {
-                itemSlots[i].quantity++;
+                itemSlots[i].quantity += numberToAdd;
+                OnUpdate?.Invoke();
                 return;
             }
         }
@@ -42,6 +69,7 @@ public class Inventory : MonoBehaviour
         if (ItemCount >= maxItems)
         {
             Debug.Log("Inventory full", this);
+            OnUpdate?.Invoke();
             return;
         }
         
@@ -49,12 +77,19 @@ public class Inventory : MonoBehaviour
         {
             if (itemSlots[i] == null)
             {
-                itemSlots[i] = new InventorySlot(item);
+                itemSlots[i] = new InventorySlot(item, numberToAdd);
+                OnUpdate?.Invoke();
                 return;
             }
         }
         
-        itemSlots.Add(new InventorySlot(item));
+        itemSlots.Add(new InventorySlot(item, numberToAdd));
+        OnUpdate?.Invoke();
+    }
+
+    public void AddItem(Item item)
+    {
+        AddItem(item, 1);
     }
 
     public void AddItem(int itemID)
@@ -67,22 +102,85 @@ public class Inventory : MonoBehaviour
         for(int i=0; i<itemSlots.Count; i++)
         {
             InventorySlot invSlot = itemSlots[i];
+            if(invSlot.item == null) continue;
             if (invSlot.ItemID == itemID)
             {
                 invSlot.quantity -= quantity;
                 if (invSlot.quantity <= 0)
                 {
-                    itemSlots[i] = null;
+                    itemSlots[i].item = null;
                 }
-
+                OnUpdate?.Invoke();
                 return;
             }
         }
+        OnUpdate?.Invoke();
     }
     
     public void DeleteItem(int itemID)
     {
         DeleteItem(itemID, 1);
+    }
+    
+    public void DeleteItem(Item item, int quantity)
+    {
+        for(int i=0; i<itemSlots.Count; i++)
+        {
+            InventorySlot invSlot = itemSlots[i];
+            if(invSlot.item == null) continue;
+            if (invSlot.ItemID == item.ItemID)
+            {
+                invSlot.quantity -= quantity;
+                if (invSlot.quantity <= 0)
+                {
+                    itemSlots[i].item = null;
+                }
+                OnUpdate?.Invoke();
+                return;
+            }
+        }
+        OnUpdate?.Invoke();
+    }
+    
+    public void DeleteItem(Item item)
+    {
+        DeleteItem(item, 1);
+    }
+
+    public void Swap(int a, int b)
+    {
+        if (Mathf.Max(a, b) >= itemSlots.Count)
+        {
+            int c = itemSlots.Count-1;
+            for (int i = 0; i < Mathf.Max(a, b) - c; i++)
+            {
+                itemSlots.Add(null);
+            }
+        }
+
+        InventorySlot temp = itemSlots[a];
+        itemSlots[a] = itemSlots[b];
+        itemSlots[b] = temp;
+        OnUpdate?.Invoke();
+    }
+
+    void UseItem(InventorySlot firstItem, InventorySlot secondItem)
+    {
+        if (firstItem.item == null || secondItem.item == null) return;
+        int id1 = firstItem.ItemID;
+        int id2 = secondItem.ItemID;
+        firstItem.item.Act(secondItem.item);
+        if (firstItem.item.Consumable)
+        {
+            DeleteItem(firstItem.item);
+        }
+
+        if (secondItem.item == null) return;
+
+        if (secondItem.item.Consumable && id1!=id2)
+        {
+            DeleteItem(secondItem.item);
+        }
     }
    
 }

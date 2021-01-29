@@ -14,10 +14,11 @@ public class Item : ScriptableObject
     [SerializeField] private string itemName;
     [TextArea(2,8)]
     [SerializeField] private string description;
-    [SerializeField] private Dictionary<Item, ItemInteraction> itemInteractions;
+    [SerializeField] private List<ItemInteractionPair> itemInteractions;
     [SerializeField] private AudioClip narrationAudio;
     [SerializeField] private SpriteRenderer inventorySprite;
     [SerializeField] private SpriteRenderer worldSprite;
+    [SerializeField] private bool consumable;
 
     public void PlayNarration(AudioSource source)
     {
@@ -28,9 +29,29 @@ public class Item : ScriptableObject
 
     public void Act(Item item)
     {
-        Transform popup = Instantiate(itemInteractions[item].popupUI);
-        //TODO: popup.parent = the canvas
-        //TODO: do all the effects
+        if (item == null) return;
+        if(!ActOneWay(item))
+            item.ActOneWay(this);
+    }
+
+    bool ActOneWay(Item item)
+    {
+        foreach (ItemInteractionPair pair in itemInteractions)
+        {
+            if (pair.item.ItemID == item.ItemID)
+            {
+                Transform popup = Instantiate(pair.interaction.popupUI, FindObjectOfType<Canvas>().transform, true);
+                RectTransform rect = popup.GetComponent<RectTransform>();
+                rect.offsetMax = new Vector2(0, 0);
+                rect.offsetMin = new Vector2(0, 0);
+
+
+                //TODO: do all the effects
+                return true;
+            }
+        }
+
+        return false;
     }
 
     #region Properties
@@ -52,7 +73,7 @@ public class Item : ScriptableObject
         private set => description = value;
     }
 
-    public Dictionary<Item, ItemInteraction> ItemInteractions
+    public List<ItemInteractionPair> ItemInteractions
     {
         get => itemInteractions;
         private set => itemInteractions = value;
@@ -75,8 +96,20 @@ public class Item : ScriptableObject
         get => worldSprite.sprite;
         private set => worldSprite.sprite = value;
     }
+
+    public bool Consumable
+    {
+        get => consumable;
+        private set => consumable = value;
+    }
+
     #endregion
 
 }
 
-
+[System.Serializable]
+public class ItemInteractionPair
+{
+    public Item item;
+    public ItemInteraction interaction;
+}
