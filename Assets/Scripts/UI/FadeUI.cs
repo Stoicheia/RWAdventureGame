@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class ItemDescriptionUI : MonoBehaviour
+public class FadeUI : MonoBehaviour
 {
     private TextMeshProUGUI tmpro;
     public float fadeTime;

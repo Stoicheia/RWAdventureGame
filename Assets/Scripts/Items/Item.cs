@@ -14,11 +14,10 @@ public class Item : ScriptableObject
     [SerializeField] private string itemName;
     [TextArea(2,8)]
     [SerializeField] private string description;
-
-    [SerializeField] private List<Sprite> descriptionDrawings;
     [SerializeField] private List<ItemInteractionPair> itemInteractions;
     [SerializeField] private DialogueLine narrationAudio;
-    [SerializeField] private SpriteRenderer inventorySprite;
+    [SerializeField] private Sprite inventorySprite;
+    [SerializeField] private Sprite sketchSprite;
     [SerializeField] private SpriteRenderer worldSprite;
     [SerializeField] private bool consumable;
 
@@ -74,13 +73,7 @@ public class Item : ScriptableObject
         get => description == "" ? GENERIC_DESCRIPTION_TEXT : description;
         private set => description = value;
     }
-
-    public List<Sprite> DescriptionDrawings
-    {
-        get => descriptionDrawings;
-        private set => descriptionDrawings = value;
-    }
-
+    
     public List<ItemInteractionPair> ItemInteractions
     {
         get => itemInteractions;
@@ -95,8 +88,14 @@ public class Item : ScriptableObject
 
     public Sprite InventorySprite
     {
-        get => inventorySprite.sprite;
-        private set => inventorySprite.sprite = value;
+        get => inventorySprite;
+        private set => inventorySprite = value;
+    }
+
+    public Sprite SketchSprite
+    {
+        get => sketchSprite;
+        private set => inventorySprite = value;
     }
 
     public Sprite WorldSprite

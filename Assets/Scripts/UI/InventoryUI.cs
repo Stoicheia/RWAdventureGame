@@ -16,7 +16,9 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Transform[] itemSlotsContainers;
     private List<ItemUI> itemsToDisplay;
 
-    public ItemDescriptionUI description;
+    public FadeUI description;
+    public FadeUI itemName;
+    public Image itemImage;
 
     private InventorySlot selectedItem;
     private int selectedSlot = -1;
@@ -44,8 +46,8 @@ public class InventoryUI : MonoBehaviour
 
     private void OnEnable()
     {
-        ItemUI.OnHover += ShowDescription;
-        ItemUI.OnExitHover += HideDescription;
+        ItemUI.OnHover += ChangeItemInfo;
+        //ItemUI.OnExitHover += HideDescription;
         ItemUI.OnDropped += Rearrange;
         ItemUI.OnClicked += SelectItem;
         inventory.OnUpdate += DisplayInventory;
@@ -53,8 +55,8 @@ public class InventoryUI : MonoBehaviour
 
     private void OnDisable()
     {
-        ItemUI.OnHover -= ShowDescription;
-        ItemUI.OnExitHover -= HideDescription;
+        ItemUI.OnHover -= ChangeItemInfo;
+        //ItemUI.OnExitHover -= HideDescription;
         ItemUI.OnDropped -= Rearrange;
         ItemUI.OnClicked -= SelectItem;
         inventory.OnUpdate -= DisplayInventory;
@@ -98,11 +100,12 @@ public class InventoryUI : MonoBehaviour
         RefreshHighlights();
     }
 
-    void ShowDescription(int id, InventorySlot invSlot)
+    void ChangeItemInfo(int id, InventorySlot invSlot)
     {
-        if (invSlot == null) return;
         if (invSlot.item == null) return;
         description.SetText(invSlot.item.Description);
+        itemName.SetText(invSlot.item.ItemName);
+        itemImage.sprite = invSlot.item.SketchSprite;
     }
 
     void HideDescription(int n, InventorySlot o)

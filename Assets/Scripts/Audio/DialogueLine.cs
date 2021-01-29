@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 public class DialogueLine : ScriptableObject
 {
     [SerializeField] private AudioClip audio;
+    [TextArea(3,8)]
     [SerializeField] private string subtitles;
 
     #region Properties

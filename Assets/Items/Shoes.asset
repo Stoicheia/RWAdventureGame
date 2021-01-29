@@ -18,7 +18,8 @@ MonoBehaviour:
   - item: {fileID: 11400000}
     interaction:
       popupUI: {fileID: 5004512823962592339, guid: 6d7d2d16e1c859e4a978821e8fc72c00, type: 3}
-  narrationAudio: {fileID: 8300000, guid: 056d0bc70a1172447b3355d713bd6a71, type: 3}
-  inventorySprite: {fileID: -1575812337293315162, guid: 1b9b7693c97249f44a5d384157dbdabc, type: 3}
+  narrationAudio: {fileID: 11400000, guid: 3b70f5858a24f164b977e5dfab3ce22b, type: 2}
+  inventorySprite: {fileID: 21300000, guid: 2ca903e4f2706ef45b31debf6e3808a5, type: 3}
+  sketchSprite: {fileID: 21300000, guid: 2ca903e4f2706ef45b31debf6e3808a5, type: 3}
   worldSprite: {fileID: -1575812337293315162, guid: 1b9b7693c97249f44a5d384157dbdabc, type: 3}
   consumable: 1
