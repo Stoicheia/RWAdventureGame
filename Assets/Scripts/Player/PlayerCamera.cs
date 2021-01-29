@@ -6,12 +6,8 @@ using UnityEngine;
 namespace Player
 {
     /// <summary>
-    /// Follows the player (object with tag "Player") maintaining the camera within the set world bounds.
+    /// Follows the player (object with tag "Player") maintaining the camera within the set bounds.
     /// </summary>
-    ///
-    /// This Camera controller specifically works with the isometric view setup in the game and resets the camera geometry
-    /// on startup to make sure it's reasonable.
-    /// 
     public class PlayerCamera : MonoBehaviour
     {
         private GameObject _playerObject;
