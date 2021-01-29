@@ -22,4 +22,10 @@ public class InventorySlot
         item = i;
         quantity = 1;
     }
+
+    public InventorySlot()
+    {
+        item = null;
+        quantity = 0;
+    }
 }
