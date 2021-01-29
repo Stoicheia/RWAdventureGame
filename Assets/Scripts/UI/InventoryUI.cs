@@ -68,7 +68,11 @@ public class InventoryUI : MonoBehaviour
         {
             slot.Refresh();
             if (slot.DisplayedItem.item == null) continue;
-            if (selectedItem == null) continue;
+            if (selectedItem == null)
+            {
+                slot.itemName.color = new Color(0, 0, 0, 1);
+                continue;
+            }
             if (selectedItem.item == null) continue;
             if (selectedItem.ItemID == slot.DisplayedItem.ItemID && selectedSlot == slot.SlotID)
             {
