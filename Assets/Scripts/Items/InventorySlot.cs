@@ -9,7 +9,7 @@ public class InventorySlot
     public Item item;
     public int quantity;
 
-    public int ItemID => item.ItemID;
+    public int ItemID => item == null ? -1 : item.ItemID;
 
     public InventorySlot(Item i, int q)
     {

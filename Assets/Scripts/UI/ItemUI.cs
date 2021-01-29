@@ -37,7 +37,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         myLayoutGroup = transform.parent.GetComponent<LayoutGroup>();
     }
 
-    public void Refresh()
+    private void Refresh()
     {
         if (slotItem.item == null)
         {

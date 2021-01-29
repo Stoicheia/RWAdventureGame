@@ -58,6 +58,7 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Count; i++)
         {
+            if (itemSlots[i] == null) continue;
             if (itemSlots[i].ItemID == item.ItemID)
             {
                 itemSlots[i].quantity += numberToAdd;
@@ -75,7 +76,7 @@ public class Inventory : MonoBehaviour
         
         for (int i = 0; i < itemSlots.Count; i++)
         {
-            if (itemSlots[i] == null)
+            if (itemSlots[i] == null || itemSlots[i].item == null)
             {
                 itemSlots[i] = new InventorySlot(item, numberToAdd);
                 OnUpdate?.Invoke();
@@ -102,6 +103,7 @@ public class Inventory : MonoBehaviour
         for(int i=0; i<itemSlots.Count; i++)
         {
             InventorySlot invSlot = itemSlots[i];
+            if (invSlot == null) continue;
             if(invSlot.item == null) continue;
             if (invSlot.ItemID == itemID)
             {
@@ -127,6 +129,7 @@ public class Inventory : MonoBehaviour
         for(int i=0; i<itemSlots.Count; i++)
         {
             InventorySlot invSlot = itemSlots[i];
+            if (invSlot == null) continue;
             if(invSlot.item == null) continue;
             if (invSlot.ItemID == item.ItemID)
             {

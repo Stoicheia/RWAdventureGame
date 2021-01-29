@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GlobalStats : MonoBehaviour
+{
+    public static GlobalStats instance;
+    [SerializeField] private Inventory playerInventory;
+
+    public Inventory PlayerInventory
+    {
+        get => playerInventory;
+        set 
+        { 
+            playerInventory = value;
+            Debug.LogWarning("Player inventory changed", this);
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+}
