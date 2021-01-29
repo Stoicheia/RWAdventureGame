@@ -19,7 +19,7 @@ public class SlideUpUI : MonoBehaviour
     private void Awake()
     {
         up = false;
-        originalPosition = transform.position;
+        originalPosition = transform.localPosition;
         targetPosition = new Vector3(originalPosition.x, originalPosition.y + slideDistance, originalPosition.z);
     }
 
@@ -62,7 +62,7 @@ public class SlideUpUI : MonoBehaviour
         float init = Time.time;
         while (Time.time <= init + t)
         {
-            transform.position = Vector3.Lerp(u,v,CompactSigmoid((Time.time-init)/t));
+            transform.localPosition = Vector3.Lerp(u,v,CompactSigmoid((Time.time-init)/t));
             yield return null;
         }
 
