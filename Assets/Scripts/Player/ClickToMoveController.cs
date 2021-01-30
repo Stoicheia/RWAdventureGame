@@ -7,16 +7,22 @@ using UnityEngine.EventSystems;
 
 namespace Player
 {
+    
+    [RequireComponent(typeof(NavMeshAgent))]
     public class ClickToMoveController : MonoBehaviour
     {
-        public delegate void MoveAction(Transform t);
 
-        public static event MoveAction OnMove;
+        public delegate void NavigationEvent(Transform t, Vector3 worldPosition);
+
+        // invoked when we start navigation to a destination.
+        public event NavigationEvent OnNavigationStarted;
 
         // invoked when navigation failed to path-find.  The object that failed to navigate and the position requested are passed.
-        public delegate void NavigationFailed(Transform t, Vector3 worldPosition);
-        public event NavigationFailed OnNavigationFailed;
-        
+        public event NavigationEvent OnNavigationFailed;
+
+        // invoked when navigation to a given destination has finished
+        public event NavigationEvent OnNavigationArrived;
+
         private GameObject _playerObject;
         private Camera _gameCamera;
         private NavMeshAgent _navMeshAgent;
@@ -25,9 +31,8 @@ namespace Player
 
         [SerializeField] private Transform _navigationIcon;
         private Transform _activeNavigationIcon;
-        
-        [MinAttribute(0.0f)]
-        public float navIconDismissDistance;
+
+        [MinAttribute(0.0f)] public float navIconDismissDistance;
 
         private bool enRoute;
 
@@ -63,9 +68,10 @@ namespace Player
             if (enRoute &&
                 _navMeshAgent.remainingDistance < navIconDismissDistance)
             {
-                enRoute = false;
+                OnNavigationArrived?.Invoke(transform, _navMeshAgent.pathEndPosition);
                 if (_activeNavigationIcon)
                     HideNavIcon();
+                enRoute = false;
             }
 
             // don't process input system events if the pointer is pointing at a discrete gameobject.
@@ -82,7 +88,7 @@ namespace Player
 
                     // snap the point to the game plane.
                     worldPoint.z = 0.0f;
-                    
+
                     // try to solve the path.
                     NavMeshPath path = new NavMeshPath();
                     _navMeshAgent.CalculatePath(worldPoint, path);
@@ -91,7 +97,7 @@ namespace Player
                         enRoute = true;
                         _navMeshAgent.SetPath(path);
                         SpawnNavIcon(worldPoint);
-                        OnMove?.Invoke(transform);
+                        OnNavigationStarted?.Invoke(transform, worldPoint);
                     }
                     else
                     {
@@ -115,7 +121,7 @@ namespace Player
             Transform nav = Instantiate(_navigationIcon, t, Quaternion.identity);
             _activeNavigationIcon = nav;
         }
-        
+
         void HideNavIcon()
         {
             if (_activeNavigationIcon)
