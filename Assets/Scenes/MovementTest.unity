@@ -1361,13 +1361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b594b60c4c4893b2f604ed66047719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voidSounds:
-  - {fileID: 8300000, guid: e98f87c2430e2674d9e3df363eac82ae, type: 3}
-  - {fileID: 8300000, guid: d301a656fab2e2e4fbe6e8af152d52ab, type: 3}
-  - {fileID: 8300000, guid: 2f00737ec89e34343a5cf8d028a7a994, type: 3}
-  - {fileID: 8300000, guid: 7e9496df0e3d08648956b8579161b245, type: 3}
   floor: {fileID: 598692472}
-  audioSource: {fileID: 76204742}
+  voidSampleGroup: Gasp
+  nopathSampleGroup: Annoyed
 --- !u!1001 &80989128
 PrefabInstance:
   m_ObjectHideFlags: 0
