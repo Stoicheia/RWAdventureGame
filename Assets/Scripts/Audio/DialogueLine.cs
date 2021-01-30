@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using TMPro;
 
 [CreateAssetMenu(fileName = "New Voiceline", menuName = "Voiceline")]
 public class DialogueLine : ScriptableObject
@@ -25,4 +26,14 @@ public class DialogueLine : ScriptableObject
     }
 
     #endregion
+
+    public void PlayAudio(AudioSource source)
+    {
+        source.PlayOneShot(audio);
+    }
+
+    public void ShowDialogue(TextMeshProUGUI textField)
+    {
+        textField.text = subtitles;
+    }
 }

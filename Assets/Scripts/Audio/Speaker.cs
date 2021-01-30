@@ -22,10 +22,20 @@ public class Speaker : MonoBehaviour
         {
             if(clipArray.clipName == toPlay)
             {
-                int clipNumberToPlay = UnityEngine.Random.Range(0,clipArray.clips.Count);
-                source.Stop();
-                source.clip = clipArray.clips[clipNumberToPlay];
-                source.Play();
+                clipArray.PlayRandom(source);
+                return;
+            }
+        }
+        Debug.LogWarning("Audio clip \"" + toPlay + "\" not found!", this);
+    }
+
+    public void PlayOneShot(string toPlay)
+    {
+        foreach (var clipArray in voiceLines)
+        {
+            if(clipArray.clipName == toPlay)
+            {
+                clipArray.PlayRandomOneShot(source);
                 return;
             }
         }
@@ -43,4 +53,18 @@ public class AudioClipArray
 {
     public string clipName;
     public List<AudioClip> clips;
+
+    public void PlayRandom(AudioSource source)
+    {
+        int clipNumberToPlay = UnityEngine.Random.Range(0,clips.Count);
+        source.Stop();
+        source.clip = clips[clipNumberToPlay];
+        source.Play();
+    }
+
+    public void PlayRandomOneShot(AudioSource source)
+    {
+        int clipNumberToPlay = UnityEngine.Random.Range(0,clips.Count);
+        source.PlayOneShot(clips[clipNumberToPlay]);
+    }
 }

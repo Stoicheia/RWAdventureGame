@@ -29,6 +29,13 @@ namespace Player
         [MinAttribute(0.0f)]
         public float navIconDismissDistance;
 
+        private bool enRoute;
+
+        public bool EnRoute
+        {
+            get => enRoute;
+        }
+
         private void Awake()
         {
             navIconDismissDistance = 0.2f;
@@ -53,10 +60,12 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete &&
-                _navMeshAgent.remainingDistance < navIconDismissDistance && _activeNavigationIcon)
+            if (enRoute &&
+                _navMeshAgent.remainingDistance < navIconDismissDistance)
             {
-                HideNavIcon();
+                enRoute = false;
+                if (_activeNavigationIcon)
+                    HideNavIcon();
             }
 
             // don't process input system events if the pointer is pointing at a discrete gameobject.
@@ -73,12 +82,13 @@ namespace Player
 
                     // snap the point to the game plane.
                     worldPoint.z = 0.0f;
-
+                    
                     // try to solve the path.
                     NavMeshPath path = new NavMeshPath();
                     _navMeshAgent.CalculatePath(worldPoint, path);
                     if (path.status == NavMeshPathStatus.PathComplete)
                     {
+                        enRoute = true;
                         _navMeshAgent.SetPath(path);
                         SpawnNavIcon(worldPoint);
                         OnMove?.Invoke(transform);
