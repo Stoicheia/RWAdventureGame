@@ -15,6 +15,9 @@ namespace Player
 
         private bool _handledClick;
 
+        [SerializeField] private Transform _navigationIcon;
+        private Transform _activeNavigationIcon;
+
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -59,6 +62,7 @@ namespace Player
                     if (path.status == NavMeshPathStatus.PathComplete)
                     {
                         _navMeshAgent.SetPath(path);
+                        SpawnNavIcon(worldPoint);
                     }
                     else
                     {
@@ -79,6 +83,14 @@ namespace Player
                 if (_handledClick)
                     _handledClick = false;
             }
+        }
+
+        void SpawnNavIcon(Vector3 t)
+        {
+            if(_activeNavigationIcon!=null)
+                Destroy(_activeNavigationIcon.gameObject);
+            Transform nav = Instantiate(_navigationIcon, t, Quaternion.identity);
+            _activeNavigationIcon = nav;
         }
     }
 }
