@@ -12,6 +12,10 @@ namespace Player
         public delegate void MoveAction(Transform t);
 
         public static event MoveAction OnMove;
+
+        // invoked when navigation failed to path-find.  The object that failed to navigate and the position requested are passed.
+        public delegate void NavigationFailed(Transform t, Vector3 worldPosition);
+        public static event NavigationFailed OnNavigationFailed;
         
         private GameObject _playerObject;
         private Camera _gameCamera;
@@ -21,8 +25,9 @@ namespace Player
 
         [SerializeField] private Transform _navigationIcon;
         private Transform _activeNavigationIcon;
-
-        [SerializeField] public float navIconDismissDistance;
+        
+        [MinAttribute(0.0f)]
+        public float navIconDismissDistance;
 
         private void Awake()
         {
@@ -81,13 +86,7 @@ namespace Player
                     else
                     {
                         Debug.LogFormat("No path to {0} found.", worldPoint);
-                        // should trigger the can't walk there action.
-
-                        INavigationFailedEvent[] allComponents = GetComponentsInChildren<INavigationFailedEvent>();
-                        foreach (INavigationFailedEvent comp in allComponents)
-                        {
-                            comp.OnNavigationFailed();
-                        }
+                        OnNavigationFailed?.Invoke(transform, worldPoint);
                     }
 
                     _handledClick = true;
