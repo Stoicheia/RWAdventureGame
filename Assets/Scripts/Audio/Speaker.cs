@@ -10,36 +10,46 @@ public class Speaker : MonoBehaviour
     private AudioSource source;
     [SerializeField] private List<AudioClipArray> voiceLines;
 
+    private Dictionary<string, AudioClipArray> _voiceLineMap;
+
     private void Awake()
     {
         source = GetComponent<AudioSource>();
         source.loop = false;
+        _voiceLineMap = new Dictionary<string, AudioClipArray>();
+    }
+
+    private void Start()
+    {
+        // cache the clip arrays into the dictionary.
+        foreach (AudioClipArray clipArray in voiceLines)
+        {
+            _voiceLineMap[clipArray.clipName] = clipArray;
+        }
     }
 
     public void PlayClip(string toPlay)
     {
-        foreach (var clipArray in voiceLines)
+        if (!_voiceLineMap.ContainsKey(toPlay))
         {
-            if(clipArray.clipName == toPlay)
-            {
-                clipArray.PlayRandom(source);
-                return;
-            }
+            Debug.LogError("Audio clip \"" + toPlay + "\" not found!", this);
+            return;
         }
-        Debug.LogWarning("Audio clip \"" + toPlay + "\" not found!", this);
+
+        var clipArray = _voiceLineMap[toPlay];
+        clipArray.PlayRandom(source);
     }
 
     public void PlayOneShot(string toPlay)
     {
-        foreach (var clipArray in voiceLines)
+        if (!_voiceLineMap.ContainsKey(toPlay))
         {
-            if(clipArray.clipName == toPlay)
-            {
-                clipArray.PlayRandomOneShot(source);
-                return;
-            }
+            Debug.LogError("Audio clip \"" + toPlay + "\" not found!", this);
+            return;
         }
-        Debug.LogWarning("Audio clip \"" + toPlay + "\" not found!", this);
+
+        var clipArray = _voiceLineMap[toPlay];
+        clipArray.PlayRandomOneShot(source);
     }
 
     public bool IsPlaying()
