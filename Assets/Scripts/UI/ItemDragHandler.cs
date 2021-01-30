@@ -29,7 +29,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         if (but.DisplayedItem == null) return;
         if (but.DisplayedItem.item == null) return;
         dragging = true;
-        transform.SetParent(FindObjectOfType<Canvas>().transform, false);
+        transform.SetParent(FindObjectOfType<Canvas>().transform, true);
         from = but;
         canvasGroup.alpha = .65f;
         canvasGroup.blocksRaycasts = false;

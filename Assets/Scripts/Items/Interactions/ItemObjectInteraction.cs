@@ -6,7 +6,7 @@ public abstract class ItemObjectInteraction : ScriptableObject
 {
     [SerializeField] protected Item interactibleItem;
 
-    public abstract void Act();
+    public abstract void Act(InteractibleObject from);
 
 
     #region Properties
