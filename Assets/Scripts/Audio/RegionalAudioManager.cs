@@ -59,7 +59,6 @@ public class RegionalAudioManager : MonoBehaviour
 
     private void Update()
     {
-        print(currentAmbientSource.name);
         if (!(Time.time >= nextPlay)) return;
         if(activeRegion!=null)
             activeRegion.regionType.musicAudio.PlayRandom(musicSource);
