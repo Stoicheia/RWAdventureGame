@@ -9,21 +9,21 @@ using UnityEngine.EventSystems;
 
 public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
 {
-    public delegate void PointerAction(int s, InventorySlot i);
+    public delegate void PointerAction(ItemUI iu);
 
     public static event PointerAction OnHover;
     public static event PointerAction OnExitHover;
     public static event PointerAction OnClicked;
     public static event PointerAction OnDropped;
-    
+
     [SerializeField] private InventorySlot slotItem;
     public InventorySlot DisplayedItem => slotItem;
 
     public int SlotID;
 
     [SerializeField] private Image itemRenderer;
-    [SerializeField] private TextMeshProUGUI itemName; //not necessary?
     [SerializeField] private TextMeshProUGUI itemQuantity;
+    [SerializeField] private Sprite transparentImage;
 
     private LayoutGroup myLayoutGroup;
 
@@ -45,7 +45,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
             return;
         }
         itemRenderer.sprite = slotItem.item.InventorySprite;
-        itemName.text = slotItem.item.ItemName;
         itemQuantity.text = slotItem.quantity == 1 ? "" : slotItem.quantity.ToString();
     }
 
@@ -57,37 +56,27 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void DisplayNull()
     {
-        itemRenderer.sprite = null;
-        itemName.text = "";
+        itemRenderer.sprite = transparentImage;
         itemQuantity.text = "";
     }
     
     public void Click()
     {
-        OnClicked?.Invoke(SlotID, slotItem);
+        OnClicked?.Invoke(this);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        OnHover?.Invoke(SlotID, slotItem);
+        OnHover?.Invoke(this);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        OnExitHover?.Invoke(SlotID, slotItem);
+        OnExitHover?.Invoke(this);
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        OnDropped?.Invoke(SlotID, slotItem);
+        OnDropped?.Invoke(this);
     }
-
-    public void Highlight()
-    {
-        itemName.color = new Color(1, 1, 0, 1);
-    }
-
-    public void Unhighlight()
-    {
-        itemName.color = new Color(0, 0, 0, 1);
-    }
+    
 }

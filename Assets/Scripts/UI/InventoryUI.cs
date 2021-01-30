@@ -19,9 +19,12 @@ public class InventoryUI : MonoBehaviour
     public FadeUI description;
     public FadeUI itemName;
     public Image itemImage;
+    public Transform highlighter;
+    private Transform myHighlighter;
+    public Transform transparentHighlighter;
+    private Transform myTransparentHighlighter;
 
-    private InventorySlot selectedItem;
-    private int selectedSlot = -1;
+    private ItemUI selectedItem;
 
     private void Awake()
     {
@@ -49,9 +52,10 @@ public class InventoryUI : MonoBehaviour
         DisplayInventory();
 
         ItemUI.OnHover += ChangeItemInfo;
-        //ItemUI.OnExitHover += HideDescription;
         ItemUI.OnDropped += Rearrange;
-        ItemUI.OnClicked += SelectItem;
+        ItemUI.OnHover += HoverSelect;
+        ItemUI.OnExitHover += HoverUnselect;
+        ItemUI.OnClicked += Select;
         inventory.OnUpdate += DisplayInventory;
     }
 
@@ -60,36 +64,43 @@ public class InventoryUI : MonoBehaviour
         selectedItem = null;
         
         ItemUI.OnHover -= ChangeItemInfo;
-        //ItemUI.OnExitHover -= HideDescription;
         ItemUI.OnDropped -= Rearrange;
-        ItemUI.OnClicked -= SelectItem;
+        ItemUI.OnHover -= HoverSelect;
+        ItemUI.OnExitHover -= HoverUnselect;
+        ItemUI.OnClicked -= Select;
         inventory.OnUpdate -= DisplayInventory;
     }
 
     private void Start()
     {
+        Canvas canvas = FindObjectOfType<Canvas>();
+
+        myHighlighter = Instantiate(highlighter, canvas.transform);
+        myHighlighter.gameObject.SetActive(false);
+        
+        myTransparentHighlighter = Instantiate(transparentHighlighter, canvas.transform);
+        myTransparentHighlighter.gameObject.SetActive(false);
+
         DisplayInventory();
     }
 
-    private void RefreshHighlights()
+    private void Select(ItemUI toHighlight)
     {
-        foreach (ItemUI slot in itemsToDisplay)
+        selectedItem = toHighlight;
+        if (selectedItem.DisplayedItem == null)
         {
-            if (slot.DisplayedItem.item == null) continue;
-            if (selectedItem == null || selectedItem.item == null)
-            {
-                slot.Unhighlight();
-                continue;
-            }
-            if (selectedItem.ItemID == slot.DisplayedItem.ItemID && selectedSlot == slot.SlotID)
-            {
-                slot.Highlight();
-            }
-            else
-            {
-                slot.Unhighlight();
-            }
+            selectedItem = null;
+            return;
         }
+        myHighlighter.gameObject.SetActive(true);
+        myHighlighter.position = selectedItem.transform.position;
+        myHighlighter.SetParent(toHighlight.transform);
+    }
+
+    public void UnselectAll()
+    {
+        selectedItem = null;
+        myHighlighter.gameObject.SetActive(false);
     }
 
     public void DisplayInventory()
@@ -97,50 +108,26 @@ public class InventoryUI : MonoBehaviour
         ClearAll();
         for(int i=0; i<inventory.maxItems; i++)
         {
-            if (inventory.ItemSlots.Count <= i){RefreshHighlights(); return;}
-            if (itemsToDisplay.Count <= i){RefreshHighlights(); return;}
+            if (inventory.ItemSlots.Count <= i){return;}
+            if (itemsToDisplay.Count <= i){return;}
             itemsToDisplay[i].Display(inventory.ItemSlots[i]);
         }
-        RefreshHighlights();
     }
 
-    void ChangeItemInfo(int id, InventorySlot invSlot)
+    void ChangeItemInfo(ItemUI ui)
     {
-        if (invSlot.item == null) return;
-        description.SetText(invSlot.item.Description);
-        itemName.SetText(invSlot.item.ItemName);
-        itemImage.sprite = invSlot.item.SketchSprite;
+        if (ui.DisplayedItem.item == null) return;
+        description.SetText(ui.DisplayedItem.item.Description);
+        itemName.SetText(ui.DisplayedItem.item.ItemName);
+        itemImage.sprite = ui.DisplayedItem.item.SketchSprite;
     }
 
-    void HideDescription(int n, InventorySlot o)
-    {
-        description.SetText("");
-    }
-
-    void Rearrange(int newSlot, InventorySlot oldItem)
+    void Rearrange(ItemUI ui)
     {
         if (ItemDragHandler.from == null) return;
         int oldSlot = ItemDragHandler.from.SlotID;
         
-        inventory.Swap(oldSlot, newSlot);
-    }
-
-    void SelectItem(int id, InventorySlot itemToUse)
-    {
-        if (itemToUse.item == null) return;
-        if (selectedItem == null)
-        {
-            selectedItem = itemToUse;
-            selectedSlot = id;
-            DisplayInventory();
-        }
-        else
-        {
-            OnItemUse?.Invoke(itemToUse, selectedItem);
-            selectedItem = null;
-            selectedSlot = -1;
-            DisplayInventory();
-        }
+        inventory.Swap(oldSlot, ui.SlotID);
     }
 
     void ClearAll()
@@ -149,5 +136,17 @@ public class InventoryUI : MonoBehaviour
         {
             slot.DisplayNull();
         }
+    }
+
+    void HoverSelect(ItemUI ui)
+    {
+        if (ui.DisplayedItem == null) return;
+        myTransparentHighlighter.gameObject.SetActive(true);
+        myTransparentHighlighter.position = ui.transform.position;
+    }
+
+    void HoverUnselect(ItemUI ui)
+    {
+        myTransparentHighlighter.gameObject.SetActive(false);
     }
 }

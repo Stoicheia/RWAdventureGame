@@ -8,15 +8,16 @@ public class BookNavigationUI : MonoBehaviour
 {
     [SerializeField] private List<ButtonMenuPair> buttonsAndMenus;
     [SerializeField] private Transform startingMenu;
+    [SerializeField] private Button startingButton;
     
     private Transform activeMenu;
+    private Button activeButton;
 
     private void OnEnable()
     {
-        OpenMenu(startingMenu);
         foreach (var bmp in buttonsAndMenus)
         {
-            bmp.button.onClick.AddListener(delegate { OpenMenu(bmp.menu); });
+            bmp.button.onClick.AddListener(delegate { OpenMenu(bmp.menu, bmp.button); });
         }
     }
 
@@ -28,11 +29,30 @@ public class BookNavigationUI : MonoBehaviour
         }
     }
 
-    void OpenMenu(Transform menuToOpen)
+    private void Start()
+    {
+        OpenStartingMenu();
+    }
+
+    void OpenMenu(Transform menuToOpen, Button clickedButton)
     {
         if(activeMenu!=null) activeMenu.gameObject.SetActive(false);
         menuToOpen.gameObject.SetActive(true);
+
+        if (activeButton != null)
+        {
+            ActivableTabNavUI u = activeButton.GetComponent<ActivableTabNavUI>();
+            u.Deactivate();
+        }
+        clickedButton.GetComponent<ActivableTabNavUI>().Activate();
+        
         activeMenu = menuToOpen;
+        activeButton = clickedButton;
+    }
+
+    public void OpenStartingMenu()
+    {
+        OpenMenu(startingMenu, startingButton);
     }
 
     void CloseAllMenus()

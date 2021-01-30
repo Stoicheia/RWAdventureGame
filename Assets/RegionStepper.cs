@@ -13,7 +13,6 @@ public class RegionStepper : MonoBehaviour
         print(region.name);
         if (region != null && region!=Region.ActiveRegion)
         {
-            print("hayaite");
             Region.UpdateActiveRegion(region);
         }
     }

@@ -16,6 +16,8 @@ public class SlideUpUI : MonoBehaviour
     private bool up;
     private bool enRoute;
 
+    public BookNavigationUI navUI;
+
     private void Awake()
     {
         up = false;
@@ -47,12 +49,15 @@ public class SlideUpUI : MonoBehaviour
     void SlideUp()
     {
         StartCoroutine(SlideSequence(slideDuration,slideDistance,originalPosition,targetPosition));
+        slideButton.GetComponent<ShoeHideUI>().OnShow();
         up = true;
     }
 
     void SlideBack()
     {
         StartCoroutine(SlideSequence(slideDuration, slideDistance, targetPosition, originalPosition));
+        slideButton.GetComponent<ShoeHideUI>().OnHide();
+        navUI.OpenStartingMenu();
         up = false;
     }
 

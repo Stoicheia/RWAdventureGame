@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
+  m_Name: Rope
+  m_EditorClassIdentifier: 
+  itemName: Rope
+  description: conticuere omnes intentique ora tenebant inde toro pater aeneas sic
+    orsus ab alto...
+  itemInteractions: []
+  narrationAudio: {fileID: 0}
+  inventorySprite: {fileID: 21300000, guid: 65707143fa2e48f448b136a715fe5c0e, type: 3}
+  sketchSprite: {fileID: 21300000, guid: 4a7f2441fb3dae742960dbcaa6881b33, type: 3}
+  worldSprite: {fileID: -8566215703460309020, guid: 6ae204c496a9d3043b00cd446e709e42, type: 3}
+  consumable: 1
