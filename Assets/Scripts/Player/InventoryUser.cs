@@ -11,6 +11,7 @@ public class InventoryUser : MonoBehaviour
 
     private void Start()
     {
+        if(GlobalStats.instance==null) Debug.LogError("Please Move GlobalStats to this Scene");
         playerInventory = GlobalStats.instance.PlayerInventory;
         if (playerInventory == null)
         {

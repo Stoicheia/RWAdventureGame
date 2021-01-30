@@ -35,7 +35,7 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 Vector3 worldPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
 
