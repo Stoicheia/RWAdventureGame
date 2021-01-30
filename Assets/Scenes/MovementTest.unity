@@ -1059,6 +1059,9 @@ GameObject:
   - component: {fileID: 76204738}
   - component: {fileID: 76204737}
   - component: {fileID: 76204740}
+  - component: {fileID: 76204741}
+  - component: {fileID: 76204742}
+  - component: {fileID: 76204743}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1078,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2f51bcac976f244bd44b87de92b97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _navigationIcon: {fileID: 3675840082746124186, guid: 68c5c4828459d6e4aa006d227ea46f36, type: 3}
+  _navigationIcon: {fileID: 3541643515539009790, guid: 68c5c4828459d6e4aa006d227ea46f36, type: 3}
 --- !u!195 &76204738
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1128,7 +1131,214 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be699e7cd80607489be2e6e5a87d2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 0
+  interactionRadius: 2
+--- !u!114 &76204741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76204736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e5c6f7109cd8f49b01c06028a0a7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceLines:
+  - clipName: Annoyed
+    clips:
+    - {fileID: 8300000, guid: e98f87c2430e2674d9e3df363eac82ae, type: 3}
+    - {fileID: 8300000, guid: ed1da502fd5f68d4e9a19da996d445bb, type: 3}
+    - {fileID: 8300000, guid: 7f029c7bed7380148bd170ba3e8c9ab1, type: 3}
+    - {fileID: 8300000, guid: d608d0d2da99bfe44b115b163726cd03, type: 3}
+    - {fileID: 8300000, guid: 3c6003688a58c424780c94ffdc34549e, type: 3}
+  - clipName: Gasp
+    clips:
+    - {fileID: 8300000, guid: 625461b603c264b4fa5ea5f117e54b27, type: 3}
+    - {fileID: 8300000, guid: d301a656fab2e2e4fbe6e8af152d52ab, type: 3}
+    - {fileID: 8300000, guid: 2f00737ec89e34343a5cf8d028a7a994, type: 3}
+    - {fileID: 8300000, guid: 7e9496df0e3d08648956b8579161b245, type: 3}
+  - clipName: Humming
+    clips:
+    - {fileID: 8300000, guid: 1a9f12b579562934a8bab8fcce5c4c34, type: 3}
+    - {fileID: 8300000, guid: a3944a1296b2204429d9213df894b6a1, type: 3}
+    - {fileID: 8300000, guid: 808c3cbf52ea5b748b000fe51e4a5c8b, type: 3}
+    - {fileID: 8300000, guid: 838a7378bd77d1c42b48bd1643f2ac40, type: 3}
+  - clipName: Laugh
+    clips:
+    - {fileID: 8300000, guid: a25202d00856f7448b00a65716fce5b2, type: 3}
+    - {fileID: 8300000, guid: 3052f0e14ecad3e4bab4009cb3004b8e, type: 3}
+    - {fileID: 8300000, guid: cb21fdce8138aca428f8f728bb6f79d4, type: 3}
+    - {fileID: 8300000, guid: 286adbafc6468fc4881f22f7ad80dcac, type: 3}
+    - {fileID: 8300000, guid: e6e1b41b9fc15294eb7364795636a65f, type: 3}
+    - {fileID: 8300000, guid: d7b0fc581707e294fb6397ebfd54288d, type: 3}
+  - clipName: Lift
+    clips:
+    - {fileID: 8300000, guid: 83081168aea4dde43a344e0059fb406d, type: 3}
+    - {fileID: 8300000, guid: 69e0bc3a0826f1b47b4dd054a7cb0540, type: 3}
+    - {fileID: 8300000, guid: afaaf029b347ed24c971ab2a02f84edb, type: 3}
+  - clipName: Pull
+    clips:
+    - {fileID: 8300000, guid: 50594f16a982d304993f90ca2044bcaa, type: 3}
+    - {fileID: 8300000, guid: 82e0eaa9917a4704fa4c35e7bbed2078, type: 3}
+    - {fileID: 8300000, guid: 2c1d076fa4f07f84cb3ff8a8a5952a01, type: 3}
+    - {fileID: 8300000, guid: 1199dd3640660354eb7138566a407238, type: 3}
+  - clipName: Satisfied
+    clips:
+    - {fileID: 8300000, guid: 016d1bdd70423fd40812bbe2d8b37915, type: 3}
+    - {fileID: 8300000, guid: fe47a4ccc650f8343ada59c5170b3323, type: 3}
+    - {fileID: 8300000, guid: 173a4ed6720567c4ab9085242b18c7dc, type: 3}
+    - {fileID: 8300000, guid: d32e337b450a89a43ae4a57d98ae5510, type: 3}
+    - {fileID: 8300000, guid: 230f602c99a4bab4c9e9f938e4a22f0d, type: 3}
+    - {fileID: 8300000, guid: 87c9880304fa20c47a9d3cfdfd8a3c8a, type: 3}
+  - clipName: Sigh_Sad
+    clips:
+    - {fileID: 8300000, guid: 448527c3316f70a459ec50d535bb4d17, type: 3}
+    - {fileID: 8300000, guid: 0122a5f38ea1f6848beb05cd97b47446, type: 3}
+    - {fileID: 8300000, guid: 27bcfcc91bacc2c46b0cfd4e3ac03602, type: 3}
+  - clipName: Sniffle
+    clips:
+    - {fileID: 8300000, guid: 2ff37a3842ac17e4ea79616342447425, type: 3}
+    - {fileID: 8300000, guid: 0907cfbe2dfbf6844808e5207868f8e6, type: 3}
+    - {fileID: 8300000, guid: 817b69c8793f16944bd241cc6881960b, type: 3}
+    - {fileID: 8300000, guid: 5e1f934fed332a74f910dcc7d43864a5, type: 3}
+  - clipName: Surprise
+    clips:
+    - {fileID: 8300000, guid: b8faad097dd71e344b31b0d84d16a086, type: 3}
+    - {fileID: 8300000, guid: 6eac30c47e529e14bb65fc1b2cd3a051, type: 3}
+    - {fileID: 8300000, guid: 3cb3049275c656548b9cf2e13fc8999e, type: 3}
+    - {fileID: 8300000, guid: c6dd9c33dc910274d8712ed406a7c9fe, type: 3}
+  - clipName: Thinking
+    clips:
+    - {fileID: 8300000, guid: 533b150736faf424c9a261644224aa05, type: 3}
+    - {fileID: 8300000, guid: 47ae2e48a2b525f4494a96fa3820edd5, type: 3}
+    - {fileID: 8300000, guid: 709ba14f7b9aaa344ac27f57f1bc7835, type: 3}
+    - {fileID: 8300000, guid: 313e8c90aa216ce48bbb6babd5159164, type: 3}
+    - {fileID: 8300000, guid: ab27a588221f4e1419e8f0d6b2f632ef, type: 3}
+  - clipName: Wow
+    clips:
+    - {fileID: 8300000, guid: 48c7934f36330d5448fb1307b3206f02, type: 3}
+    - {fileID: 8300000, guid: 72f4c43eca19154409d0f145251aac6b, type: 3}
+    - {fileID: 8300000, guid: 07bd5403bb0985046a851edbd0f62777, type: 3}
+    - {fileID: 8300000, guid: 3219c42a8a4027f4084f54be2426343c, type: 3}
+    - {fileID: 8300000, guid: f959288e1a8f8bb48aef909670276c85, type: 3}
+    - {fileID: 8300000, guid: 16c0ba9e0dfd4434dbee433ab0e12532, type: 3}
+  - clipName: Yawn
+    clips:
+    - {fileID: 8300000, guid: be7972a093122d0419bd3125b2303a82, type: 3}
+    - {fileID: 8300000, guid: a0aa3e65beb76b84bbcb673d5b6c9643, type: 3}
+--- !u!82 &76204742
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76204736}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &76204743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76204736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8573d4f87338b7a418db5d6c8fa169c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHumAfterSeconds: 1.5
+  startYawnAfterSeconds: 10
+  humFrequency: 0.42
+  yawnFrequency: 0.4
 --- !u!1001 &80989128
 PrefabInstance:
   m_ObjectHideFlags: 0
