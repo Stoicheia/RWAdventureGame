@@ -18,8 +18,11 @@ namespace Player
         [SerializeField] private Transform _navigationIcon;
         private Transform _activeNavigationIcon;
 
+        [SerializeField] public float navIconDismissDistance;
+
         private void Awake()
         {
+            navIconDismissDistance = 0.2f;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _handledClick = false;
         }
@@ -41,6 +44,12 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
+            if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete &&
+                _navMeshAgent.remainingDistance < navIconDismissDistance && _activeNavigationIcon)
+            {
+                HideNavIcon();
+            }
+
             // don't process input system events if the pointer is pointing at a discrete gameobject.
             if (EventSystem.current.IsPointerOverGameObject())
             {
@@ -66,7 +75,7 @@ namespace Player
                     }
                     else
                     {
-                        Debug.Log(String.Format("No path to {0} found.", worldPoint));
+                        Debug.LogFormat("No path to {0} found.", worldPoint);
                         // should trigger the can't walk there action.
 
                         INavigationFailedEvent[] allComponents = GetComponentsInChildren<INavigationFailedEvent>();
@@ -75,6 +84,7 @@ namespace Player
                             comp.OnNavigationFailed();
                         }
                     }
+
                     _handledClick = true;
                 }
             }
@@ -87,10 +97,18 @@ namespace Player
 
         void SpawnNavIcon(Vector3 t)
         {
-            if(_activeNavigationIcon!=null)
-                Destroy(_activeNavigationIcon.gameObject);
+            HideNavIcon();
             Transform nav = Instantiate(_navigationIcon, t, Quaternion.identity);
             _activeNavigationIcon = nav;
+        }
+        
+        void HideNavIcon()
+        {
+            if (_activeNavigationIcon)
+            {
+                Destroy(_activeNavigationIcon.gameObject);
+                _activeNavigationIcon = null;
+            }
         }
     }
 }
