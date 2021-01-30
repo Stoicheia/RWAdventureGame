@@ -16,12 +16,12 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable()
     {
-        InventoryUI.OnItemUse += UseItem;
+        
     }
 
     private void OnDisable()
     {
-        InventoryUI.OnItemUse -= UseItem;
+        
     }
 
     public List<InventorySlot> ItemSlots
@@ -167,7 +167,7 @@ public class Inventory : MonoBehaviour
         OnUpdate?.Invoke();
     }
 
-    void UseItem(InventorySlot firstItem, InventorySlot secondItem)
+    /*void UseItem(InventorySlot firstItem, InventorySlot secondItem)
     {
         if (firstItem.item == null || secondItem.item == null) return;
         int id1 = firstItem.ItemID;
@@ -184,6 +184,6 @@ public class Inventory : MonoBehaviour
         {
             DeleteItem(secondItem.item);
         }
-    }
+    }*/
    
 }
