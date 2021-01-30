@@ -12,15 +12,23 @@ namespace Player
         public delegate void MoveAction(Transform t);
 
         public static event MoveAction OnMove;
-
-        public const float NEGLIGIBLE_DISTANCE = 0.05f;
         
+        public const float NEGLIGIBLE_DISTANCE = 0.05f;
+        // invoked when navigation failed to path-find.  The object that failed to navigate and the position requested are passed.
+        public delegate void NavigationFailed(Transform t, Vector3 worldPosition);
+        public static event NavigationFailed OnNavigationFailed;
+
         private GameObject _playerObject;
         private Camera _gameCamera;
         private NavMeshAgent _navMeshAgent;
 
+        private bool _handledClick;
+
         [SerializeField] private Transform _navigationIcon;
         private Transform _activeNavigationIcon;
+        
+        [MinAttribute(0.0f)]
+        public float navIconDismissDistance;
 
         private bool enRoute;
 
@@ -31,7 +39,9 @@ namespace Player
 
         private void Awake()
         {
+            navIconDismissDistance = 0.2f;
             _navMeshAgent = GetComponent<NavMeshAgent>();
+            _handledClick = false;
         }
 
         // Start is called before the first frame update
@@ -51,15 +61,54 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete &&
+                _navMeshAgent.remainingDistance < navIconDismissDistance && _activeNavigationIcon)
             {
-                Vector3 worldPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
+                HideNavIcon();
+            }
 
+            // don't process input system events if the pointer is pointing at a discrete gameobject.
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (!_handledClick)
+                {
+                    Vector3 worldPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
+
+                    // snap the point to the game plane.
+                    worldPoint.z = 0.0f;
+                    
                 worldPoint.z = 0.0f;
                 _navMeshAgent.destination = worldPoint;
                 SpawnNavIcon(worldPoint);
                 enRoute = true;
                 OnMove?.Invoke(transform);
+                // try to solve the path.
+                    NavMeshPath path = new NavMeshPath();
+                    _navMeshAgent.CalculatePath(worldPoint, path);
+                    if (path.status == NavMeshPathStatus.PathComplete)
+                    {
+                        _navMeshAgent.SetPath(path);
+                        SpawnNavIcon(worldPoint);
+                        OnMove?.Invoke(transform);
+                    }
+                    else
+                    {
+                        Debug.LogFormat("No path to {0} found.", worldPoint);
+                        OnNavigationFailed?.Invoke(transform, worldPoint);
+                    }
+
+                    _handledClick = true;
+                }
+            }
+            else
+            {
+                if (_handledClick)
+                    _handledClick = false;
             }
 
             if (Mathf.Abs((transform.position - _navMeshAgent.destination).magnitude) < NEGLIGIBLE_DISTANCE)
@@ -70,10 +119,20 @@ namespace Player
 
         void SpawnNavIcon(Vector3 t)
         {
-            if(_activeNavigationIcon!=null)
-                Destroy(_activeNavigationIcon.gameObject);
+            HideNavIcon();
             Transform nav = Instantiate(_navigationIcon, t, Quaternion.identity);
             _activeNavigationIcon = nav;
         }
+        
+        void HideNavIcon()
+        {
+            if (_activeNavigationIcon)
+            {
+                Destroy(_activeNavigationIcon.gameObject);
+                _activeNavigationIcon = null;
+            }
+        }
     }
 }
+
+

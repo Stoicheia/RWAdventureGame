@@ -1082,6 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navigationIcon: {fileID: 3541643515539009790, guid: 68c5c4828459d6e4aa006d227ea46f36, type: 3}
+  navIconDismissDistance: 0.1
 --- !u!195 &76204738
 NavMeshAgent:
   m_ObjectHideFlags: 0
