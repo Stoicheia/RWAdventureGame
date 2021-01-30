@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a22817851f53db54e8c9576c813d61bb, type: 3}
-  m_Name: CheckBridge
+  m_Name: 4
   m_EditorClassIdentifier: 
-  taskName: check_bridge
-  taskDescription: Check on the river bridge.
+  taskName: fertilize_beds
+  taskDescription: 'Fertilize the garden beds.
+
+'

@@ -21,6 +21,7 @@ public class TaskUI : MonoBehaviour
 
         for (int i = 0; i < tasksToDisplay.Count; i++)
         {
+            if (i + startFromIndex >= tManager.taskStatuses.Count) return;
             TaskStatus associatedTask = tManager.taskStatuses[i+startFromIndex];
             tasksToDisplay[i].taskText.text = associatedTask.task.taskDescription;
             if(associatedTask.complete) tasksToDisplay[i].Strike();

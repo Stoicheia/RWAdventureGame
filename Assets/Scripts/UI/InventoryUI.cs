@@ -143,6 +143,7 @@ public class InventoryUI : MonoBehaviour
         if (ui.DisplayedItem == null) return;
         myTransparentHighlighter.gameObject.SetActive(true);
         myTransparentHighlighter.position = ui.transform.position;
+        myTransparentHighlighter.SetParent(ui.transform);
     }
 
     void HoverUnselect(ItemUI ui)
