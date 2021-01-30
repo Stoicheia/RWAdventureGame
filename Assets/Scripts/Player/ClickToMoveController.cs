@@ -13,6 +13,9 @@ namespace Player
         private Camera _gameCamera;
         private NavMeshAgent _navMeshAgent;
 
+        [SerializeField] private Transform _navigationIcon;
+        private Transform _activeNavigationIcon;
+
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -41,7 +44,16 @@ namespace Player
 
                 worldPoint.z = 0.0f;
                 _navMeshAgent.destination = worldPoint;
+                SpawnNavIcon(worldPoint);
             }
+        }
+
+        void SpawnNavIcon(Vector3 t)
+        {
+            if(_activeNavigationIcon!=null)
+                Destroy(_activeNavigationIcon.gameObject);
+            Transform nav = Instantiate(_navigationIcon, t, Quaternion.identity);
+            _activeNavigationIcon = nav;
         }
     }
 }
