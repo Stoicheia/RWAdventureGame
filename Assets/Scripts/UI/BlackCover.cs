@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(Image), typeof(AudioSource))]
 public class BlackCover : MonoBehaviour
 {
     public float fadeTime = 0.9f;
     private Image cover;
+    private AudioSource source;
     private Inventory inventory;
 
     private void Awake()
     {
         cover = GetComponent<Image>();
+        source = GetComponent<AudioSource>();
         cover.color = new Color(1, 1, 1, 0);
     }
 
@@ -32,9 +34,9 @@ public class BlackCover : MonoBehaviour
         StartCoroutine(FadeOutEffect(fadeTime));
     }
 
-    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn)
+    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp)
     {
-        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn));
+        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp));
     }
 
     IEnumerator FadeInEffect(float t)
@@ -59,7 +61,7 @@ public class BlackCover : MonoBehaviour
         cover.color = new Color(1, 1, 1,0);
     }
     
-    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning)
+    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay)
     {
         FadeIn();
         yield return new WaitForSeconds(fadeTime + 0.1f);
@@ -69,7 +71,8 @@ public class BlackCover : MonoBehaviour
         {
             Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation);
         }
-        yield return new WaitForSeconds(fadeTime + 0.1f);
+        source.PlayOneShot(toPlay);
+        yield return new WaitForSeconds(toPlay.length + 0.1f);
         FadeOut();
     }
 }

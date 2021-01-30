@@ -10,7 +10,8 @@ public class FadeBlackInteraction : ItemObjectInteraction
 
     [SerializeField] private Item itemToRemove;
     [SerializeField] private bool removeInteractedObject;
-    [SerializeField] private List<Spawnable> objectsToSpawn; 
+    [SerializeField] private List<Spawnable> objectsToSpawn;
+    [SerializeField] private AudioClip toPlay;
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class FadeBlackInteraction : ItemObjectInteraction
     
     public override void Act(InteractibleObject from)
     {
-        cover.StartSequence(from, itemToRemove, removeInteractedObject, objectsToSpawn);
+        cover.StartSequence(from, itemToRemove, removeInteractedObject, objectsToSpawn, toPlay);
     }
 
     
