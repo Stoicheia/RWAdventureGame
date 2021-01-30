@@ -8,6 +8,7 @@ public class InventoryUser : MonoBehaviour
     private Inventory playerInventory;
 
     [SerializeField] private float interactionRadius;
+    public bool hasShoes; //whatever
 
     private void Start()
     {

@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
-public enum NeutralState
-{
-    NONE, HUMMING, YAWNING
-}
 public class Mood : MonoBehaviour
 {
     private Speaker speaker;
@@ -19,9 +15,6 @@ public class Mood : MonoBehaviour
     [SerializeField] private float humFrequency;
     [Range(0,1)]
     [SerializeField] private float yawnFrequency;
-    private NeutralState nState = NeutralState.NONE;
-
-    public NeutralState NState => nState;
 
     private void Awake()
     {
