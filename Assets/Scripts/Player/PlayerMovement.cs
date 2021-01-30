@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     
     static readonly Vector2 WorldScaleCorrection = new Vector2(1.0f, 0.5f);
 
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        rigidbody = GetComponentInChildren<Rigidbody2D>();
+        _rigidbody = GetComponentInChildren<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -34,6 +34,6 @@ public class PlayerMovement : MonoBehaviour
         dirInput.Normalize();
         dirInput *= WorldScaleCorrection;
 
-        rigidbody.MovePosition(rigidbody.position + (dirInput * (movementSpeed * Time.fixedDeltaTime)));
+        _rigidbody.MovePosition(_rigidbody.position + (dirInput * (movementSpeed * Time.fixedDeltaTime)));
     }
 }
