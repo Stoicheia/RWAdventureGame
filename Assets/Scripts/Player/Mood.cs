@@ -20,17 +20,22 @@ public class Mood : MonoBehaviour
     {
         speaker = GetComponent<Speaker>();
         if(speaker==null) Debug.LogWarning("This entity cannot make sound.", this);
-        ResetTimeOfLastAction(transform);
+        ResetTimeOfLastAction();
     }
 
     private void OnEnable()
     {
-        ClickToMoveController.OnMove += ResetTimeOfLastAction;
+        ClickToMoveController clickToMoveController = GetComponentInChildren<ClickToMoveController>();
+        clickToMoveController.OnNavigationStarted += navigationEventCallback;
+        clickToMoveController.OnNavigationFailed += navigationEventCallback;
     }
 
     private void OnDisable()
     {
-        ClickToMoveController.OnMove -= ResetTimeOfLastAction;
+        ClickToMoveController clickToMoveController = GetComponentInChildren<ClickToMoveController>();
+
+        clickToMoveController.OnNavigationStarted -= navigationEventCallback;
+        clickToMoveController.OnNavigationFailed -= navigationEventCallback;
     }
 
     private void Update()
@@ -38,10 +43,19 @@ public class Mood : MonoBehaviour
         CalculateNeutralSound();
     }
 
-    private void ResetTimeOfLastAction(Transform t)
+    public void InterruptMood()
     {
-        if(t == transform)
-            timeOfLastAction = Time.time;
+        ResetTimeOfLastAction();
+    }
+
+    private void navigationEventCallback(Transform t, Vector3 wp)
+    {
+        ResetTimeOfLastAction();
+    }
+
+    private void ResetTimeOfLastAction()
+    {
+        timeOfLastAction = Time.time;
     }
 
     private void CalculateNeutralSound()
@@ -49,19 +63,22 @@ public class Mood : MonoBehaviour
         if (speaker.IsPlaying()) return;
         
         float timeSinceLastAction = Time.time - timeOfLastAction;
-        PlayMaybe(timeSinceLastAction, startHumAfterSeconds,startYawnAfterSeconds, humFrequency, "Humming");
-        PlayMaybe(timeSinceLastAction, startYawnAfterSeconds, float.PositiveInfinity, yawnFrequency, "Yawn");
+        if (!PlayMaybe(timeSinceLastAction, startHumAfterSeconds,startYawnAfterSeconds, humFrequency, "Humming"))
+            PlayMaybe(timeSinceLastAction, startYawnAfterSeconds, float.PositiveInfinity, yawnFrequency, "Yawn");
     }
 
-    private void PlayMaybe(float t, float thresholdMin, float thresholdMax, float p, string clip)
+    private bool PlayMaybe(float t, float thresholdMin, float thresholdMax, float p, string clip)
     {
         if (t >= thresholdMin && t <= thresholdMax)
         {
             if (UnityEngine.Random.Range(0f, 1.0f) <= Paraboloid01(p))
             {
                 speaker.PlayClip(clip);
+                return true;
             }
         }
+
+        return false;
     }
 
     public static float Paraboloid01(float t)
