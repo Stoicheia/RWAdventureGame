@@ -1062,6 +1062,7 @@ GameObject:
   - component: {fileID: 76204741}
   - component: {fileID: 76204742}
   - component: {fileID: 76204743}
+  - component: {fileID: 76204744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1340,6 +1341,25 @@ MonoBehaviour:
   startYawnAfterSeconds: 10
   humFrequency: 0.42
   yawnFrequency: 0.4
+--- !u!114 &76204744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76204736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b594b60c4c4893b2f604ed66047719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voidSounds:
+  - {fileID: 8300000, guid: e98f87c2430e2674d9e3df363eac82ae, type: 3}
+  - {fileID: 8300000, guid: d301a656fab2e2e4fbe6e8af152d52ab, type: 3}
+  - {fileID: 8300000, guid: 2f00737ec89e34343a5cf8d028a7a994, type: 3}
+  - {fileID: 8300000, guid: 7e9496df0e3d08648956b8579161b245, type: 3}
+  floor: {fileID: 598692472}
+  audioSource: {fileID: 76204742}
 --- !u!1001 &80989128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5538,6 +5558,7 @@ GameObject:
   - component: {fileID: 598692473}
   - component: {fileID: 598692475}
   - component: {fileID: 598692474}
+  - component: {fileID: 598692476}
   m_Layer: 0
   m_Name: GroundLayer
   m_TagString: Untagged
@@ -6377,6 +6398,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &598692476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598692472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61296c54f29346e09f00611b825095e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &610643481
 GameObject:
   m_ObjectHideFlags: 0
