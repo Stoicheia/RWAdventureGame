@@ -8,5 +8,5 @@ public class RegionType : ScriptableObject
 {
     public string regionName;
     public AudioClip ambienceAudio;
-    public AudioClip musicAudio;
+    public AudioClipArray musicAudio;
 }

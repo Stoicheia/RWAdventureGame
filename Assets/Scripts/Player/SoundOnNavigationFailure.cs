@@ -18,10 +18,14 @@ namespace Player
         public string nopathSampleGroup;
         
         private TileLookup _tileLookup;
+
+        [SerializeField] private float cooldown;
+        private float lastSoundTime;
         
 
         private void Awake()
         {
+            lastSoundTime = Time.time;
             _speaker = GetComponent<Speaker>();
 
             ClickToMoveController ctmc = GetComponentInChildren<ClickToMoveController>();
@@ -38,6 +42,7 @@ namespace Player
         private void NavigationFailedEvent(Transform obj, Vector3 worldPosition)
         {
             TileBase tbase = _tileLookup.FindTileAtWorldLocation(worldPosition);
+            if (Time.time - lastSoundTime < cooldown) return;
             if (!tbase)
             {
                 if (voidSampleGroup.Length > 0)
@@ -50,6 +55,8 @@ namespace Player
                     _speaker.PlayOneShot(nopathSampleGroup);
                 //TODO: some comment about not being able to find a path there.
             }
+
+            lastSoundTime = Time.time;
         }
     }
 }

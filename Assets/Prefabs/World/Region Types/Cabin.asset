@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764d21a4c5abe9a4bb39725c0a94b5e3, type: 3}
+  m_Name: Cabin
+  m_EditorClassIdentifier: 
+  regionName: Cabin
+  ambienceAudio: {fileID: 8300000, guid: 5fd2b04342cb18547aea86c04ff7dabf, type: 3}
+  musicAudio:
+    clipName: Cabin Music
+    clips:
+    - {fileID: 8300000, guid: 5dd9b213c2c2b2e4a9c0b52ca4f62158, type: 3}

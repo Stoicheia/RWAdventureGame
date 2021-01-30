@@ -66,6 +66,16 @@ public class AudioClipArray
 
     public void PlayRandom(AudioSource source)
     {
+        source.loop = false;
+        int clipNumberToPlay = UnityEngine.Random.Range(0,clips.Count);
+        source.Stop();
+        source.clip = clips[clipNumberToPlay];
+        source.Play();
+    }
+
+    public void PlayRandomLoop(AudioSource source)
+    {
+        source.loop = true;
         int clipNumberToPlay = UnityEngine.Random.Range(0,clips.Count);
         source.Stop();
         source.clip = clips[clipNumberToPlay];
