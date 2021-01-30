@@ -15,7 +15,7 @@ namespace Player
 
         // invoked when navigation failed to path-find.  The object that failed to navigate and the position requested are passed.
         public delegate void NavigationFailed(Transform t, Vector3 worldPosition);
-        public static event NavigationFailed OnNavigationFailed;
+        public event NavigationFailed OnNavigationFailed;
         
         private GameObject _playerObject;
         private Camera _gameCamera;
