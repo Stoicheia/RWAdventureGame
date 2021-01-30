@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: Item Database
   m_EditorClassIdentifier: 
   gameItems:
+  - {fileID: 11400000, guid: e64c644b786d03d4cb2b67dfd224c78b, type: 2}
   - {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
+  - {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}
+  - {fileID: 11400000, guid: b3f81453a6fd8f6439553eccf5cfff23, type: 2}
+  - {fileID: 11400000, guid: c4d03e8fe0b9fda498b06954c9380504, type: 2}
+  - {fileID: 11400000, guid: b59cc9b03e756ac4da5c5c7d9adf38cb, type: 2}
+  - {fileID: 11400000, guid: 505a6f0d2e15ede40be4fd7547afcf39, type: 2}
+  - {fileID: 11400000, guid: 774e71289f400d6449f2f7911ae2d862, type: 2}

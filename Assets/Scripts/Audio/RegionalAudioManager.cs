@@ -7,6 +7,8 @@ using UnityEngine.Audio;
 public class RegionalAudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource ambientSource;
+    [SerializeField] private AudioSource ambientSourceCross;
+    private AudioSource currentAmbientSource;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private float fadeTime;
         
@@ -20,12 +22,16 @@ public class RegionalAudioManager : MonoBehaviour
     private float nextPlay;
     private Region activeRegion;
 
+    private Coroutine currentFadeOut;
+    private Coroutine currentFadeIn;
+
     private void Start()
     {
         player = FindObjectOfType<ClickToMoveController>();
         if(player==null) Debug.LogError("No player found.");
         lastPlay = Time.time;
         nextPlay = lastPlay + UnityEngine.Random.Range(playIntervalMin, playIntervalMax);
+        currentAmbientSource = ambientSource;
     }
 
     private void OnEnable()
@@ -42,14 +48,18 @@ public class RegionalAudioManager : MonoBehaviour
     {
         activeRegion = r;
         
-        ambientSource.Stop();
-        ambientSource.clip = activeRegion.regionType.ambienceAudio;
-        ambientSource.Play();
+        //if(currentFadeOut!=null) StopCoroutine(currentFadeOut);
+        currentFadeOut = StartCoroutine(FadeOutEffect(currentAmbientSource, fadeTime));
+        SwitchAmbientSource();
+        currentAmbientSource.clip = activeRegion.regionType.ambienceAudio;
+        //if(currentFadeIn!=null) StopCoroutine(currentFadeOut);
+        currentAmbientSource.Play();
+        currentFadeIn = StartCoroutine(FadeInEffect(currentAmbientSource, fadeTime));
     }
 
     private void Update()
     {
-        print(nextPlay-Time.time);
+        print(currentAmbientSource.name);
         if (!(Time.time >= nextPlay)) return;
         if(activeRegion!=null)
             activeRegion.regionType.musicAudio.PlayRandom(musicSource);
@@ -80,7 +90,11 @@ public class RegionalAudioManager : MonoBehaviour
             yield return null;
         }
 
-        source.volume = 0;
+        source.Stop();
     }
-    
+
+    private void SwitchAmbientSource()
+    {
+        currentAmbientSource = currentAmbientSource == ambientSource ? ambientSourceCross : ambientSource;
+    }
 }
