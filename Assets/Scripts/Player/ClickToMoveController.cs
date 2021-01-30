@@ -9,6 +9,10 @@ namespace Player
 {
     public class ClickToMoveController : MonoBehaviour
     {
+        public delegate void MoveAction(Transform t);
+
+        public static event MoveAction OnMove;
+        
         private GameObject _playerObject;
         private Camera _gameCamera;
         private NavMeshAgent _navMeshAgent;
@@ -72,6 +76,7 @@ namespace Player
                     {
                         _navMeshAgent.SetPath(path);
                         SpawnNavIcon(worldPoint);
+                        OnMove?.Invoke(transform);
                     }
                     else
                     {

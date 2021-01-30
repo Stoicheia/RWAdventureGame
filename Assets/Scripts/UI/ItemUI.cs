@@ -46,7 +46,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         }
         itemRenderer.sprite = slotItem.item.InventorySprite;
         itemName.text = slotItem.item.ItemName;
-        itemQuantity.text = slotItem.quantity.ToString();
+        itemQuantity.text = slotItem.quantity == 1 ? "" : slotItem.quantity.ToString();
     }
 
     public void Display(InventorySlot toDisplay)
