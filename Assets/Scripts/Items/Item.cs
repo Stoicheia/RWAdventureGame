@@ -126,5 +126,5 @@ public class ItemInteractionPair
 public class ItemObjectInteractionPair
 {
     public InteractibleObject interactibleObject;
-    public ItemObjectInteraction interaction;
+    public List<ItemObjectInteraction> interactions;
 }

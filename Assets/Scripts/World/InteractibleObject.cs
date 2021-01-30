@@ -15,7 +15,8 @@ public class InteractibleObject : MonoBehaviour, IDropHandler
         {
             if (interactible.interactibleObject.objectName == objectName)
             {
-                interactible.interaction.Act(this);
+                foreach(var interaction in interactible.interactions)
+                    interaction.Act(this);
             }
         }
     }
