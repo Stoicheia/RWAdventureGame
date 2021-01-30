@@ -13,10 +13,19 @@ public class RegionalAudioManager : MonoBehaviour
     private ClickToMoveController player;
     [SerializeField] private List<Region> regions;
 
+    [SerializeField] private float playIntervalMin;
+    [SerializeField] private float playIntervalMax;
+
+    private float lastPlay;
+    private float nextPlay;
+    private Region activeRegion;
+
     private void Start()
     {
         player = FindObjectOfType<ClickToMoveController>();
         if(player==null) Debug.LogError("No player found.");
+        lastPlay = Time.time;
+        nextPlay = lastPlay + UnityEngine.Random.Range(playIntervalMin, playIntervalMax);
     }
 
     private void OnEnable()
@@ -31,11 +40,21 @@ public class RegionalAudioManager : MonoBehaviour
 
     public void StartNewAudio(Region r)
     {
+        activeRegion = r;
+        
         ambientSource.Stop();
-        ambientSource.clip = r.regionType.ambienceAudio;
+        ambientSource.clip = activeRegion.regionType.ambienceAudio;
         ambientSource.Play();
+    }
 
-        r.regionType.musicAudio.PlayRandom(musicSource);
+    private void Update()
+    {
+        print(nextPlay-Time.time);
+        if (!(Time.time >= nextPlay)) return;
+        if(activeRegion!=null)
+            activeRegion.regionType.musicAudio.PlayRandom(musicSource);
+        lastPlay = Time.time;
+        nextPlay = lastPlay + UnityEngine.Random.Range(playIntervalMin, playIntervalMax);
     }
 
     IEnumerator FadeInEffect(AudioSource source, float t)

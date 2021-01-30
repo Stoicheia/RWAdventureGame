@@ -684,8 +684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHumAfterSeconds: 1.5
   startYawnAfterSeconds: 10
-  humFrequency: 0.42
-  yawnFrequency: 0.4
+  humFrequency: 0.35
+  yawnFrequency: 0.35
 --- !u!114 &76204744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6610,6 +6610,8 @@ MonoBehaviour:
   regions:
   - {fileID: 1571971625}
   - {fileID: 1645454122}
+  playIntervalMin: 5
+  playIntervalMax: 40
 --- !u!1 &851219141
 GameObject:
   m_ObjectHideFlags: 0
