@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -69,7 +70,7 @@ public class BlackCover : MonoBehaviour
         if(toRemove!=null) inventory.DeleteItem(toRemove);
         foreach (var spawnable in spawning)
         {
-            Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation);
+            Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation, quaternion.identity);
         }
         source.PlayOneShot(toPlay);
         yield return new WaitForSeconds(toPlay.length + 0.1f);

@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InteractibleObject : MonoBehaviour, IDropHandler
+public class InteractibleObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public string objectName;
     public void OnDrop(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
     {
         ItemUI selectedItemUI = ItemDragHandler.from;
         Item selectedItem = selectedItemUI.DisplayedItem.item;
@@ -19,5 +24,10 @@ public class InteractibleObject : MonoBehaviour, IDropHandler
                     interaction.Act(this);
             }
         }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        
     }
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
+  m_Name: Fader
+  m_EditorClassIdentifier: 
+  itemToRemove: {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
+  removeInteractedObject: 1
+  objectsToSpawn:
+  - toSpawn: {fileID: 7403782371982985276, guid: 74dcc03891239cf41938c3b4eb0efec2, type: 3}
+    spawnLocation: {x: -1.39, y: 0.85, z: 0}
+  toPlay: {fileID: 8300000, guid: 056d0bc70a1172447b3355d713bd6a71, type: 3}

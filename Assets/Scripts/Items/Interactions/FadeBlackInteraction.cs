@@ -30,5 +30,5 @@ public class FadeBlackInteraction : ItemObjectInteraction
 public class Spawnable
 {
     public Transform toSpawn;
-    public Transform spawnLocation;
+    public Vector3 spawnLocation;
 }
