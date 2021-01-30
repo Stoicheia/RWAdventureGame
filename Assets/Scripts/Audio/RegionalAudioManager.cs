@@ -35,7 +35,7 @@ public class RegionalAudioManager : MonoBehaviour
         ambientSource.clip = r.regionType.ambienceAudio;
         ambientSource.Play();
 
-        r.regionType.musicAudio.PlayRandomLoop(musicSource);
+        r.regionType.musicAudio.PlayRandom(musicSource);
     }
 
     IEnumerator FadeInEffect(AudioSource source, float t)
