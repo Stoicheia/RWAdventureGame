@@ -47,7 +47,7 @@ namespace Player
                 return;
             }
 
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (Input.GetMouseButtonDown(0))
             {
                 if (!_handledClick)
                 {
