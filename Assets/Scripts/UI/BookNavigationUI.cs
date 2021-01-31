@@ -31,6 +31,12 @@ public class BookNavigationUI : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(NextFrame());
+    }
+
+    IEnumerator NextFrame()
+    {
+        yield return null;
         OpenStartingMenu();
     }
 

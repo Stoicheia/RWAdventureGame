@@ -12,7 +12,7 @@ public class FadeBlackInteraction : ItemObjectInteraction
     [SerializeField] private Item itemToRemove;
     [SerializeField] private bool removeInteractedObject;
     [SerializeField] private List<Spawnable> objectsToSpawn;
-    [SerializeField] private AudioClip toPlay;
+    [SerializeField] public AudioClip toPlay;
 
     public override void Act(InteractibleObject from)
     {

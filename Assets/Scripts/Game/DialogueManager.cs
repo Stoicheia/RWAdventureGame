@@ -13,4 +13,15 @@ public class DialogueManager : MonoBehaviour
         dialogueSource.PlayOneShot(dialogue.Audio);
         dialogueSubtitles.SetText(dialogue.Subtitles);
     }
+
+    public void PlayDialogueAfter(float t, DialogueLine d)
+    {
+        StartCoroutine(PlayAfterSequence(t,d));
+    }
+
+    IEnumerator PlayAfterSequence(float t, DialogueLine d)
+    {
+        yield return new WaitForSeconds(t);
+        PlayDialogue(d);
+    }
 }
