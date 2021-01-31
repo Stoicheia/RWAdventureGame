@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public DialogueSequence toPlay;
     public int currentPlayIndex;
 
-    private bool inDialogue;
+    public bool inDialogue;
 
     private ClickToMoveController player;
 
@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueSource.clip = dialogue.Audio;
         dialogueSource.Play();
-        dialogueSubtitles.SetText(dialogue.Subtitles);
+        dialogueSubtitles.SetText(dialogue.Subtitles.Replace("\r", ""));
         if (!inDialogue)
         {
             dialogueSubtitles.DeleteTextAfter(3.1f);
@@ -88,6 +88,7 @@ public class DialogueManager : MonoBehaviour
             }
             return;
         }
+        inDialogue = true;
         PlayDialogue(toPlay.lines[currentPlayIndex]);
         currentPlayIndex++;
     }
@@ -101,8 +102,7 @@ public class DialogueManager : MonoBehaviour
             memoryFilter.weight = 1;
         }
         
-        if(lines.lines.Count>1)
-            player.moveEnabled = false;
+        player.moveEnabled = false;
         currentPlayIndex = 0;
         toPlay = lines;
         inDialogue = true;
@@ -110,10 +110,10 @@ public class DialogueManager : MonoBehaviour
         PlayNext();
     }
 
-    void KillDialogue()
+    public void KillDialogue()
     {
         player.moveEnabled = true;
-        inDialogue = false;
+        StartCoroutine(TimeToExitDialogue(0.01f));
         memoryFilter.weight = 0;
         nextLineButton.gameObject.SetActive(false);
         dialogueSubtitles.DeleteText();
@@ -123,5 +123,12 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         PlayDialogue(d);
+    }
+
+    IEnumerator TimeToExitDialogue(float t)
+    {
+        yield return null;
+        yield return new WaitForSeconds(t);
+        inDialogue = false;
     }
 }

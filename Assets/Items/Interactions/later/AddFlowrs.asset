@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22817851f53db54e8c9576c813d61bb, type: 3}
-  m_Name: 4
+  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
+  m_Name: AddFlowrs
   m_EditorClassIdentifier: 
-  taskName: vege_bed
-  taskDescription: Tend to the vegetable bed.
+  toRemove: []
+  toAdd:
+  - {fileID: 11400000, guid: b59cc9b03e756ac4da5c5c7d9adf38cb, type: 2}

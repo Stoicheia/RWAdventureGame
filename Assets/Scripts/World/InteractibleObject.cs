@@ -16,9 +16,10 @@ public class InteractibleObject : MonoBehaviour
     protected int timesInteracted;
     [SerializeField] private DialogueSequence firstTimeDialogue;
     [SerializeField] private Item criticalItem;
-    [SerializeField] private DialogueSequence noItemFirstTimeDialogue;
+    [SerializeField] private DialogueSequence noItemDialogue;
     [SerializeField] private DialogueSequence otherTimeDialogue;
     [SerializeField] private AudioClip sfx;
+    [SerializeField] private List<AudioClip> playerNoises;
 
     private AudioSource objectAudio;
     private DialogueSystem dialogueSource;
@@ -38,19 +39,24 @@ public class InteractibleObject : MonoBehaviour
         InventoryUser[] players = FindObjectsOfType<InventoryUser>();
         if (players.Length>1) Debug.LogWarning("Multiple Players Foudn!");
         player = FindObjectsOfType<InventoryUser>()[0];
-        playerCol = player.GetComponent<Collider2D>();
+        playerCol = player.GetComponentInChildren<InteractibleObject>().GetComponent<Collider2D>();
         dialogueSource = FindObjectOfType<DialogueSystem>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) && myCol.Distance(playerCol).distance <= player.interactionRadius)
+        if (Input.GetMouseButtonUp(0) && ColDistance(myCol,playerCol) <= player.interactionRadius && !dialogueSource.InDialogue())
         {
             DetectHit();
         }
     }
 
-    void DetectHit()
+    float ColDistance(Collider2D c, Collider2D d)
+    {
+        return c == d ? 0 : c.Distance(d).distance;
+    }
+
+    protected virtual void DetectHit()
     {
         RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         InteractibleObject hitObj;
@@ -77,6 +83,7 @@ public class InteractibleObject : MonoBehaviour
                     {
                         foreach (var interactible in ica.successfulItemIneraction)
                         {
+                            if (interactible == null) continue;
                             if (interactible.interactibleObject.objectName == objectName)
                             {
                                 foreach(var interaction in interactible.interactions)
@@ -115,17 +122,25 @@ public class InteractibleObject : MonoBehaviour
 
     public virtual void InteractWithObject()
     {
-        print("s");
         if(sfx!=null)
             objectAudio.PlayOneShot(sfx);
+        if (playerNoises.Count > 0)
+        {
+            AudioSource s = player.GetComponent<Speaker>().Source;
+            if (s != null)
+            {
+                s.clip = playerNoises[UnityEngine.Random.Range(0, playerNoises.Count)];
+                s.Play();
+            }
+        }
 
         DialogueSequence dialogueToUse = timesInteracted <= 0 ? firstTimeDialogue : otherTimeDialogue;
 
-        if (timesInteracted <= 0 && !GlobalStats.instance.PlayerInventory.HasItem(criticalItem))
+        if (!GlobalStats.instance.PlayerInventory.HasItem(criticalItem))
         {
-            dialogueToUse = noItemFirstTimeDialogue;
+            dialogueToUse = noItemDialogue;
         }
-        
+
         if(dialogueToUse!=null)
             dialogueSource.SetDialogue(dialogueToUse);
 

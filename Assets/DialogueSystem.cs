@@ -14,7 +14,7 @@ public class DialogueSystem : MonoBehaviour
 
 
     public void SetDialogue(DialogueSequence sequence)
-    { 
+    {
         dialogueSource.EnableDialogue(sequence);
     }
 
@@ -27,6 +27,11 @@ public class DialogueSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(f);
         dialogueSource.EnableDialogue(s);
+    }
+
+    public bool InDialogue()
+    {
+        return dialogueSource.inDialogue;
     }
     
 }

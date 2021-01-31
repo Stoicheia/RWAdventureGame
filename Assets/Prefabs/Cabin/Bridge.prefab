@@ -324,9 +324,10 @@ MonoBehaviour:
   objectName: bridge
   firstTimeDialogue: {fileID: 0}
   criticalItem: {fileID: 0}
-  noItemFirstTimeDialogue: {fileID: 0}
+  noItemDialogue: {fileID: 0}
   otherTimeDialogue: {fileID: 0}
-  sfx: {fileID: 8300000, guid: d301a656fab2e2e4fbe6e8af152d52ab, type: 3}
+  sfx: {fileID: 0}
+  playerNoises: []
   active: {fileID: 5672730349991385346}
   inactive: {fileID: 9191809639347401493}
   bridgeFirstDia: {fileID: 11400000, guid: f1f2481c0e102b3458705411d5984c68, type: 2}

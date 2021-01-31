@@ -17,7 +17,21 @@ MonoBehaviour:
   description: "These things are sharper than they look! Almost cut my thumb open
     with them. He would have gone through a whole safety drill if he\u2019d seen
     me do that."
-  itemInteractions: []
+  itemInteractions:
+  - interactibleObject: {fileID: 8492834170157874388, guid: 26bd769474ab2de4fa815d4dc74bb365, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: fe0ed4fd67d816e42bfed88834da5961, type: 2}
+    - {fileID: 11400000, guid: dd7edf6ec275d394c84de9250496a7c2, type: 2}
+    - {fileID: 11400000, guid: ee461b6337e21894aa72ff6a138f9def, type: 2}
+  - interactibleObject: {fileID: 1986310807697963908, guid: aefc1b8def6513f4b90ed18e8754744e, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: 7b9c722a5a0b10a47b37ccc614421f40, type: 2}
+  - interactibleObject: {fileID: 5705570583089823294, guid: 782f84ae1744b1e4c8cd1a741fe45c9f, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: 7b9c722a5a0b10a47b37ccc614421f40, type: 2}
+    - {fileID: 11400000, guid: c94cb1c7129c8e849aa23607bdd136b9, type: 2}
+    - {fileID: 11400000, guid: d217db27593a7244695b788bb52b9444, type: 2}
+  itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 62d69bd6199f39b4b9e63fd3a82008de, type: 3}
   sketchSprite: {fileID: 21300000, guid: b0d071c592ae9be438715630385f9ba1, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22817851f53db54e8c9576c813d61bb, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  taskName: water_beds
-  taskDescription: Water the garden beds.
+  taskName: flower_beds
+  taskDescription: Tend to the flower bed.

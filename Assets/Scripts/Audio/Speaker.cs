@@ -8,6 +8,7 @@ using UnityEngine.Audio;
 public class Speaker : MonoBehaviour
 {
     private AudioSource source;
+    public AudioSource Source => source;
     [SerializeField] private List<AudioClipArray> voiceLines;
 
     private Dictionary<string, AudioClipArray> _voiceLineMap;

@@ -16,7 +16,15 @@ MonoBehaviour:
   itemName: Fertiliser
   description: "Why does fertilizer have to be so heavy and smell weird? I knew I
     shouldn\u2019t have worn my favorite hoodie.\r"
-  itemInteractions: []
+  itemInteractions:
+  - interactibleObject: {fileID: 1986310807697963908, guid: aefc1b8def6513f4b90ed18e8754744e, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: f2a967eae178d654d83e3a3f1fc7fa50, type: 2}
+  - interactibleObject: {fileID: 788464404846533650, guid: b9e57c6af516cf24fbcc69d7d2eb4b73, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: f2a967eae178d654d83e3a3f1fc7fa50, type: 2}
+    - {fileID: 11400000, guid: 97ea0e05b40315245946c162f42f8c05, type: 2}
+  itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 5176513e79e5d374d8edec594ad7bc69, type: 3}
   sketchSprite: {fileID: 21300000, guid: fc204c9f429a0a347a8edc1530f90282, type: 3}

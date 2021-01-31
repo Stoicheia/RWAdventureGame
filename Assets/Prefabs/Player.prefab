@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5914197051319059733}
   - component: {fileID: 5914197051319059735}
   - component: {fileID: 5914197051319059732}
+  - component: {fileID: 259264686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -373,6 +374,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &259264686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914197051319059741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08da6b90e983d0842a96b692913b82c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations: {fileID: 0}
 --- !u!1 &5914197051541793749
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +402,7 @@ GameObject:
   - component: {fileID: 5914197051541793747}
   - component: {fileID: 5914197051541793744}
   - component: {fileID: 5914197051541793746}
+  - component: {fileID: 399270921}
   m_Layer: 0
   m_Name: PlayerFeet
   m_TagString: Untagged
@@ -592,6 +607,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756fd6abda9c4604b8ebd23950942197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &399270921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914197051541793749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1a03ac9a92a3d49b213f30290ee269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: player
+  firstTimeDialogue: {fileID: 0}
+  criticalItem: {fileID: 0}
+  noItemDialogue: {fileID: 0}
+  otherTimeDialogue: {fileID: 0}
+  sfx: {fileID: 0}
+  playerNoises: []
 --- !u!1 &5914197052113272990
 GameObject:
   m_ObjectHideFlags: 0

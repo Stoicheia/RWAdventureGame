@@ -17,13 +17,13 @@ public class BlackCover : MonoBehaviour
     private void Awake()
     {
         cover = GetComponent<Image>();
-        source = GetComponent<AudioSource>();
         cover.color = new Color(1, 1, 1, 0);
     }
 
     private void Start()
     {
         inventory = GlobalStats.instance.PlayerInventory;
+        source = FindObjectOfType<ClickToMoveController>().GetComponent<Speaker>().Source;
     }
 
     public void FadeIn()

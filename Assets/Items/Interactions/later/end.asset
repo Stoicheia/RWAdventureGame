@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
+  m_Name: end
+  m_EditorClassIdentifier: 
+  itemToRemove: {fileID: 0}
+  removeInteractedObject: 1
+  objectsToSpawn: []
+  swapObject: 0
+  toPlay: {fileID: 8300000, guid: 5216f589db0fc3d4e85d141c6700ae70, type: 3}
+  toPlayAfter: {fileID: 8300000, guid: 2f00737ec89e34343a5cf8d028a7a994, type: 3}
+  newPlayerSprite: {fileID: 0}

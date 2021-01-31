@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22817851f53db54e8c9576c813d61bb, type: 3}
-  m_Name: 2a
+  m_Script: {fileID: 11500000, guid: 99ad2d702c24801469f8131a4b759c1e, type: 3}
+  m_Name: ClipBush
   m_EditorClassIdentifier: 
-  taskName: tend
-  taskDescription: Tend to the garden.
+  audio:
+  - {fileID: 8300000, guid: 1659f30292d4e15468312ff70275604f, type: 3}

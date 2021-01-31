@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickableItem : InteractibleObject
 {
     [SerializeField] private Item associatedItem;
+    [SerializeField] private DialogueSequence associatedDialogue;
     [SerializeField] private bool destroyWorldObject;
 
     public override void InteractWithObject()
@@ -12,6 +13,8 @@ public class PickableItem : InteractibleObject
         base.InteractWithObject();
         
         GlobalStats.instance.PlayerInventory.AddItem(associatedItem);
+        if(associatedDialogue!=null) 
+            FindObjectOfType<DialogueSystem>().SetDialogue(associatedDialogue);
         if (destroyWorldObject)
         {
             Destroy(gameObject);
