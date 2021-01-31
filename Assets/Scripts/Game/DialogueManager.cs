@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,11 +17,18 @@ public class DialogueManager : MonoBehaviour
 
     private bool inDialogue;
 
+    private ClickToMoveController player;
+
     private void Awake()
     {
         currentPlayIndex = 0;
         inDialogue = false;
         toPlay = new List<DialogueLine>();
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<ClickToMoveController>();
     }
 
     private void OnEnable()
@@ -63,6 +71,7 @@ public class DialogueManager : MonoBehaviour
     public void EnableDialogue(List<DialogueLine> lines)
     {
         if (inDialogue) return;
+        player.moveEnabled = false;
         currentPlayIndex = 0;
         toPlay = lines;
         inDialogue = true;
@@ -72,6 +81,7 @@ public class DialogueManager : MonoBehaviour
 
     void KillDialogue()
     {
+        player.moveEnabled = true;
         inDialogue = false;
         nextLineButton.gameObject.SetActive(false);
         dialogueSubtitles.DeleteText();

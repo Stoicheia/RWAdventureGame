@@ -36,6 +36,8 @@ namespace Player
 
         private bool enRoute;
 
+        public bool moveEnabled;
+
         public bool EnRoute
         {
             get => enRoute;
@@ -46,6 +48,7 @@ namespace Player
             navIconDismissDistance = 0.2f;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _handledClick = false;
+            moveEnabled = true;
         }
 
         // Start is called before the first frame update
@@ -80,7 +83,7 @@ namespace Player
                 return;
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && moveEnabled)
             {
                 if (!_handledClick)
                 {
