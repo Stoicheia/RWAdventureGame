@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_49
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 3ba287dfae04b5d4093c74aefdd7edd8, type: 3}
-  subtitles: "You've taken care of a plant\r\nbefore, so this should be a walk in\r\nthe
-    park. Right?\r"
+  audio: {fileID: 8300000, guid: d05c393de25205045ad1473dfda0491b, type: 3}
+  subtitles: "Narrator:\nYou've taken care of a plant\r before, so this should be
+    a walk in\r the park. Right?\r"

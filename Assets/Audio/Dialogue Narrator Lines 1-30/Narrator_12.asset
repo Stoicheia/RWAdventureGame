@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_12
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 1475916fe4044144fb14a76d480183ed, type: 3}
-  subtitles: "(Sigh) Just as beautiful as I remember.\r"
+  subtitles: "Narrator:\n(Sigh) Just as beautiful as I remember.\r"

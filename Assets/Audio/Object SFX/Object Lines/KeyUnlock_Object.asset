@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: KeyUnlock_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 20a986b7c1d245b4489d23841e6f10f4, type: 3}
-  subtitles: (Key used)
+  subtitles: 

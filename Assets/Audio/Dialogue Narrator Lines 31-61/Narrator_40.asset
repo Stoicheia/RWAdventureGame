@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_40
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 4f9c383eebc15164ea10ce1a24c27b80, type: 3}
-  subtitles: "So, I know it's outta the blue for\r me to do this kind of stuff. But
-    I\r wanted to get you something for\r these boots you got me. But I also\r got
-    you this as a thank you for\r always being there for me."
+  audio: {fileID: 8300000, guid: 16b0fbf28e60b8e4f9a33a8059dd1adc, type: 3}
+  subtitles: "Narrator:\nSo, I know it's outta the blue for\r me to do this kind
+    of stuff. But I\r wanted to get you something for\r these boots you got me. But
+    I also\r got you this as a thank you for\r always being there for me."

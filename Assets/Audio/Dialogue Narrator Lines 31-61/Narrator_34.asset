@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_34
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: ffd534dd7f5a1f047b5c33bdf1b15795, type: 3}
-  subtitles: "Well done! I'm more amazed you\r\ndidn't fall in. Now what?\r"
+  audio: {fileID: 8300000, guid: 9360684be4710ea47b439881d5e072aa, type: 3}
+  subtitles: "Narrator:\nWell done! I'm more amazed you\r didn't fall in. Now what?\r"

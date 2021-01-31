@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_19
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: b881df8ca7a841c4faade70d14eff052, type: 3}
-  subtitles: "(Hearty laughter) All jokes aside though, it is good to see you. The
-    only conversation I get out there are the birds squawking.\r"
+  subtitles: "Narrator:\n(Hearty laughter) All jokes aside though, it is good to
+    see you. The only conversation I get out there are the birds squawking.\r"

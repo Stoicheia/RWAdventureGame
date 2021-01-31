@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Satisfied_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 016d1bdd70423fd40812bbe2d8b37915, type: 3}
-  subtitles: Ah!
+  subtitles: 

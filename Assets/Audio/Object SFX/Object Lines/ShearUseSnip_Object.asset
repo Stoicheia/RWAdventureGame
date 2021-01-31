@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShearUseSnip_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 5216f589db0fc3d4e85d141c6700ae70, type: 3}
-  subtitles: (Snip at flowers)
+  subtitles: 

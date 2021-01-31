@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_05
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: f4dcad515d7efa84b9cfa9f7321c3d63, type: 3}
-  subtitles: "You're so mean to me. But alright, I give.\r"
+  subtitles: "Narrator:\nYou're so mean to me. But alright, I give.\r"

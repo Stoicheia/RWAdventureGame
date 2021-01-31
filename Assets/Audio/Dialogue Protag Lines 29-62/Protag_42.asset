@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Protag_42
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "That I could even inspire you\r surprises me. Ironic too.\r"
+  subtitles: "Protagonist:\nThat I could even inspire you\r surprises me. Ironic
+    too.\r"

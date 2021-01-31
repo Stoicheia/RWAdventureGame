@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_16
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 2010e77b8cef925409017e89e393aa5d, type: 3}
-  subtitles: "Hey!\r"
+  subtitles: "Narrator:\nHey!\r"

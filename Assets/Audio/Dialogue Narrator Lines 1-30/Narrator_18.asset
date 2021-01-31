@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_18
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: aa96ae24f270feb4a8fb1038945af19a, type: 3}
-  subtitles: "Seriously?! It hasn't been long since the last visit. How'd it come
-    free?\r"
+  subtitles: "Narrator:\nSeriously?! It hasn't been long since the last visit. How'd
+    it come free?\r"

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: OpenPresent_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 87e93b0e15362e242997f69ae44578d1, type: 3}
-  subtitles: (Opens present)
+  subtitles: 

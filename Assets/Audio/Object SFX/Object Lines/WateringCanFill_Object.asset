@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WateringCanFill_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 31337767bea5a704d99993129982b116, type: 3}
-  subtitles: (Water splashes)
+  subtitles: 

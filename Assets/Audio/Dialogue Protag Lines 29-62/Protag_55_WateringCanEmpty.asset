@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Protag_55_WateringCanEmpty
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: Alright, just water now.
+  subtitles: 'Protagonist:
+
+    Alright, just water now.'

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Protag_30_Hammer
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Maybe the shed? Didn't get the time\r to have a look this morning."
+  subtitles: "Protagonist:\nMaybe the shed? Didn't get the time\r to have a look
+    this morning."

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bed_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 773385bbbebfe6540920fcdd87014fce, type: 3}
-  subtitles: (Bed creaking)
+  subtitles: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_17
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: f592dde6539fd6e43bfa7bd2139ccefe, type: 3}
-  subtitles: "Too deep for your chicken legs to cross. That's what the bridge is
-    for.\r"
+  subtitles: "Narrator:\nToo deep for your chicken legs to cross. That's what the
+    bridge is for.\r"

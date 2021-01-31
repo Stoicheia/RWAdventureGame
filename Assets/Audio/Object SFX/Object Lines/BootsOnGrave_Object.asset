@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BootsOnGrave_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: cdba8a8e7d28e544591b53031957d9c6, type: 3}
-  subtitles: (Place boots)
+  subtitles: 

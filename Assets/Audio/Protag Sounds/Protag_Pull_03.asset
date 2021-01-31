@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Pull_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 1199dd3640660354eb7138566a407238, type: 3}
-  subtitles: Rah!
+  subtitles: 

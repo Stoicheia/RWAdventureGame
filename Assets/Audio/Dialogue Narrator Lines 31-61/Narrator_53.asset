@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_53
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: b255b1be22f71ec489f838be6d590712, type: 3}
-  subtitles: 'That should be more than enough
+  audio: {fileID: 8300000, guid: 57bc7889900e80e4fbe76f230a21cf39, type: 3}
+  subtitles: 'Narrator:
 
-    water, don''t spill any of it!'
+    That should be more than enough water, don''t spill
+    any of it!'

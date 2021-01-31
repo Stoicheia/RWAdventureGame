@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_41
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 8b9ab276be6674a48838209f94e36775, type: 3}
-  subtitles: 'C''mon, don''t shoot me down like
+  audio: {fileID: 8300000, guid: fc9a907f68f3e6d40a07f00444e412c2, type: 3}
+  subtitles: 'Narrator:
 
-    that.'
+    C''mon, don''t shoot me down like that.'

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Narrator_29
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 7878e8f02e4a00e4e80e79748df28036, type: 3}
-  subtitles: 'C''mon, you just need the hammer now. Where could it be?
+  subtitles: 'Narrator:
+
+    C''mon, you just need the hammer now. Where could it
+    be?
 
 '

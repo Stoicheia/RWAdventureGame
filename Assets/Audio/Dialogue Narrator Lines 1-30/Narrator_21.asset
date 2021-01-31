@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_21
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 47615b5b2117474448e6b1b3f2dd63cc, type: 3}
-  subtitles: "I don't make the rules, city slicker.\r"
+  subtitles: "Narrator:\nI don't make the rules, city slicker.\r"

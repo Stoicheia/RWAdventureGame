@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Yawn_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: a0aa3e65beb76b84bbcb673d5b6c9643, type: 3}
-  subtitles: (Yawn)
+  subtitles: 

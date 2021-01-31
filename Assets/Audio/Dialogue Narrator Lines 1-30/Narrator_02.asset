@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Narrator_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: ac22d6086ff5bdd43a16cb1c30843efa, type: 3}
-  subtitles: I dunno about you, but I wouldn't wanna walk out there barefoot.
+  subtitles: 'Narrator:
+
+    I dunno about you, but I wouldn''t wanna walk out there
+    barefoot.'

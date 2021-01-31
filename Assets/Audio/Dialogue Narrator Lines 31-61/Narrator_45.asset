@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_45
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 6da6dce79d6844540894a841f65dd855, type: 3}
-  subtitles: "Of course! What kind of friend\r\nwould I be if I didn't?\r"
+  audio: {fileID: 8300000, guid: 7abd638f2839a6245a108741a4292087, type: 3}
+  subtitles: "Narrator:\nOf course! What kind of friend\r would I be if I didn't?\r"

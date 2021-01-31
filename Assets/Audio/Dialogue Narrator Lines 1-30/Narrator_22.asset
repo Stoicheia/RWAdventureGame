@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_22
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 3c26dfdfb9ae26540ac32e12a3cbf7fc, type: 3}
-  subtitles: "Oh it's nothing. Just some work I did at the cabin.\r"
+  subtitles: "Narrator:\nOh it's nothing. Just some work I did at the cabin.\r"

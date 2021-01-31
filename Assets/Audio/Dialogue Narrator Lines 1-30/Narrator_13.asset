@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_13
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 7726a6233b2b12c4f9f134c72ca58801, type: 3}
-  subtitles: "So, how's the boots on you?\r"
+  subtitles: "Narrator:\nSo, how's the boots on you?\r"

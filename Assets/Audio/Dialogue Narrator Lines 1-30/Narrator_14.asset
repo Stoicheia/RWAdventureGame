@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_14
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 76fb9779389c8b348bf916cdf21aa283, type: 3}
-  subtitles: "Heh, would you rather go barefoot, Tarzan?\r"
+  subtitles: "Narrator:\nHeh, would you rather go barefoot, Tarzan?\r"

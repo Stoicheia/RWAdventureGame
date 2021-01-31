@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_27
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 7811983c6857e8f41a61e066ebb24347, type: 3}
-  subtitles: "I think there was some rope nearby!\r"
+  subtitles: "Narrator:\nI think there was some rope nearby!\r"

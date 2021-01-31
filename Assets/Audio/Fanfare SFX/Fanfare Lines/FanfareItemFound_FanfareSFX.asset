@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FanfareItemFound_FanfareSFX
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 519b8e7c9b7a35f4e8aa0b2716c57c9c, type: 3}
-  subtitles: (You found an item!)
+  subtitles: 

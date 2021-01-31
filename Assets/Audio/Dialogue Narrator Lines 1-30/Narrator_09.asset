@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_09
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 757879372905b584195282e5e7900224, type: 3}
-  subtitles: "Nope! They're so cool, I'm gonna wear them everywhere I go!\r"
+  subtitles: "Narrator:\nNope! They're so cool, I'm gonna wear them everywhere I
+    go!\r"

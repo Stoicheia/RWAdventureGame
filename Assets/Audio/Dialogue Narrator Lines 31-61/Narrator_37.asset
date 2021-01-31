@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_37
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 54cbde0511dd43343bddc603679b6c64, type: 3}
-  subtitles: "Alright, alright. Just-just wait\r\nhere, yeah?\r"
+  audio: {fileID: 8300000, guid: 4224a1c0e037092418f6c9f5057ebf1c, type: 3}
+  subtitles: "Narrator:\nAlright, alright. Just-just wait\r here, yeah?\r"

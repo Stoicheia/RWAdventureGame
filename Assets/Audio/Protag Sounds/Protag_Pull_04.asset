@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Pull_04
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 50594f16a982d304993f90ca2044bcaa, type: 3}
-  subtitles: Heugh!
+  subtitles: 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_51
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "I could fill up the watering can\r here!\r"
+  subtitles: "Protagonist:\nI could fill up the watering can\r here!\r"

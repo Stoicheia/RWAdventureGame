@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Narrator_40_2
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 96bf2827b5470b449a90d5fe89b076eb, type: 3}
-  subtitles: "I wanted the plant to show just how\r far I've come thanks to you.
-    I and\r the plant have gotten to grow a lot\r because of you...So uh, thank you.\r
-    For it all.\r"
+  subtitles: "Narrator:\nI wanted the plant to show just how\r far I've come thanks
+    to you. I and\r the plant have gotten to grow a lot\r because of you...So uh,
+    thank you.\r For it all.\r"

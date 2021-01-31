@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_20
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: b65db66acb6e2cd49ba0331cf1a4b617, type: 3}
-  subtitles: "Nah, I'm more of a Snow White.\r (Chuckle)"
+  subtitles: "Narrator:\nNah, I'm more of a Snow White.\r (Chuckle)"

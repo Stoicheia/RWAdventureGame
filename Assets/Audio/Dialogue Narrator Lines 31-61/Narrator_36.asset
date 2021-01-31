@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_36
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: f42333660fbbe2445a90e3525b3fd825, type: 3}
-  subtitles: "Hey! I'll have you know I am a\r\ncapable individual.\r"
+  audio: {fileID: 8300000, guid: 83b111f0788654c44978ea5965452cb9, type: 3}
+  subtitles: "Narrator:\nHey! I'll have you know I am a\r capable individual.\r"

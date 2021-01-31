@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_39
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 3967bedfd7a532644bbd53e9d701eae9, type: 3}
-  subtitles: Uh, y-yeah of course! Uh...Here
+  audio: {fileID: 8300000, guid: 08276399933c306449b842f8c5c223a3, type: 3}
+  subtitles: 'Narrator:
+
+    Uh, y-yeah of course! Uh...Here'

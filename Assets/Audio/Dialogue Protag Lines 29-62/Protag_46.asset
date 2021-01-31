@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Protag_46
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: Know me so well, don't you?
+  subtitles: 'Protagonist:
+
+    Know me so well, don''t you?'

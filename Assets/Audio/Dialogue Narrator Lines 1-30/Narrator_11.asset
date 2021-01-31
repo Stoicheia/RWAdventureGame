@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_11
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 4d0323702b2a2f24e85cb45c6cd23293, type: 3}
-  subtitles: "Now that's more like it! Get to it, city slicker.\r"
+  subtitles: "Narrator:\nNow that's more like it! Get to it, city slicker.\r"

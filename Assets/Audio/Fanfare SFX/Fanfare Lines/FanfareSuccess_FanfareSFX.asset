@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FanfareSuccess_FanfareSFX
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 676b01e7d1423784785f2be223dd3be8, type: 3}
-  subtitles: (Success!)
+  subtitles: 

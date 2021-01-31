@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Protag_59
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Better get some flowers from the\r garden, blue should do.\r"
+  subtitles: "Protagonist:\nBetter get some flowers from the\r garden, blue should
+    do.\r"

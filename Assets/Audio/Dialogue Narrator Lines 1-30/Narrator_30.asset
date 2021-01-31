@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_30
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 76c0595ea8abedc43b0ef77aa2f54cfe, type: 3}
-  subtitles: "(Sneeze) Sorry, seeing all this dust makes me sneeze. You work hard
-    to keep a place clean...\r"
+  subtitles: "Narrator:\n(Sneeze) Sorry, seeing all this dust makes me sneeze. You
+    work hard to keep a place clean...\r"

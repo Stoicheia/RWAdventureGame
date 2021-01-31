@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_04
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 1f7cd3aa1aa98154eacd31002345999e, type: 3}
-  subtitles: "Nuh-uh, what happens if it's something embarrassing?\r"
+  subtitles: "Narrator:\nNuh-uh, what happens if it's something embarrassing?\r"

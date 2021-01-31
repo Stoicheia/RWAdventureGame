@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CabingDoorOpen_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: bd65a5cc36659e84880b3016e6532835, type: 3}
-  subtitles: (Door opening)
+  subtitles: 

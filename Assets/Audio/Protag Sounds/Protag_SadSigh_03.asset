@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_SadSigh_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 27bcfcc91bacc2c46b0cfd4e3ac03602, type: 3}
-  subtitles: (Sigh)
+  subtitles: 

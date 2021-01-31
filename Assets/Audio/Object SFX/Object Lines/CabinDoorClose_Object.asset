@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CabinDoorClose_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 79436c3183007c14088901a744a86155, type: 3}
-  subtitles: (Door closing)
+  subtitles: 

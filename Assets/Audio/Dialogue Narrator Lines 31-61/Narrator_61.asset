@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_61
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: f12bea2f79313d041b7d4ccc354f5caf, type: 3}
-  subtitles: 'Sounds good, city slicker. You''re
+  audio: {fileID: 8300000, guid: aea4879c81c8e6645996356259d8f1f3, type: 3}
+  subtitles: 'Narrator:
 
-    gonna be alright. Thank you.'
+    Sounds good, city slicker. You''re gonna be alright.
+    Thank you.'

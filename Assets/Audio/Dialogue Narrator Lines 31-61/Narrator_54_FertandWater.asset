@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_54_FertandWater
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 577727218c8cdc9408b03f4f9d399a5d, type: 3}
-  subtitles: 'Looks like we''re good to go, city
+  audio: {fileID: 8300000, guid: 24dfef67c68655e47989b82b290c265a, type: 3}
+  subtitles: 'Narrator:
 
-    slicker!'
+    Looks like we''re good to go, city slicker!'

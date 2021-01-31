@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FlowersPickUp_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: c38a2046cc7223841a97945bac908984, type: 3}
-  subtitles: (Picks up flowers)
+  subtitles: 

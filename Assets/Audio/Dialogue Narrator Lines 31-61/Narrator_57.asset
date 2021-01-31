@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_57
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: ffb2aef6c0d75f341bd2869418a9117c, type: 3}
-  subtitles: "Good work! That'll keep them going\r\nfor a little while. You're a\r\nnatural
-    after all.\r"
+  audio: {fileID: 8300000, guid: 6ad817b22060b874a9ee0f5ca207801a, type: 3}
+  subtitles: "Narrator:\nGood work! That'll keep them going\r for a little while.
+    You're a\r natural after all.\r"

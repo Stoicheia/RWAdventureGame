@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Narrator_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 62c4f232cbb3f794fa3a221d7f142230, type: 3}
-  subtitles: Agreed, there'll be a bit to do tomorrow!
+  subtitles: 'Narrator:
+
+    Agreed, there''ll be a bit to do tomorrow!'

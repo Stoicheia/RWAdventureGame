@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_44
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 719c11701c31be0408c9c88a1a84a599, type: 3}
-  subtitles: "That's why I got you a succulent.\r"
+  audio: {fileID: 8300000, guid: 759b2f60f842ceb41b354cea5cc6d7bd, type: 3}
+  subtitles: "Narrator:\nThat's why I got you a succulent.\r"

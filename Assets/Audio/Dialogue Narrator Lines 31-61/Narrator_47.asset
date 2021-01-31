@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_47
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: bdfa674dd1bfec14684536d62dce67f7, type: 3}
-  subtitles: Hmmm...
+  audio: {fileID: 8300000, guid: 0ddb5d7cea2a09d418f2d7adab91cbee, type: 3}
+  subtitles: 'Narrator:
+
+    Hmmm...'

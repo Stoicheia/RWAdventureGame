@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShedDoorLocked_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 48136e4f0e4bed846954a1da81c8e317, type: 3}
-  subtitles: (Door won't open)
+  subtitles: 
