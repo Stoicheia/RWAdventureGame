@@ -5,15 +5,26 @@ using Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider2D), typeof(AudioSource))]
 public class InteractibleObject : MonoBehaviour
 {
     public string objectName;
     private InventoryUser player;
 
-    
-    
+    private int timesInteracted;
+    [SerializeField] private DialogueSequence firstTimeDialogue;
+    [SerializeField] private DialogueSequence otherTimeDialogue;
+    [SerializeField] private AudioClip sfx;
+
+    private AudioSource objectAudio;
+
     private Camera camera;
+
+    private void Awake()
+    {
+        timesInteracted = 0;
+        objectAudio = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -42,7 +53,11 @@ public class InteractibleObject : MonoBehaviour
             {
                 print("up");
                 ItemUI selectedItemUI = ItemDragHandler.from;
-                if (selectedItemUI == null) return;
+                if (selectedItemUI == null)
+                {
+                    InteractWithObject();
+                    return;
+                }
                 Item selectedItem = selectedItemUI.DisplayedItem.item;
                 if (selectedItem == null) return;
 
@@ -62,7 +77,11 @@ public class InteractibleObject : MonoBehaviour
 
     public virtual void InteractWithObject()
     {
-        print("interacted with " + name);
+        
+        objectAudio.PlayOneShot(sfx);
+        
+        
+        timesInteracted++;
     }
     
 }
