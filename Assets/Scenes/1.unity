@@ -515,8 +515,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 1532273375}
-  itemName: {fileID: 800134966}
   itemQuantity: {fileID: 1507841180}
+  transparentImage: {fileID: 0}
 --- !u!114 &66274909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,8 +1243,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 938098488}
-  itemName: {fileID: 706872679}
   itemQuantity: {fileID: 1396341017}
+  transparentImage: {fileID: 0}
 --- !u!114 &238190042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,8 +1396,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 2069262457}
-  itemName: {fileID: 1713335500}
   itemQuantity: {fileID: 1213691543}
+  transparentImage: {fileID: 0}
 --- !u!114 &266689098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,6 +1731,8 @@ MonoBehaviour:
   description: {fileID: 1250749657}
   itemName: {fileID: 627590491}
   itemImage: {fileID: 170188330}
+  highlighter: {fileID: 0}
+  transparentHighlighter: {fileID: 0}
 --- !u!114 &334585394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,8 +2308,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 122494517}
-  itemName: {fileID: 1912146061}
   itemQuantity: {fileID: 686512715}
+  transparentImage: {fileID: 0}
 --- !u!114 &456219831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2668,8 +2670,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 1676941493}
-  itemName: {fileID: 1276679123}
   itemQuantity: {fileID: 525398483}
+  transparentImage: {fileID: 0}
 --- !u!114 &501020291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4469,8 +4471,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 529081012}
-  itemName: {fileID: 931900987}
   itemQuantity: {fileID: 1635255515}
+  transparentImage: {fileID: 0}
 --- !u!114 &742894783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4756,8 +4758,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 1140827956}
-  itemName: {fileID: 514675980}
   itemQuantity: {fileID: 2122796134}
+  transparentImage: {fileID: 0}
 --- !u!114 &799836515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6414,8 +6416,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 979802841}
-  itemName: {fileID: 1693211813}
   itemQuantity: {fileID: 1093746606}
+  transparentImage: {fileID: 0}
 --- !u!114 &997258893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6567,8 +6569,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 470546827}
-  itemName: {fileID: 283522916}
   itemQuantity: {fileID: 821101961}
+  transparentImage: {fileID: 0}
 --- !u!114 &1013021875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8146,6 +8148,7 @@ MonoBehaviour:
   - button: {fileID: 1104894135}
     menu: {fileID: 2012959217}
   startingMenu: {fileID: 334585391}
+  startingButton: {fileID: 0}
 --- !u!1 &1188144185
 GameObject:
   m_ObjectHideFlags: 0
@@ -8471,8 +8474,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 236714384}
-  itemName: {fileID: 1028248725}
   itemQuantity: {fileID: 2040021487}
+  transparentImage: {fileID: 0}
 --- !u!114 &1194587589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9790,8 +9793,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 725561394}
-  itemName: {fileID: 1193947365}
   itemQuantity: {fileID: 689532130}
+  transparentImage: {fileID: 0}
 --- !u!114 &1296473001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10177,6 +10180,8 @@ MonoBehaviour:
   slideDistance: 500
   slideDuration: 1
   slideButton: {fileID: 1019353779}
+  taskThing: {fileID: 0}
+  navUI: {fileID: 0}
 --- !u!1 &1396341015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10502,8 +10507,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 1016524931}
-  itemName: {fileID: 1199695039}
   itemQuantity: {fileID: 1494914590}
+  transparentImage: {fileID: 0}
 --- !u!114 &1421076097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11424,8 +11429,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 113295615}
-  itemName: {fileID: 1158089054}
   itemQuantity: {fileID: 1111548652}
+  transparentImage: {fileID: 0}
 --- !u!114 &1593017915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11920,8 +11925,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 501266918}
-  itemName: {fileID: 25883737}
   itemQuantity: {fileID: 2126188824}
+  transparentImage: {fileID: 0}
 --- !u!114 &1685209324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13342,8 +13347,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 1282320815}
-  itemName: {fileID: 1737983485}
   itemQuantity: {fileID: 765816511}
+  transparentImage: {fileID: 0}
 --- !u!114 &1829869075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13495,8 +13500,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 162769764}
-  itemName: {fileID: 1037775010}
   itemQuantity: {fileID: 1195233357}
+  transparentImage: {fileID: 0}
 --- !u!114 &1848926319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14481,8 +14486,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 610482284}
-  itemName: {fileID: 583856564}
   itemQuantity: {fileID: 1104106209}
+  transparentImage: {fileID: 0}
 --- !u!114 &2074393456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15041,8 +15046,8 @@ MonoBehaviour:
     quantity: 0
   SlotID: 0
   itemRenderer: {fileID: 2077453126}
-  itemName: {fileID: 423037081}
   itemQuantity: {fileID: 653233349}
+  transparentImage: {fileID: 0}
 --- !u!114 &2134343041
 MonoBehaviour:
   m_ObjectHideFlags: 0
