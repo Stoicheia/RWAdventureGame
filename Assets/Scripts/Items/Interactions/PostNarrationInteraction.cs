@@ -7,12 +7,12 @@ public class PostNarrationInteraction : ItemObjectInteraction
 {
     [SerializeField] private FadeBlackInteraction afterThis;
 
-    [SerializeField] private DialogueLine narration;
-    private DialogueManager dialogueSource;
+    [SerializeField] private DialogueSequence narration;
+    private DialogueSystem dialogueSource;
     public override void Act(InteractibleObject @from)
     {
-        dialogueSource = FindObjectOfType<DialogueManager>();
+        dialogueSource = FindObjectOfType<DialogueSystem>();
         float toWait = 1.5f + afterThis.toPlay.length;
-        dialogueSource.PlayDialogueAfter(toWait, narration);
+        dialogueSource.SetDialogue(narration);
     }
 }

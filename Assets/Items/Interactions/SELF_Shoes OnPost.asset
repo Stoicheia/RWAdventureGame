@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SELF_Shoes OnPost
   m_EditorClassIdentifier: 
   afterThis: {fileID: 11400000, guid: fa41e6f80248b924eacc4306fde99a8d, type: 2}
-  narration: {fileID: 0}
+  narration: {fileID: 11400000, guid: 0e91ea541b25030458c3d0b883e9eb4c, type: 2}
