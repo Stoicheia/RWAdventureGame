@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -12,23 +13,25 @@ public class DialogueManager : MonoBehaviour
     public DialogueSubtitles dialogueSubtitles;
     public Button nextLineButton;
 
-    public List<DialogueLine> toPlay;
+    public DialogueSequence toPlay;
     public int currentPlayIndex;
 
     private bool inDialogue;
 
     private ClickToMoveController player;
 
+    public PostProcessVolume memoryFilter;
+
     private void Awake()
     {
         currentPlayIndex = 0;
         inDialogue = false;
-        toPlay = new List<DialogueLine>();
     }
 
     private void Start()
     {
         player = FindObjectOfType<ClickToMoveController>();
+        KillDialogue();
     }
 
     private void OnEnable()
@@ -59,18 +62,24 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayNext()
     {
-        if (currentPlayIndex >= toPlay.Count)
+        if (currentPlayIndex >= toPlay.lines.Count)
         {
             KillDialogue();
             return;
         }
-        PlayDialogue(toPlay[currentPlayIndex]);
+        PlayDialogue(toPlay.lines[currentPlayIndex]);
         currentPlayIndex++;
     }
 
-    public void EnableDialogue(List<DialogueLine> lines)
+    public void EnableDialogue(DialogueSequence lines)
     {
         if (inDialogue) return;
+
+        if (lines.memory)
+        {
+            memoryFilter.weight = 1;
+        }
+        
         player.moveEnabled = false;
         currentPlayIndex = 0;
         toPlay = lines;
@@ -83,6 +92,7 @@ public class DialogueManager : MonoBehaviour
     {
         player.moveEnabled = true;
         inDialogue = false;
+        memoryFilter.weight = 0;
         nextLineButton.gameObject.SetActive(false);
         dialogueSubtitles.DeleteText();
     }
