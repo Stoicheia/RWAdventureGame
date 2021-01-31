@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
   m_Name: Boots
   m_EditorClassIdentifier: 
+  itemID: 1
   itemName: Boots
   description: "Thanks to the rain and mud from last night I\u2019ve had to wear
     these boots instead. They\u2019re not a perfect fit, but I\u2019m sure it\u2019ll
@@ -20,8 +21,10 @@ MonoBehaviour:
   - interactibleObject: {fileID: 3352096603780827088, guid: daf156bfe000a0e4683c942a07f1df2b, type: 3}
     interactions:
     - {fileID: 11400000, guid: 311125fe93364d3498f198f3df86f20b, type: 2}
+    - {fileID: 11400000, guid: 33bb1bcb9a9f01e4caf5c1c08b01f633, type: 2}
+    - {fileID: 11400000, guid: 7ae2c0b39a139cc48b57c19302088f7c, type: 2}
   narrationAudio: {fileID: 11400000, guid: 3b70f5858a24f164b977e5dfab3ce22b, type: 2}
-  inventorySprite: {fileID: 21300000, guid: 4f110d771a8d0ea4899a3c9897238b19, type: 3}
-  sketchSprite: {fileID: 21300000, guid: 14f28761ede54f749b0c7106c9405d57, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 14f28761ede54f749b0c7106c9405d57, type: 3}
+  sketchSprite: {fileID: 21300000, guid: 4f110d771a8d0ea4899a3c9897238b19, type: 3}
   worldSprite: {fileID: 762757367782011242, guid: 846a6fad742bab041b50441b8ec3e406, type: 3}
   consumable: 1

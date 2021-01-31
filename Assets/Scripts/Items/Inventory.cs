@@ -62,6 +62,7 @@ public class Inventory : MonoBehaviour
             if (itemSlots[i].ItemID == item.ItemID)
             {
                 itemSlots[i].quantity += numberToAdd;
+                print("2");
                 OnUpdate?.Invoke();
                 return;
             }
@@ -70,6 +71,7 @@ public class Inventory : MonoBehaviour
         if (ItemCount >= maxItems)
         {
             Debug.Log("Inventory full", this);
+            print("3");
             OnUpdate?.Invoke();
             return;
         }
@@ -79,11 +81,12 @@ public class Inventory : MonoBehaviour
             if (itemSlots[i] == null || itemSlots[i].item == null)
             {
                 itemSlots[i] = new InventorySlot(item, numberToAdd);
+                print("4");
                 OnUpdate?.Invoke();
                 return;
             }
         }
-        
+        print("5");
         itemSlots.Add(new InventorySlot(item, numberToAdd));
         OnUpdate?.Invoke();
     }

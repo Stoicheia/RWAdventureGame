@@ -45,10 +45,10 @@ public class BlackCover : MonoBehaviour
         float init = Time.time;
         while (Time.time <= init + t)
         {
-            cover.color = new Color(1, 1, 1,(Time.time-init)/t);
+            cover.color = new Color(0, 0, 0,(Time.time-init)/t);
             yield return null;
         }
-        cover.color = new Color(1, 1, 1,1);
+        cover.color = new Color(0, 0, 0,1);
     }
     
     IEnumerator FadeOutEffect(float t)
@@ -56,10 +56,10 @@ public class BlackCover : MonoBehaviour
         float init = Time.time;
         while (Time.time <= init + t)
         {
-            cover.color = new Color(1, 1, 1,1-(Time.time-init)/t);
+            cover.color = new Color(0, 0, 0,1-(Time.time-init)/t);
             yield return null;
         }
-        cover.color = new Color(1, 1, 1,0);
+        cover.color = new Color(0, 0, 0,0);
     }
     
     IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay)

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
   m_Name: Flowers
   m_EditorClassIdentifier: 
+  itemID: 5
   itemName: Flowers
   description: "Forget-me-not\u2019s, I never thought I\u2019d need to grab a bunch
     of them. But they are beautiful.\r\n\r\nForget-me-not, I don\u2019t think I ever
@@ -19,7 +20,7 @@ MonoBehaviour:
     slicker\u201D he always says. He\u2019s right, I can do this."
   itemInteractions: []
   narrationAudio: {fileID: 0}
-  inventorySprite: {fileID: 21300000, guid: 43ad24840095e9442b246111426b373d, type: 3}
-  sketchSprite: {fileID: 21300000, guid: fc0b9646be63adf459b0edf365434cf6, type: 3}
+  inventorySprite: {fileID: 21300000, guid: fc0b9646be63adf459b0edf365434cf6, type: 3}
+  sketchSprite: {fileID: 21300000, guid: 43ad24840095e9442b246111426b373d, type: 3}
   worldSprite: {fileID: -323449668236063551, guid: 17b13b1a2d51b2b4aa8f990cc5c14856, type: 3}
   consumable: 1

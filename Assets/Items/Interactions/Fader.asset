@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
   m_Name: Fader
   m_EditorClassIdentifier: 
-  itemToRemove: {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
+  itemToRemove: {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}
   removeInteractedObject: 1
   objectsToSpawn:
   - toSpawn: {fileID: 7403782371982985276, guid: 74dcc03891239cf41938c3b4eb0efec2, type: 3}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
+  m_Name: New Inventory Interaction
+  m_EditorClassIdentifier: 
+  toRemove:
+  - {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
+  toAdd:
+  - {fileID: 11400000, guid: b59cc9b03e756ac4da5c5c7d9adf38cb, type: 2}

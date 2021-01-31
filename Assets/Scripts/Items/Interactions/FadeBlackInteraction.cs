@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Fade Interaction", menuName = "Interactions/Fade Interaction")]
@@ -13,13 +14,9 @@ public class FadeBlackInteraction : ItemObjectInteraction
     [SerializeField] private List<Spawnable> objectsToSpawn;
     [SerializeField] private AudioClip toPlay;
 
-    private void Awake()
-    {
-        cover = FindObjectOfType<BlackCover>();
-    }
-    
     public override void Act(InteractibleObject from)
     {
+        cover = FindObjectOfType<BlackCover>();
         cover.StartSequence(from, itemToRemove, removeInteractedObject, objectsToSpawn, toPlay);
     }
 

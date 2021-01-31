@@ -38,6 +38,18 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        StartCoroutine(NextFrameAction());
+    }
+
+    IEnumerator NextFrameAction()
+    {
+        yield return null;
+        yield return null;
+        EndDrag();
+    }
+
+    void EndDrag()
+    {
         dragging = false;
         if (but != null)
             transform.SetParent(but.transform);
@@ -45,6 +57,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             Debug.LogWarning("Item probably ended up in the wrong place...", this);
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
+        from = null;
         transform.localPosition = Vector3.zero;
     }
 }

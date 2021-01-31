@@ -10,7 +10,7 @@ public class Item : ScriptableObject
     public const string GENERIC_ITEM_NAME = "New Item";
     public const string GENERIC_DESCRIPTION_TEXT = "This seems interesting...";
 
-    private int itemID;
+    [SerializeField] private int itemID;
     [SerializeField] private string itemName;
     [TextArea(2,8)]
     [SerializeField] private string description;

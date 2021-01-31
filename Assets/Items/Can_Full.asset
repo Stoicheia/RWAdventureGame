@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
   m_Name: Can_Full
   m_EditorClassIdentifier: 
+  itemID: 3
   itemName: Watering Can (Full)
   description: Taking care of a garden can be just as relaxing as it is stressful.
     I should know, keeping that singular succulent alive has driven me up the wall
     many times.
   itemInteractions: []
   narrationAudio: {fileID: 0}
-  inventorySprite: {fileID: 21300000, guid: 2083dda89eb1da44395be05f13714f40, type: 3}
-  sketchSprite: {fileID: 21300000, guid: 65f1fec0eef0f674fa101fb17d4f6231, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 36e1a14a675b4dc4c815ef7089e1ba80, type: 3}
+  sketchSprite: {fileID: 21300000, guid: 2083dda89eb1da44395be05f13714f40, type: 3}
   worldSprite: {fileID: 5059354735313454914, guid: 378c1ec16ae9f5949b393beb5ad2578a, type: 3}
   consumable: 1
