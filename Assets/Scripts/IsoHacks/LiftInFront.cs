@@ -27,15 +27,34 @@ namespace IsoHacks
             int sortOrder = root.sortingOrder;
             int sortLayer = root.sortingLayerID;
 
+            Vector3 rootPosition = root.transform.position;
+
             ISet<SpriteRenderer> remainingRenderers = new HashSet<SpriteRenderer>(renderers);
             foreach (SpriteRenderer aRenderer in renderers)
             {
                 if (aRenderer == root)
+                {
+                    remainingRenderers.Remove(aRenderer);
                     continue;
+                }
+                // not in our layer? doesn't matter.
                 if (aRenderer.sortingLayerID != sortLayer)
+                {
+                    remainingRenderers.Remove(aRenderer);
                     continue;
+                }
+                // eliminate objects that would render behind normally - they won't need elevation.
                 if (aRenderer.sortingOrder < sortOrder)
+                {
+                    remainingRenderers.Remove(aRenderer);
                     continue;
+                }
+                if (aRenderer.transform.position.y > rootPosition.y)
+                {
+                    remainingRenderers.Remove(aRenderer);
+                    continue;
+                }
+                // overlaps our bounding box?
                 if (root.bounds.Intersects(aRenderer.bounds))
                 {
                     returnSet.Add(aRenderer);
