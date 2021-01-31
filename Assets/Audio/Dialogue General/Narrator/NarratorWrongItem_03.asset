@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorWrongItem_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 8e51df55e07376e49a6d5a23f8a09bc0, type: 3}
-  subtitles: "Or you could just ignore me. That works too.\r"
+  subtitles: "Narrator:\nOr you could just ignore me. That works too.\r"

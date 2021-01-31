@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProtagFlowerBed_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 029509aabb0fb254a9c3faaacb661971, type: 3}
-  subtitles: "\rHow'd he even keep them alive?"
+  subtitles: "\rProtagonist:\nHow'd he even keep them alive?"

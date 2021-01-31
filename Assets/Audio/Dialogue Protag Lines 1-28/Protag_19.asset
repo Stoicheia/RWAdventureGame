@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_19
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "All that hard work...\r"
+  subtitles: "Protagonist:\nAll that hard work...\r"

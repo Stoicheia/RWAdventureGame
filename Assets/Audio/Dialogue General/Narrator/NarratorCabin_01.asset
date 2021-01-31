@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NarratorCabin_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 11e627101cf7ece45a8294782a15d9af, type: 3}
-  subtitles: "Look, I know it's a cute cabin but the sun won't bite! Let's get back
-    out there!\r"
+  subtitles: "Narrator: \nLook, I know it's a cute cabin but the sun won't bite!
+    Let's get back out there!\r"

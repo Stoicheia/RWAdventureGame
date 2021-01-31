@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProtagNoFlowers_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 029509aabb0fb254a9c3faaacb661971, type: 3}
-  subtitles: "Gotta grab some flowers first.\r"
+  subtitles: "Protagonist:\nGotta grab some flowers first.\r"

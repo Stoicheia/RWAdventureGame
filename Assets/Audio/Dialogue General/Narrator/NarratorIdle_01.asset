@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorIdle_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 5000fb86edfeab24db9802b11b56b2f6, type: 3}
-  subtitles: "Hey, did you fall asleep or something?\r"
+  subtitles: "Narrator:\nHey, did you fall asleep or something?\r"

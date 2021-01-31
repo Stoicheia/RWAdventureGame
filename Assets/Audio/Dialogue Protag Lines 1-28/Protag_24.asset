@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_24
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "You need to be more careful! No one else is up there with you. What
-    were you doing anyway? Wrestling a bear?!\r"
+  subtitles: "Protagonist:\nYou need to be more careful! No one else is up there
+    with you. What were you doing anyway? Wrestling a bear?!\r"

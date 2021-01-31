@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_20
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "You'll become a bird-brain the longer you stay up there.\r"
+  subtitles: "Protagonist:\nYou'll become a bird-brain the longer you stay up there.\r"
