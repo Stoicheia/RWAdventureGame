@@ -304,8 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHumAfterSeconds: 1.5
   startYawnAfterSeconds: 10
-  humFrequency: 0.42
-  yawnFrequency: 0.4
+  humFrequency: 0.33
+  yawnFrequency: 0.33
 --- !u!114 &5914197051319059733
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,9 +16,12 @@ public class Mood : MonoBehaviour
     [Range(0,1)]
     [SerializeField] private float yawnFrequency;
 
+    private ClickToMoveController player;
+
     private void Awake()
     {
         speaker = GetComponent<Speaker>();
+        player = GetComponent<ClickToMoveController>();
         if(speaker==null) Debug.LogWarning("This entity cannot make sound.", this);
         ResetTimeOfLastAction();
     }
@@ -40,7 +43,8 @@ public class Mood : MonoBehaviour
 
     private void Update()
     {
-        CalculateNeutralSound();
+        if(player.moveEnabled)
+            CalculateNeutralSound();
     }
 
     public void InterruptMood()

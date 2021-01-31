@@ -36,9 +36,9 @@ public class BlackCover : MonoBehaviour
         StartCoroutine(FadeOutEffect(fadeTime));
     }
 
-    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp, Sprite newPlayerSprite)
+    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp, Sprite newPlayerSprite, SwappableObject toSwap)
     {
-        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp, newPlayerSprite));
+        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp, newPlayerSprite, toSwap));
     }
 
     IEnumerator FadeInEffect(float t)
@@ -63,7 +63,7 @@ public class BlackCover : MonoBehaviour
         cover.color = new Color(0, 0, 0,0);
     }
     
-    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay, Sprite newPlayerSprite)
+    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay, Sprite newPlayerSprite, SwappableObject toSwap)
     {
         FadeIn();
         yield return new WaitForSeconds(fadeTime + 0.1f);
@@ -72,6 +72,11 @@ public class BlackCover : MonoBehaviour
         foreach (var spawnable in spawning)
         {
             Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation, quaternion.identity);
+        }
+
+        if (toSwap != null)
+        {
+            toSwap.Swap();
         }
 
         if (newPlayerSprite != null)

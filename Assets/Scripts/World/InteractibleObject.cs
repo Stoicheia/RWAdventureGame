@@ -11,7 +11,7 @@ public class InteractibleObject : MonoBehaviour
     public string objectName;
     protected InventoryUser player;
 
-    private int timesInteracted;
+    protected int timesInteracted;
     [SerializeField] private DialogueSequence firstTimeDialogue;
     [SerializeField] private Item criticalItem;
     [SerializeField] private DialogueSequence noItemFirstTimeDialogue;
@@ -30,7 +30,7 @@ public class InteractibleObject : MonoBehaviour
         objectAudio.spatialBlend = 1;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         InventoryUser[] players = FindObjectsOfType<InventoryUser>();
         if (players.Length>1) Debug.LogWarning("Multiple Players Foudn!");
@@ -81,6 +81,7 @@ public class InteractibleObject : MonoBehaviour
 
     public virtual void InteractWithObject()
     {
+        print("s");
         if(sfx!=null)
             objectAudio.PlayOneShot(sfx);
 
