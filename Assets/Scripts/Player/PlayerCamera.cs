@@ -11,15 +11,14 @@ namespace Player
     public class PlayerCamera : MonoBehaviour
     {
         private GameObject _playerObject;
-        
-        public float MovementSpeed { get; set; }
+
+        public float MovementSpeed = 2.0f;
 
         // Sets the size of the region we try to keep the player in in camera coordinates
         public Vector2 MovementBounds { get; set; }
         
         private void Awake()
         {
-            MovementSpeed = 1.0f;
             MovementBounds = new Vector2(1.0f, 1.0f);
         }
 
