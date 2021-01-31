@@ -10,6 +10,8 @@ public class InteractibleObject : MonoBehaviour
 {
     public string objectName;
     protected InventoryUser player;
+    protected Collider2D playerCol;
+    protected Collider2D myCol;
 
     protected int timesInteracted;
     [SerializeField] private DialogueSequence firstTimeDialogue;
@@ -28,6 +30,7 @@ public class InteractibleObject : MonoBehaviour
         timesInteracted = 0;
         objectAudio = GetComponent<AudioSource>();
         objectAudio.spatialBlend = 1;
+        myCol = GetComponent<Collider2D>();
     }
 
     protected virtual void Start()
@@ -35,12 +38,13 @@ public class InteractibleObject : MonoBehaviour
         InventoryUser[] players = FindObjectsOfType<InventoryUser>();
         if (players.Length>1) Debug.LogWarning("Multiple Players Foudn!");
         player = FindObjectsOfType<InventoryUser>()[0];
+        playerCol = player.GetComponent<Collider2D>();
         dialogueSource = FindObjectOfType<DialogueSystem>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) && (transform.position-player.transform.position).magnitude <= player.interactionRadius)
+        if (Input.GetMouseButtonUp(0) && myCol.Distance(playerCol).distance <= player.interactionRadius)
         {
             DetectHit();
         }
@@ -64,6 +68,36 @@ public class InteractibleObject : MonoBehaviour
                 }
                 Item selectedItem = selectedItemUI.DisplayedItem.item;
                 if (selectedItem == null) return;
+
+                if (selectedItem is ItemCombAct)
+                {
+                    print("here");
+                    ItemCombAct ica = (ItemCombAct) selectedItem;
+                    if (GlobalStats.instance.PlayerInventory.HasItem(ica.complement))
+                    {
+                        foreach (var interactible in ica.successfulItemIneraction)
+                        {
+                            if (interactible.interactibleObject.objectName == objectName)
+                            {
+                                foreach(var interaction in interactible.interactions)
+                                    interaction.Act(this);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var interactible in ica.neutralItemInteraction)
+                        {
+                            if (interactible.interactibleObject.objectName == objectName)
+                            {
+                                foreach(var interaction in interactible.interactions)
+                                    interaction.Act(this);
+                            }
+                        }
+                    }
+
+                    return;
+                }
 
                 foreach (var interactible in selectedItem.ItemInteractions)
                 {

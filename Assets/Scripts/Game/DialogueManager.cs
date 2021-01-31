@@ -9,6 +9,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    private const float SKIP_COOLDOWN = 0.25f;
+    
     public AudioSource dialogueSource;
     public DialogueSubtitles dialogueSubtitles;
     public Button nextLineButton;
@@ -22,6 +24,8 @@ public class DialogueManager : MonoBehaviour
 
     public PostProcessVolume memoryFilter;
 
+    private float lastSkipTime;
+
     private void Awake()
     {
         currentPlayIndex = 0;
@@ -32,12 +36,13 @@ public class DialogueManager : MonoBehaviour
     {
         player = FindObjectOfType<ClickToMoveController>();
         KillDialogue();
+        dialogueSource.loop = false;
     }
 
     private void OnEnable()
     {
         currentPlayIndex = 0;
-        nextLineButton.onClick.AddListener(PlayNext);
+        nextLineButton.onClick.AddListener(TryPlayNext);
     }
 
     private void OnDisable()
@@ -47,7 +52,8 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogue(DialogueLine dialogue)
     {
-        dialogueSource.PlayOneShot(dialogue.Audio);
+        dialogueSource.clip = dialogue.Audio;
+        dialogueSource.Play();
         dialogueSubtitles.SetText(dialogue.Subtitles);
         if (!inDialogue)
         {
@@ -60,11 +66,26 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(PlayAfterSequence(t,d));
     }
 
+    void TryPlayNext()
+    {
+        if (Time.time < lastSkipTime + SKIP_COOLDOWN) return;
+        lastSkipTime = Time.time;
+        PlayNext();
+    }
+
     public void PlayNext()
     {
         if (currentPlayIndex >= toPlay.lines.Count)
         {
-            KillDialogue();
+            if (toPlay.nextDialogue != null)
+            {
+                inDialogue = false;
+                EnableDialogue(toPlay.nextDialogue);
+            }
+            else
+            {
+                KillDialogue();
+            }
             return;
         }
         PlayDialogue(toPlay.lines[currentPlayIndex]);

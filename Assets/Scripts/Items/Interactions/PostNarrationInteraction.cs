@@ -13,6 +13,6 @@ public class PostNarrationInteraction : ItemObjectInteraction
     {
         dialogueSource = FindObjectOfType<DialogueSystem>();
         float toWait = 1.5f + afterThis.toPlay.length;
-        dialogueSource.SetDialogue(narration);
+        dialogueSource.SetDialogueAfter(narration, toWait);
     }
 }

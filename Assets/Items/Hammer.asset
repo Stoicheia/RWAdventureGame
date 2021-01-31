@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
+  m_Script: {fileID: 11500000, guid: 94d16e727d4c2e048a8ff0762cfd9a1f, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
   itemID: 6
@@ -17,12 +17,21 @@ MonoBehaviour:
   description: "Looks like this hammer\u2019s been put to good use, let\u2019s see
     if it can help me with the bridge.\r\n\r\nI remember him telling me he almost
     hammered his thumb once. I wonder if this was the culprit."
-  itemInteractions:
-  - interactibleObject: {fileID: 0}
-    interactions: []
+  itemInteractions: []
   itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 82f8a372cc9617f4db11dc61a1e5760f, type: 3}
   sketchSprite: {fileID: 21300000, guid: 0a6fcb0414d5c9e4389a4eafb5172a3e, type: 3}
   worldSprite: {fileID: 3446479000725897789, guid: 5999eb26fc1a42a47bfc5850a873b5b1, type: 3}
   consumable: 1
+  complement: {fileID: 11400000, guid: 74ffbfd5efea4bc4599d701230a15b75, type: 2}
+  neutralItemInteraction:
+  - interactibleObject: {fileID: 8025690941549529667, guid: aea4abe0d33eb5c4a999874fa0c8ad46, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: 66528f2f521a2704bb3f4bb5c8064443, type: 2}
+  successfulItemIneraction:
+  - interactibleObject: {fileID: 8025690941549529667, guid: aea4abe0d33eb5c4a999874fa0c8ad46, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: 418c65290b7e072478905f078a1ebf48, type: 2}
+    - {fileID: 11400000, guid: 3c1a33c56ccd3184ea1f7004ff2f7302, type: 2}
+    - {fileID: 11400000, guid: a44f0b191e2abb44f92a6d3246cd2f21, type: 2}

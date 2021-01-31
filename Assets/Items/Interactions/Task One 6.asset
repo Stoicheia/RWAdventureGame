@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
-  m_Name: WORLD_Rope FixInv
+  m_Script: {fileID: 11500000, guid: 9001f1e6046180a408c67458fab8fba5, type: 3}
+  m_Name: Task One 6
   m_EditorClassIdentifier: 
-  toRemove:
-  - {fileID: 11400000, guid: 774e71289f400d6449f2f7911ae2d862, type: 2}
-  - {fileID: 11400000, guid: 505a6f0d2e15ede40be4fd7547afcf39, type: 2}
-  toAdd: []
+  toComplete: {fileID: 11400000, guid: 75e12ff830eec504fb671b0ec4186a3a, type: 2}
