@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProtagOtherFlowers_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 029509aabb0fb254a9c3faaacb661971, type: 3}
-  subtitles: "These aren't the right ones.\r"
+  subtitles: "Protagonist:\nThese aren't the right ones.\r"

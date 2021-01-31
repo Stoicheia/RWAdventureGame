@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NarratorShed_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 04541bfb963674d4e98e170a4a100cca, type: 3}
-  subtitles: "I don't think we'll find a bridge in there. C'mon, there's no time
-    to waste.\r"
+  subtitles: "Narrator:\nI don't think we'll find a bridge in there. C'mon, there's
+    no time to waste.\r"

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Protag_26
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "So you can sacrifice me to a bear that tries to eat you? No thanks.\r"
+  subtitles: "Protagonist:\nSo you can sacrifice me to a bear that tries to eat you?
+    No thanks.\r"

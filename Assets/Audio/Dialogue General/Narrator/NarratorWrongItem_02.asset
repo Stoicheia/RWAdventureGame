@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorWrongItem_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 5a06efcd0897dde4a995090b9c36ac68, type: 3}
-  subtitles: "Maybe you could look elsewhere?\r"
+  subtitles: "Narrator:\nMaybe you could look elsewhere?\r"

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85e3754f30706034a953c95523141882, type: 3}
-  m_Name: NoRopeNoHammer_Dialogue_Story_BranchB
+  m_Name: AfterBridgeMemory_Dialogue_Story
   m_EditorClassIdentifier: 
   lines:
   - {fileID: 11400000, guid: 8b2d47d7c794ff14dadcac89910101e4, type: 2}
   - {fileID: 11400000, guid: ed6509646e655864e90598f438179c85, type: 2}
+  memory: 0

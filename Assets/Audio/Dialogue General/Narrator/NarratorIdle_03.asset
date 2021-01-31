@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NarratorIdle_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: e64838dd64b5c1c48836478975301ffa, type: 3}
-  subtitles: "Just let me know when you get back, yeah? I'm pretty important to the
-    story.\r"
+  subtitles: "Narrator:\nJust let me know when you get back, yeah? I'm pretty important
+    to the story.\r"

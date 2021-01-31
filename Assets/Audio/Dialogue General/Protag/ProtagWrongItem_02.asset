@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProtagWrongItem_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 029509aabb0fb254a9c3faaacb661971, type: 3}
-  subtitles: "Where did he even put half his stuff?\r"
+  subtitles: "Protagonist:\nWhere did he even put half his stuff?\r"

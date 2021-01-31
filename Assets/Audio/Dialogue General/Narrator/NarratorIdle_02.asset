@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorIdle_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 75c6dfc418cc11545827b4b64e378ac2, type: 3}
-  subtitles: "Ah! Bear! Really, no reaction? You really are gone.\r"
+  subtitles: "Narrator:\nAh! Bear! Really, no reaction? You really are gone.\r"

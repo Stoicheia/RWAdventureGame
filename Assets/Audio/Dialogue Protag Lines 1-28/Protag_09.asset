@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_09
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Ok, if that makes you happy. Wait! Don't put them on now, people might
-    see! Wait!\r"
+  subtitles: "Protagonist:\nOk, if that makes you happy. Wait! Don't put them on
+    now, people might see! Wait!\r"

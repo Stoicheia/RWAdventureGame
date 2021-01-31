@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_13
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Wow, he wasn't kidding. It really is peaceful.\r"
+  subtitles: "Protagonist:\nWow, he wasn't kidding. It really is peaceful.\r"

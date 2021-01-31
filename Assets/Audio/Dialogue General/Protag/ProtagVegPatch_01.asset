@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProtagVegPatch_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 029509aabb0fb254a9c3faaacb661971, type: 3}
-  subtitles: "He had all kinds of food growing here!\r"
+  subtitles: "Protagonist:\nHe had all kinds of food growing here!\r"

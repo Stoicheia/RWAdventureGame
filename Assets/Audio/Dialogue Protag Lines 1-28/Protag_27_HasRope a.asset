@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_27_HasRope a
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Alright, I've already got the rope. Just need to find a hammer. I wonder
-    if it's in that shed back at the cabin?\r"
+  subtitles: "Protagonist:\nAlright, I've already got the rope. Just need to find
+    a hammer. I wonder if it's in that shed back at the cabin?\r"

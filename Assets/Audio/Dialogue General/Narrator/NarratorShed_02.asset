@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorShed_02
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 94266891011809b429f6f2686b68988c, type: 3}
-  subtitles: "Seriously? You'd rather go in there than explore out here?\r"
+  subtitles: "Narrator:\nSeriously? You'd rather go in there than explore out here?\r"

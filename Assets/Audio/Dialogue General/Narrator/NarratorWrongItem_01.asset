@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NarratorWrongItem_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: a7f5a4aedc34b2248b048b3916e6cb9c, type: 3}
-  subtitles: "Look, I admire your persistence, but that's not gonna work.\r"
+  subtitles: "Narrator:\nLook, I admire your persistence, but that's not gonna work.\r"
