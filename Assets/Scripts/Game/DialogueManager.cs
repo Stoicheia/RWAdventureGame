@@ -51,13 +51,18 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayNext()
     {
-        if(currentPlayIndex >= toPlay.Count) KillDialogue();
+        if (currentPlayIndex >= toPlay.Count)
+        {
+            KillDialogue();
+            return;
+        }
         PlayDialogue(toPlay[currentPlayIndex]);
         currentPlayIndex++;
     }
 
     public void EnableDialogue(List<DialogueLine> lines)
     {
+        if (inDialogue) return;
         currentPlayIndex = 0;
         toPlay = lines;
         inDialogue = true;

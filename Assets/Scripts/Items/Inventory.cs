@@ -170,6 +170,17 @@ public class Inventory : MonoBehaviour
         OnUpdate?.Invoke();
     }
 
+    public bool HasItem(Item item)
+    {
+        foreach (var i in itemSlots)
+        {
+            if (i.item.ItemID == item.ItemID)
+                return true;
+        }
+
+        return false;
+    }
+
     /*void UseItem(InventorySlot firstItem, InventorySlot secondItem)
     {
         if (firstItem.item == null || secondItem.item == null) return;

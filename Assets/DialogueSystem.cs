@@ -14,7 +14,7 @@ public class DialogueSystem : MonoBehaviour
 
 
     public void SetDialogue(DialogueSequence sequence)
-    {
+    { 
         dialogueSource.EnableDialogue(sequence.lines);
     }
     

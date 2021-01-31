@@ -9,14 +9,17 @@ using UnityEngine.EventSystems;
 public class InteractibleObject : MonoBehaviour
 {
     public string objectName;
-    private InventoryUser player;
+    protected InventoryUser player;
 
     private int timesInteracted;
     [SerializeField] private DialogueSequence firstTimeDialogue;
+    [SerializeField] private Item criticalItem;
+    [SerializeField] private DialogueSequence noItemFirstTimeDialogue;
     [SerializeField] private DialogueSequence otherTimeDialogue;
     [SerializeField] private AudioClip sfx;
 
     private AudioSource objectAudio;
+    private DialogueSystem dialogueSource;
 
     private Camera camera;
 
@@ -24,6 +27,7 @@ public class InteractibleObject : MonoBehaviour
     {
         timesInteracted = 0;
         objectAudio = GetComponent<AudioSource>();
+        objectAudio.spatialBlend = 1;
     }
 
     private void Start()
@@ -31,6 +35,7 @@ public class InteractibleObject : MonoBehaviour
         InventoryUser[] players = FindObjectsOfType<InventoryUser>();
         if (players.Length>1) Debug.LogWarning("Multiple Players Foudn!");
         player = FindObjectsOfType<InventoryUser>()[0];
+        dialogueSource = FindObjectOfType<DialogueSystem>();
     }
 
     private void Update()
@@ -79,8 +84,16 @@ public class InteractibleObject : MonoBehaviour
     {
         
         objectAudio.PlayOneShot(sfx);
-        
-        
+
+        DialogueSequence dialogueToUse = timesInteracted <= 0 ? firstTimeDialogue : otherTimeDialogue;
+
+        if (timesInteracted <= 0 && !GlobalStats.instance.PlayerInventory.HasItem(criticalItem))
+        {
+            dialogueToUse = noItemFirstTimeDialogue;
+        }
+
+        dialogueSource.SetDialogue(dialogueToUse);
+
         timesInteracted++;
     }
     

@@ -10,7 +10,7 @@ public class AudioTriggerOncePoint : MonoBehaviour
 {
     private Collider2D col;
     private ClickToMoveController activePlayer;
-    [SerializeField] private DialogueLine audio;
+    [SerializeField] private DialogueLine audion;
 
     private DialogueManager dialogueManager;
     
@@ -28,7 +28,7 @@ public class AudioTriggerOncePoint : MonoBehaviour
     {
         if (activated) return;
         
-        dialogueManager.PlayDialogue(audio);
+        dialogueManager.PlayDialogue(audion);
         
         activated = true;
     }
