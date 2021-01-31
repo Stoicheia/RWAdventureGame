@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_64
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Even if you're\r not here with me. Next time though,\r I'll bring a
-    spare pair of boots so\r I don't have to steal yours. How's\r that sound?\r"
+  subtitles: "Next time though,\r I'll bring a spare pair of boots so\r I don't have
+    to steal yours. How's\r that sound?\r"

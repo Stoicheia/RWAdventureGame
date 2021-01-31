@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e3754f30706034a953c95523141882, type: 3}
+  m_Name: NoRopeNoHammer_RopeInteract_Dialogue_Story_BranchB
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 11400000, guid: 889b320785dec84459dd3a99409667e1, type: 2}
+  - {fileID: 11400000, guid: 8ecc1ef7c41311947949178800d13b74, type: 2}
+  - {fileID: 11400000, guid: 35589db254c4f72499b2699883bc5b7c, type: 2}
+  - {fileID: 11400000, guid: 7f382321cbdd38f428003d18ecc1bddd, type: 2}
+  - {fileID: 11400000, guid: 7fe47baa0a9937c419ad05c39ae5b560, type: 2}
+  - {fileID: 11400000, guid: 5eb7807cb808d564da6eba13456f507c, type: 2}
+  - {fileID: 11400000, guid: 867bbbd32465e84419d74c65a2f76fdd, type: 2}

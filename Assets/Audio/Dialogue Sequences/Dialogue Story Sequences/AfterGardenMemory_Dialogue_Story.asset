@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e3754f30706034a953c95523141882, type: 3}
+  m_Name: AfterGardenMemory_Dialogue_Story
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 11400000, guid: 06be85be4161ec14f89ce0f22cdb980c, type: 2}
+  - {fileID: 11400000, guid: a0b745f88292f5242b83fda8f3b7bde7, type: 2}
+  - {fileID: 11400000, guid: 30bd5abce34c04d4b80b194ea79d2571, type: 2}
+  - {fileID: 11400000, guid: f1b4ee706c68cdc4991a41de79e9a660, type: 2}
+  - {fileID: 11400000, guid: cc4e3dd68558c9443b3ce6e180f74e4b, type: 2}

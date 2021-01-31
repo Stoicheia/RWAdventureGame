@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
-  m_Name: Narrator_54
+  m_Name: Rope_Object
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 577727218c8cdc9408b03f4f9d399a5d, type: 3}
-  subtitles: 'Looks like we''re good to go, city
-
-    slicker!'
+  audio: {fileID: 8300000, guid: 27d9dcd9eaac299428c4a1f39b6e2144, type: 3}
+  subtitles: (Use rope)

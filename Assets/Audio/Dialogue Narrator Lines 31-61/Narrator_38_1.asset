@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
+  m_Name: Narrator_38_1
+  m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 26379eb1f8c078640b19eca2e6b7e63a, type: 3}
+  subtitles: ' I know these kind of
+
+    gifts ain''t for everyone and end
+
+    up
+    being more of a responsibility than
+
+    something to just put on a shelf
+
+    and
+    forget about but I-'

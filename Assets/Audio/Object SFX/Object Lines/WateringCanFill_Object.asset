@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
-  m_Name: Protag_56_WateringCanFilled
+  m_Name: WateringCanFill_Object
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Looks like we're good to go, city\r slicker!\r"
+  audio: {fileID: 8300000, guid: 31337767bea5a704d99993129982b116, type: 3}
+  subtitles: (Water splashes)

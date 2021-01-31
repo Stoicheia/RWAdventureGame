@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
   subtitles: "I might keep coming up here ya\r know?  Keep it up to scratch for\r
-    you. That way, we can make more\r memories together."
+    you. That way, we can make more\r memories together. Even if you're\r not here
+    with me."

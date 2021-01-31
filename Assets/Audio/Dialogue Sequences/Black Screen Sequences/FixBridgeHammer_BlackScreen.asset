@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e3754f30706034a953c95523141882, type: 3}
+  m_Name: FixBridgeHammer_BlackScreen
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 11400000, guid: 9ebdd07a45593034ba4c594097740b19, type: 2}
+  - {fileID: 11400000, guid: c7f706ca789532848832b9d6fec3b637, type: 2}
+  - {fileID: 11400000, guid: ca751e5a85b1c3345900ccde20995462, type: 2}

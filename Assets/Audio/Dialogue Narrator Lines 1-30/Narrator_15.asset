@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: ab1dd0e97458f024d991bad23e92ed28, type: 3}
   subtitles: "There is no method to the madness of an outdoors-person my young apprentice.\r
-    (Laughter)\n"
+    (Laughter)"

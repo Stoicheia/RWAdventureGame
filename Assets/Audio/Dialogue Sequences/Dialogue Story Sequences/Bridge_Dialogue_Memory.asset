@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e3754f30706034a953c95523141882, type: 3}
+  m_Name: Bridge_Dialogue_Memory
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 11400000, guid: fb81989843902cc48ae207c7634d1813, type: 2}
+  - {fileID: 11400000, guid: 4ec7fb1438795e142a9293309dcbf841, type: 2}
+  - {fileID: 11400000, guid: 59c64830e38e170488a750ccb37543da, type: 2}
+  - {fileID: 11400000, guid: 9c136dc96a163fa4a83317e5fda0fd57, type: 2}
+  - {fileID: 11400000, guid: 47e407685d54b6d458e69df4bdbcc40a, type: 2}
+  - {fileID: 11400000, guid: c6e2bf2a44ba9bd418f436be3cd47edf, type: 2}
+  - {fileID: 11400000, guid: 7a3911706d745bc43a9a03e35e1f8fe2, type: 2}
+  - {fileID: 11400000, guid: 8865f81b042a2344897eac25a8bbb636, type: 2}
+  - {fileID: 11400000, guid: 99a2ee56cdc5fbf4db05277cd8e9fa77, type: 2}
+  - {fileID: 11400000, guid: 96f0a64d454d7c745a01bccee5f53645, type: 2}
+  - {fileID: 11400000, guid: d9e435583dea91f4b8f7803a6af45e40, type: 2}
+  - {fileID: 11400000, guid: 6d30c3dc4439f2f4e85c48bbb4d3f3d8, type: 2}
+  - {fileID: 11400000, guid: 76241a1283155e44cb327e864ecaeaef, type: 2}
+  - {fileID: 11400000, guid: 888ce73b47081064daf48fb30b5d839f, type: 2}
