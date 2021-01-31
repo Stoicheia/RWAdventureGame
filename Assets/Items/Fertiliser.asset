@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515ffc1a523afca4c87ca0442690bf35, type: 3}
   m_Name: Fertiliser
   m_EditorClassIdentifier: 
+  itemID: 4
   itemName: Fertiliser
   description: "Why does fertilizer have to be so heavy and smell weird? I knew I
     shouldn\u2019t have worn my favorite hoodie.\r"
   itemInteractions: []
   narrationAudio: {fileID: 0}
-  inventorySprite: {fileID: 21300000, guid: fc204c9f429a0a347a8edc1530f90282, type: 3}
-  sketchSprite: {fileID: 21300000, guid: 5176513e79e5d374d8edec594ad7bc69, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 5176513e79e5d374d8edec594ad7bc69, type: 3}
+  sketchSprite: {fileID: 21300000, guid: fc204c9f429a0a347a8edc1530f90282, type: 3}
   worldSprite: {fileID: -5000682378470029226, guid: 4b7c67b0c9213b84c935673a3b88e491, type: 3}
   consumable: 1

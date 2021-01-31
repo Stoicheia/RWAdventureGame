@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
+  m_Name: WORLD_Can EmptyInv
+  m_EditorClassIdentifier: 
+  toRemove:
+  - {fileID: 11400000, guid: b3f81453a6fd8f6439553eccf5cfff23, type: 2}
+  toAdd:
+  - {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}

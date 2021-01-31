@@ -10,11 +10,12 @@ public class Item : ScriptableObject
     public const string GENERIC_ITEM_NAME = "New Item";
     public const string GENERIC_DESCRIPTION_TEXT = "This seems interesting...";
 
-    private int itemID;
+    [SerializeField] private int itemID;
     [SerializeField] private string itemName;
     [TextArea(2,8)]
     [SerializeField] private string description;
-    [SerializeField] private List<ItemInteractionPair> itemInteractions;
+    [SerializeField] private List<ItemObjectInteractionPair> itemInteractions;
+    [SerializeField] public List<ItemObjectInteraction> itemClickInteractions;
     [SerializeField] private DialogueLine narrationAudio;
     [SerializeField] private Sprite inventorySprite;
     [SerializeField] private Sprite sketchSprite;
@@ -28,7 +29,7 @@ public class Item : ScriptableObject
         source.Play();
     }
 
-    public void Act(Item item)
+    /*public void Act(Item item)
     {
         if (item == null) return;
         if(!ActOneWay(item))
@@ -53,7 +54,7 @@ public class Item : ScriptableObject
         }
 
         return false;
-    }
+    }*/
 
     #region Properties
     public int ItemID
@@ -74,7 +75,7 @@ public class Item : ScriptableObject
         private set => description = value;
     }
     
-    public List<ItemInteractionPair> ItemInteractions
+    public List<ItemObjectInteractionPair> ItemInteractions
     {
         get => itemInteractions;
         private set => itemInteractions = value;
@@ -120,4 +121,11 @@ public class ItemInteractionPair
 {
     public Item item;
     public ItemInteraction interaction;
+}
+
+[System.Serializable]
+public class ItemObjectInteractionPair
+{
+    public InteractibleObject interactibleObject;
+    public List<ItemObjectInteraction> interactions;
 }

@@ -16,12 +16,12 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable()
     {
-        InventoryUI.OnItemUse += UseItem;
+        
     }
 
     private void OnDisable()
     {
-        InventoryUI.OnItemUse -= UseItem;
+        
     }
 
     public List<InventorySlot> ItemSlots
@@ -62,6 +62,7 @@ public class Inventory : MonoBehaviour
             if (itemSlots[i].ItemID == item.ItemID)
             {
                 itemSlots[i].quantity += numberToAdd;
+                print("2");
                 OnUpdate?.Invoke();
                 return;
             }
@@ -70,6 +71,7 @@ public class Inventory : MonoBehaviour
         if (ItemCount >= maxItems)
         {
             Debug.Log("Inventory full", this);
+            print("3");
             OnUpdate?.Invoke();
             return;
         }
@@ -79,11 +81,12 @@ public class Inventory : MonoBehaviour
             if (itemSlots[i] == null || itemSlots[i].item == null)
             {
                 itemSlots[i] = new InventorySlot(item, numberToAdd);
+                print("4");
                 OnUpdate?.Invoke();
                 return;
             }
         }
-        
+        print("5");
         itemSlots.Add(new InventorySlot(item, numberToAdd));
         OnUpdate?.Invoke();
     }
@@ -167,7 +170,18 @@ public class Inventory : MonoBehaviour
         OnUpdate?.Invoke();
     }
 
-    void UseItem(InventorySlot firstItem, InventorySlot secondItem)
+    public bool HasItem(Item item)
+    {
+        foreach (var i in itemSlots)
+        {
+            if (i.item.ItemID == item.ItemID)
+                return true;
+        }
+
+        return false;
+    }
+
+    /*void UseItem(InventorySlot firstItem, InventorySlot secondItem)
     {
         if (firstItem.item == null || secondItem.item == null) return;
         int id1 = firstItem.ItemID;
@@ -184,6 +198,6 @@ public class Inventory : MonoBehaviour
         {
             DeleteItem(secondItem.item);
         }
-    }
+    }*/
    
 }

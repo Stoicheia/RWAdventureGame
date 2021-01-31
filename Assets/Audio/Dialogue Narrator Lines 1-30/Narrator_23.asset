@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
+  m_Name: Narrator_23
+  m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 33966cbe6f6e2ff46849473dfcac42b9, type: 3}
+  subtitles: 'Calm down! I was actually wrestling with some rope and wood. I strung
+    up a few bridges so I could get across the river easier. The stilts were a pain
+    to keep steady but a few hits with a hammer did the job. Anyway, I thought it
+    was about time I set up traps further out, ya know?
+
+'

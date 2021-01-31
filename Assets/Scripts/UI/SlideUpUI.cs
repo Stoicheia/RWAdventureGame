@@ -9,6 +9,7 @@ public class SlideUpUI : MonoBehaviour
     [SerializeField] private float slideDistance;
     [SerializeField] private float slideDuration;
     [SerializeField] private Button slideButton;
+    [SerializeField] private Transform taskThing;
 
     private Vector3 originalPosition;
     private Vector3 targetPosition;
@@ -50,6 +51,7 @@ public class SlideUpUI : MonoBehaviour
     {
         StartCoroutine(SlideSequence(slideDuration,slideDistance,originalPosition,targetPosition));
         slideButton.GetComponent<ShoeHideUI>().OnShow();
+        taskThing.gameObject.SetActive(false);
         up = true;
     }
 
@@ -57,6 +59,7 @@ public class SlideUpUI : MonoBehaviour
     {
         StartCoroutine(SlideSequence(slideDuration, slideDistance, targetPosition, originalPosition));
         slideButton.GetComponent<ShoeHideUI>().OnHide();
+        taskThing.gameObject.SetActive(true);
         navUI.OpenStartingMenu();
         up = false;
     }
