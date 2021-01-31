@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: dc0ad802ba459f94ebfa845f376cc688
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: BushHidingGrave
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3523
+      y: 1730
+      width: 411
+      height: 492
+    spriteID: 719e0e36ac3319f4b9c4870d96a23822
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3338, y: 1577}
+  - name: Gravestone
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3514
+      y: 4
+      width: 367
+      height: 412
+    spriteID: 99979e84fdeb7fa43be00779b7ca6a88
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3314, y: -171}
+  - name: LargeBush
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2800
+      y: 1730
+      width: 715
+      height: 545
+    spriteID: b1777816c07a22c4783786e789f848d0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2800, y: 1518}
+  - name: Stump
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1626
+      y: 2434
+      width: 655
+      height: 520
+    spriteID: 26a159f665901d443a78a1d736a36fcd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1226, y: 2323}
+  - name: Flowers
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1626
+      y: 1730
+      width: 1166
+      height: 696
+    spriteID: 36f889a842f668346a8d1c4cfff0c073
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1235, y: 955}
+  - name: Vegetables
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1730
+      width: 1614
+      height: 1303
+    spriteID: d86abda9fe1501f489fd40649e628a93
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1246, y: 1635}
+  - name: Soil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 3502
+      height: 1718
+    spriteID: 0af87cc9501a14146a591fade61c2671
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 3507, y: 1718}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 4096
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: BushHidingGrave
+    spriteName: BushHidingGrave
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 719e0e36ac3319f4b9c4870d96a23822
+    layerID: 0
+    mosaicPosition: {x: 3523, y: 1730}
+  - name: Gravestone
+    spriteName: Gravestone
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 99979e84fdeb7fa43be00779b7ca6a88
+    layerID: 844925556
+    mosaicPosition: {x: 3514, y: 4}
+  - name: LargeBush
+    spriteName: LargeBush
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b1777816c07a22c4783786e789f848d0
+    layerID: 1253076125
+    mosaicPosition: {x: 2800, y: 1730}
+  - name: Stump
+    spriteName: Stump
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 26a159f665901d443a78a1d736a36fcd
+    layerID: -938817057
+    mosaicPosition: {x: 1626, y: 2434}
+  - name: Flowers
+    spriteName: Flowers
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 36f889a842f668346a8d1c4cfff0c073
+    layerID: 887730166
+    mosaicPosition: {x: 1626, y: 1730}
+  - name: Vegetables
+    spriteName: Vegetables
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d86abda9fe1501f489fd40649e628a93
+    layerID: 832918606
+    mosaicPosition: {x: 4, y: 1730}
+  - name: Soil
+    spriteName: Soil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0af87cc9501a14146a591fade61c2671
+    layerID: 204392989
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Garden_Layers Texture
+  prefabAssetName: Garden_Layers Prefab
+  spriteLibAssetName: Garden_Layers Sprite Lib
+  secondarySpriteTextures: []
