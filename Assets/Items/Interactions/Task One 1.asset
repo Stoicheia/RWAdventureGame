@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
-  m_Name: WORLD_Can EmptyInv
+  m_Script: {fileID: 11500000, guid: 9001f1e6046180a408c67458fab8fba5, type: 3}
+  m_Name: Task One 1
   m_EditorClassIdentifier: 
-  toRemove:
-  - {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}
-  toAdd:
-  - {fileID: 11400000, guid: b3f81453a6fd8f6439553eccf5cfff23, type: 2}
+  toComplete: {fileID: 11400000, guid: 5665bdfa702f20b43937d6ccbc740b3b, type: 2}

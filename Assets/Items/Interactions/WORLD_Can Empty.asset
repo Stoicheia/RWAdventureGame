@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: WORLD_Can Empty
   m_EditorClassIdentifier: 
   itemToRemove: {fileID: 0}
-  removeInteractedObject: 1
+  removeInteractedObject: 0
   objectsToSpawn: []
-  toPlay: {fileID: 0}
+  swapObject: 0
+  toPlay: {fileID: 8300000, guid: 31337767bea5a704d99993129982b116, type: 3}
+  toPlayAfter: {fileID: 0}
   newPlayerSprite: {fileID: 0}

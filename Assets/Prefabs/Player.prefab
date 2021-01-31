@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be699e7cd80607489be2e6e5a87d2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 2
+  interactionRadius: 1
   hasShoes: 0
 --- !u!114 &5914197051319059736
 MonoBehaviour:

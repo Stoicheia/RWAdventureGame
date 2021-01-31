@@ -17,5 +17,16 @@ public class DialogueSystem : MonoBehaviour
     { 
         dialogueSource.EnableDialogue(sequence);
     }
+
+    public void SetDialogueAfter(DialogueSequence sequence, float f)
+    {
+        StartCoroutine(WaitSequence(sequence, f));
+    }
+
+    IEnumerator WaitSequence(DialogueSequence s, float f)
+    {
+        yield return new WaitForSeconds(f);
+        dialogueSource.EnableDialogue(s);
+    }
     
 }

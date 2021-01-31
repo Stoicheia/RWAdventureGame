@@ -15,5 +15,7 @@ MonoBehaviour:
   itemToRemove: {fileID: 0}
   removeInteractedObject: 0
   objectsToSpawn: []
-  toPlay: {fileID: 8300000, guid: a0aa3e65beb76b84bbcb673d5b6c9643, type: 3}
+  toSwap: {fileID: 0}
+  toPlay: {fileID: 8300000, guid: 773385bbbebfe6540920fcdd87014fce, type: 3}
+  toPlayAfter: {fileID: 8300000, guid: a0aa3e65beb76b84bbcb673d5b6c9643, type: 3}
   newPlayerSprite: {fileID: 0}

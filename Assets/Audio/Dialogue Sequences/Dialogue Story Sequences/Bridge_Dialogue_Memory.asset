@@ -28,3 +28,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76241a1283155e44cb327e864ecaeaef, type: 2}
   - {fileID: 11400000, guid: 888ce73b47081064daf48fb30b5d839f, type: 2}
   memory: 1
+  nextDialogue: {fileID: 11400000, guid: 54b059d8c305f5245a9819fe19af5cce, type: 2}

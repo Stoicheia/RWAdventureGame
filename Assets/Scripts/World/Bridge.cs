@@ -5,12 +5,23 @@ using UnityEngine;
 public class Bridge : SwappableObject
 {
     [SerializeField] private DialogueSequence bridgeFirstDia;
+    [SerializeField] private ItemObjectInteraction taskComp;
+    private bool firstDia;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        firstDia = false;
+    }
+
     public override void InteractWithObject()
     {
-        if (base.timesInteracted == 0)
+        if (!firstDia)
         {
             FindObjectOfType<DialogueSystem>().SetDialogue(bridgeFirstDia);
-            timesInteracted--;
+            taskComp.Act(this);
+            firstDia = true;
         }
         else
         {

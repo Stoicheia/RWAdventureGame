@@ -104,7 +104,6 @@ namespace Player
                     }
                     else
                     {
-                        Debug.LogFormat("No path to {0} found.", worldPoint);
                         OnNavigationFailed?.Invoke(transform, worldPoint);
                     }
 

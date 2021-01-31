@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
-  m_Name: WORLD_Can Fill
+  m_Name: WORLD_Hammer Fix
   m_EditorClassIdentifier: 
   itemToRemove: {fileID: 0}
   removeInteractedObject: 0
   objectsToSpawn: []
-  swapObject: 0
-  toPlay: {fileID: 8300000, guid: f6cc02b502e03974793bbe700d6f98f1, type: 3}
-  toPlayAfter: {fileID: 8300000, guid: 87c9880304fa20c47a9d3cfdfd8a3c8a, type: 3}
+  swapObject: 1
+  toPlay: {fileID: 8300000, guid: 502be70cf5d33c24ea506f0d72a490fb, type: 3}
+  toPlayAfter: {fileID: 8300000, guid: d32e337b450a89a43ae4a57d98ae5510, type: 3}
   newPlayerSprite: {fileID: 0}

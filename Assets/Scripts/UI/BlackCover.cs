@@ -36,9 +36,9 @@ public class BlackCover : MonoBehaviour
         StartCoroutine(FadeOutEffect(fadeTime));
     }
 
-    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp, Sprite newPlayerSprite, SwappableObject toSwap)
+    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> toSpawn, AudioClip tp, AudioClip tpa, Sprite newPlayerSprite)
     {
-        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp, newPlayerSprite, toSwap));
+        StartCoroutine(Sequence(f, toRemove, removeObject, swapObject, toSpawn,tp, tpa, newPlayerSprite));
     }
 
     IEnumerator FadeInEffect(float t)
@@ -63,7 +63,7 @@ public class BlackCover : MonoBehaviour
         cover.color = new Color(0, 0, 0,0);
     }
     
-    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay, Sprite newPlayerSprite, SwappableObject toSwap)
+    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> spawning, AudioClip toPlay, AudioClip toPlayAfter, Sprite newPlayerSprite)
     {
         FadeIn();
         yield return new WaitForSeconds(fadeTime + 0.1f);
@@ -74,9 +74,9 @@ public class BlackCover : MonoBehaviour
             Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation, quaternion.identity);
         }
 
-        if (toSwap != null)
+        if (f.GetComponent<SwappableObject>() != null && swapObject)
         {
-            toSwap.Swap();
+            f.GetComponent<SwappableObject>().Swap();
         }
 
         if (newPlayerSprite != null)
@@ -87,5 +87,6 @@ public class BlackCover : MonoBehaviour
         source.PlayOneShot(toPlay);
         yield return new WaitForSeconds(toPlay.length + 0.1f);
         FadeOut();
+        source.PlayOneShot(toPlayAfter);
     }
 }

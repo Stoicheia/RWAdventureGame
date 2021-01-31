@@ -18,7 +18,6 @@ public class RegionStepper : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        print(other.gameObject.name);
         AudioTriggerOncePoint trigger = other.gameObject.GetComponent<AudioTriggerOncePoint>();
         if (trigger != null)
         {

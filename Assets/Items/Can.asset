@@ -17,7 +17,13 @@ MonoBehaviour:
   description: Taking care of a garden can be just as relaxing as it is stressful.
     I should know, keeping that singular succulent alive has driven me up the wall
     many times.
-  itemInteractions: []
+  itemInteractions:
+  - interactibleObject: {fileID: 883689167900418066, guid: f17ca0b611f28874792d45fb12ed38da, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: 177b03b72eb87c74698939c50971ff8f, type: 2}
+    - {fileID: 11400000, guid: 3d46d4d8ca44c8543a026688bf05fbe0, type: 2}
+    - {fileID: 11400000, guid: 88a2edf4505347342ba008ab2ab8f9dc, type: 2}
+  itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 65f1fec0eef0f674fa101fb17d4f6231, type: 3}
   sketchSprite: {fileID: 21300000, guid: 2083dda89eb1da44395be05f13714f40, type: 3}

@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
-  m_Name: WORLD_Can EmptyInv
+  m_Script: {fileID: 11500000, guid: dda6de270e6da4d4db6c78126afc29f1, type: 3}
+  m_Name: WORLD_Can EmptyPost
   m_EditorClassIdentifier: 
-  toRemove:
-  - {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}
-  toAdd:
-  - {fileID: 11400000, guid: b3f81453a6fd8f6439553eccf5cfff23, type: 2}
+  afterThis: {fileID: 11400000, guid: 177b03b72eb87c74698939c50971ff8f, type: 2}
+  narration: {fileID: 11400000, guid: 797bd6e0e40e93946aac7becc7488a06, type: 2}
