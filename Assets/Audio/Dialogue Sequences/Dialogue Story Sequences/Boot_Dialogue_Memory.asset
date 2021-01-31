@@ -28,3 +28,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19aa5329905332b4c93fc3c1a6d57fce, type: 2}
   - {fileID: 11400000, guid: d545da65b5844734189179b5a0d88eaf, type: 2}
   - {fileID: 11400000, guid: 40b0a6e436cde214599cd87cc4b066de, type: 2}
+  memory: 1

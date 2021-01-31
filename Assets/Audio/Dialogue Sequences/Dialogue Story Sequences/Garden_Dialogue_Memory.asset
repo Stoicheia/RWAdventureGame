@@ -39,3 +39,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d56fca60ce06cc4dad3525039e491a3, type: 2}
   - {fileID: 11400000, guid: cea7dfb73cef3c3428e63f1f3dd40ef0, type: 2}
   - {fileID: 11400000, guid: fb40e8b5e04d11d40a411b650bae31b7, type: 2}
+  memory: 1
