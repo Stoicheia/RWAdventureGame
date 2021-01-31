@@ -9,6 +9,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image), typeof(AudioSource))]
 public class BlackCover : MonoBehaviour
 {
+    public float liftTime = 1;
     public float fadeTime = 0.9f;
     private Image cover;
     private AudioSource source;
@@ -24,6 +25,7 @@ public class BlackCover : MonoBehaviour
     {
         inventory = GlobalStats.instance.PlayerInventory;
         source = FindObjectOfType<ClickToMoveController>().GetComponent<Speaker>().Source;
+        StartCoroutine(FadeOutEffect(liftTime));
     }
 
     public void FadeIn()
@@ -89,4 +91,5 @@ public class BlackCover : MonoBehaviour
         FadeOut();
         source.PlayOneShot(toPlayAfter);
     }
+    
 }

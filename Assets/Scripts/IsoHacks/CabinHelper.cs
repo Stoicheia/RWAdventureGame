@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Player;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,7 +14,7 @@ namespace IsoHacks
         [SerializeField]
         public Transform InternalSection;
 
-        public Transform detectionPoint;
+        public List<Transform> detectionPoints;
         public float openRadius;
 
         private ClickToMoveController player;
@@ -34,7 +35,13 @@ namespace IsoHacks
 
         private void Update()
         {
-            if ((player.transform.position - detectionPoint.position).magnitude <= openRadius || AnyTouching())
+            bool n = false;
+            foreach (var t in detectionPoints)
+            {
+                if ((player.transform.position - t.position).magnitude <= openRadius)
+                    n = true;
+            }
+            if (n || AnyTouching())
             {
                 ShowInternals();
                 playerSprite.sortingOrder = 10;
