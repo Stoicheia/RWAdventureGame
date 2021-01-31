@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace IsoHacks
 {
@@ -10,10 +11,11 @@ namespace IsoHacks
 
         [SerializeField]
         public Transform InternalSection;
-        
+
         private void Start()
         {
             HideInternals();
+            HideDoor();
         }
 
         public void ShowInternals()
