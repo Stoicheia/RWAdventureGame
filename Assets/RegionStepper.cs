@@ -10,7 +10,7 @@ public class RegionStepper : MonoBehaviour
     private void OnCollisionStay2D(Collision2D other)
     {
         Region region = other.gameObject.GetComponent<Region>();
-        print(region.name);
+        // print(region.name);
         if (region != null && region!=Region.ActiveRegion)
         {
             Region.UpdateActiveRegion(region);
