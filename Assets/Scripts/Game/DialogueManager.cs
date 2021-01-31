@@ -80,7 +80,8 @@ public class DialogueManager : MonoBehaviour
             memoryFilter.weight = 1;
         }
         
-        player.moveEnabled = false;
+        if(lines.lines.Count>1)
+            player.moveEnabled = false;
         currentPlayIndex = 0;
         toPlay = lines;
         inDialogue = true;

@@ -17,7 +17,10 @@ MonoBehaviour:
   description: "Looks like this hammer\u2019s been put to good use, let\u2019s see
     if it can help me with the bridge.\r\n\r\nI remember him telling me he almost
     hammered his thumb once. I wonder if this was the culprit."
-  itemInteractions: []
+  itemInteractions:
+  - interactibleObject: {fileID: 0}
+    interactions: []
+  itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 82f8a372cc9617f4db11dc61a1e5760f, type: 3}
   sketchSprite: {fileID: 21300000, guid: 0a6fcb0414d5c9e4389a4eafb5172a3e, type: 3}
