@@ -12,6 +12,7 @@ public class FadeBlackInteraction : ItemObjectInteraction
     [SerializeField] private Item itemToRemove;
     [SerializeField] private bool removeInteractedObject;
     [SerializeField] private List<Spawnable> objectsToSpawn;
+    [SerializeField] private SwappableObject toSwap;
     [SerializeField] public AudioClip toPlay;
     [SerializeField] private Sprite newPlayerSprite;
 
@@ -19,7 +20,7 @@ public class FadeBlackInteraction : ItemObjectInteraction
     {
         cover = FindObjectOfType<BlackCover>();
         if (from == null) removeInteractedObject = false;
-        cover.StartSequence(from, itemToRemove, removeInteractedObject, objectsToSpawn, toPlay, newPlayerSprite);
+        cover.StartSequence(from, itemToRemove, removeInteractedObject, objectsToSpawn, toPlay, newPlayerSprite, toSwap);
     }
 
     
