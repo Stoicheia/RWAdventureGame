@@ -59,5 +59,10 @@ public class InteractibleObject : MonoBehaviour
             }
         }
     }
+
+    public virtual void InteractWithObject()
+    {
+        print("interacted with " + name);
+    }
     
 }
