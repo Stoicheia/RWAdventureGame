@@ -15,6 +15,7 @@ public class Item : ScriptableObject
     [TextArea(2,8)]
     [SerializeField] private string description;
     [SerializeField] private List<ItemObjectInteractionPair> itemInteractions;
+    [SerializeField] public List<ItemObjectInteraction> itemClickInteractions;
     [SerializeField] private DialogueLine narrationAudio;
     [SerializeField] private Sprite inventorySprite;
     [SerializeField] private Sprite sketchSprite;

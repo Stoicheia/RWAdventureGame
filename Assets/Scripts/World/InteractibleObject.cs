@@ -1,21 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(PolygonCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class InteractibleObject : MonoBehaviour
 {
     public string objectName;
+    private InventoryUser player;
 
-
-
+    
+    
     private Camera camera;
+
+    private void Start()
+    {
+        InventoryUser[] players = FindObjectsOfType<InventoryUser>();
+        if (players.Length>1) Debug.LogWarning("Multiple Players Foudn!");
+        player = FindObjectsOfType<InventoryUser>()[0];
+    }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && (transform.position-player.transform.position).magnitude <= player.interactionRadius)
         {
             DetectHit();
         }
@@ -23,6 +32,7 @@ public class InteractibleObject : MonoBehaviour
 
     void DetectHit()
     {
+        print("usage detected!");
         RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         InteractibleObject hitObj;
         foreach (var hit in hits)

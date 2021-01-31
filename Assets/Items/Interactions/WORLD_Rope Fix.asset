@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9001f1e6046180a408c67458fab8fba5, type: 3}
-  m_Name: New Task Interaction
+  m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
+  m_Name: WORLD_Rope Fix
   m_EditorClassIdentifier: 
-  toComplete: {fileID: 11400000, guid: bccef4c0b1cec78498717266c4afc23d, type: 2}
+  itemToRemove: {fileID: 0}
+  removeInteractedObject: 1
+  objectsToSpawn: []
+  toPlay: {fileID: 0}
+  newPlayerSprite: {fileID: 0}

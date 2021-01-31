@@ -19,10 +19,8 @@ MonoBehaviour:
     be ok for me to borrow them for a little while."
   itemInteractions:
   - interactibleObject: {fileID: 3352096603780827088, guid: daf156bfe000a0e4683c942a07f1df2b, type: 3}
-    interactions:
-    - {fileID: 11400000, guid: 311125fe93364d3498f198f3df86f20b, type: 2}
-    - {fileID: 11400000, guid: 33bb1bcb9a9f01e4caf5c1c08b01f633, type: 2}
-    - {fileID: 11400000, guid: 7ae2c0b39a139cc48b57c19302088f7c, type: 2}
+    interactions: []
+  itemClickInteractions: []
   narrationAudio: {fileID: 11400000, guid: 3b70f5858a24f164b977e5dfab3ce22b, type: 2}
   inventorySprite: {fileID: 21300000, guid: 14f28761ede54f749b0c7106c9405d57, type: 3}
   sketchSprite: {fileID: 21300000, guid: 4f110d771a8d0ea4899a3c9897238b19, type: 3}

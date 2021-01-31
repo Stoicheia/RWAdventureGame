@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc72c63a424b744883db5a6c5aa6e9, type: 3}
-  m_Name: New Inventory Interaction
+  m_Script: {fileID: 11500000, guid: dda6de270e6da4d4db6c78126afc29f1, type: 3}
+  m_Name: SELF_Shoes OnPost
   m_EditorClassIdentifier: 
-  toRemove:
-  - {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
-  toAdd:
-  - {fileID: 11400000, guid: b59cc9b03e756ac4da5c5c7d9adf38cb, type: 2}
+  afterThis: {fileID: 11400000, guid: fa41e6f80248b924eacc4306fde99a8d, type: 2}
+  narration: {fileID: 0}

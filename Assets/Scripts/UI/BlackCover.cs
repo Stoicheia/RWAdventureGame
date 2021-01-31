@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,9 +36,9 @@ public class BlackCover : MonoBehaviour
         StartCoroutine(FadeOutEffect(fadeTime));
     }
 
-    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp)
+    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> toSpawn, AudioClip tp, Sprite newPlayerSprite)
     {
-        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp));
+        StartCoroutine(Sequence(f, toRemove, removeObject, toSpawn,tp, newPlayerSprite));
     }
 
     IEnumerator FadeInEffect(float t)
@@ -62,7 +63,7 @@ public class BlackCover : MonoBehaviour
         cover.color = new Color(0, 0, 0,0);
     }
     
-    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay)
+    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, List<Spawnable> spawning, AudioClip toPlay, Sprite newPlayerSprite)
     {
         FadeIn();
         yield return new WaitForSeconds(fadeTime + 0.1f);
@@ -71,6 +72,12 @@ public class BlackCover : MonoBehaviour
         foreach (var spawnable in spawning)
         {
             Transform spawned = Instantiate(spawnable.toSpawn, spawnable.spawnLocation, quaternion.identity);
+        }
+
+        if (newPlayerSprite != null)
+        {
+            ClickToMoveController player = FindObjectOfType<ClickToMoveController>();
+            player.GetComponentInChildren<SpriteRenderer>().sprite = newPlayerSprite;
         }
         source.PlayOneShot(toPlay);
         yield return new WaitForSeconds(toPlay.length + 0.1f);

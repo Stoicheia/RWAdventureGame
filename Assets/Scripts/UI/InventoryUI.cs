@@ -86,6 +86,15 @@ public class InventoryUI : MonoBehaviour
 
     private void Select(ItemUI toHighlight)
     {
+        if (selectedItem == toHighlight)
+        {
+            print("hey");
+            foreach (var interaction in selectedItem.DisplayedItem.item.itemClickInteractions)
+            {
+                interaction.Act(null);
+            }
+        }
+        
         selectedItem = toHighlight;
         if (selectedItem.DisplayedItem == null)
         {

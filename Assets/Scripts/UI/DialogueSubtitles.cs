@@ -20,12 +20,17 @@ public class DialogueSubtitles : MonoBehaviour
     public void SetText(string s)
     {
         if(tfe!=null) StopCoroutine(tfe);
-        tfe = StartCoroutine(TextFadeEffect(s, 0.85f));
+        tfe = StartCoroutine(TextFadeEffect(s, 0.65f));
     }
 
     public void DeleteText()
     {
-        StartCoroutine(TextDieEffect(0.85f));
+        StartCoroutine(TextDieEffect(0.65f));
+    }
+
+    public void DeleteTextAfter(float s)
+    {
+        StartCoroutine(AfterEffect(s+0.65f));
     }
 
     IEnumerator TextFadeEffect(string text, float duration)
@@ -50,5 +55,11 @@ public class DialogueSubtitles : MonoBehaviour
         }
         tmpro.color = new Color(0,0,0,0);
         tmpro.text = "";
+    }
+
+    IEnumerator AfterEffect(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        DeleteText();
     }
 }
