@@ -71,11 +71,13 @@ namespace IsoHacks
 
         public void ShowDoor()
         {
+            if (Door == null) return;
             Door.gameObject.SetActive(true);
         }
 
         public void HideDoor()
         {
+            if (Door == null) return;
             Door.gameObject.SetActive(false);
         }
 
