@@ -137,8 +137,8 @@ ScriptedImporter:
     uvTransform: {x: 3314, y: -171}
   - name: LargeBush
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4537072, y: 0.21152209}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

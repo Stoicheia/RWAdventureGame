@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D), typeof(AudioSource))]
 public class InteractibleObject : MonoBehaviour
@@ -59,10 +60,16 @@ public class InteractibleObject : MonoBehaviour
     protected virtual void DetectHit()
     {
         RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        InteractibleObject hitObj;
+
         foreach (var hit in hits)
         {
-            hitObj = hit.collider.GetComponent<InteractibleObject>();
+            if (hit.collider.GetComponent<Image>() != null)
+                return;
+        }
+
+        foreach (var hit in hits)
+        {
+            var hitObj = hit.collider.GetComponent<InteractibleObject>();
             if (hitObj == this)
             {
                 print("up");

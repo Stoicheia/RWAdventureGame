@@ -29,6 +29,7 @@ namespace IsoHacks
             playerSprite = player.GetComponentInChildren<SpriteRenderer>();
             HideInternals();
             HideDoor();
+            print(playerCol.Length);
         }
 
         private void Update()
@@ -57,7 +58,10 @@ namespace IsoHacks
             foreach (var col in playerCol)
             {
                 if (col.IsTouching(internalCol))
+                {
+                    print("ye");
                     return true;
+                }
             }
 
             return false;

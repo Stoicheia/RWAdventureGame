@@ -104,7 +104,7 @@ namespace Player
                     }
                     else
                     {
-                        OnNavigationFailed?.Invoke(transform, worldPoint);
+                        //OnNavigationFailed?.Invoke(transform, worldPoint);
                     }
 
                     _handledClick = true;
