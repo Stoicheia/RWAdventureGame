@@ -172,8 +172,11 @@ public class Inventory : MonoBehaviour
 
     public bool HasItem(Item item)
     {
+        if (item == null) return true;
         foreach (var i in itemSlots)
         {
+            if (i == null) continue;
+            if (i.item == null) continue;
             if (i.item.ItemID == item.ItemID)
                 return true;
         }

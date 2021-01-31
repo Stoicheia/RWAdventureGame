@@ -48,7 +48,6 @@ public class InteractibleObject : MonoBehaviour
 
     void DetectHit()
     {
-        print("usage detected!");
         RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         InteractibleObject hitObj;
         foreach (var hit in hits)
@@ -82,8 +81,8 @@ public class InteractibleObject : MonoBehaviour
 
     public virtual void InteractWithObject()
     {
-        
-        objectAudio.PlayOneShot(sfx);
+        if(sfx!=null)
+            objectAudio.PlayOneShot(sfx);
 
         DialogueSequence dialogueToUse = timesInteracted <= 0 ? firstTimeDialogue : otherTimeDialogue;
 
@@ -91,8 +90,9 @@ public class InteractibleObject : MonoBehaviour
         {
             dialogueToUse = noItemFirstTimeDialogue;
         }
-
-        dialogueSource.SetDialogue(dialogueToUse);
+        
+        if(dialogueToUse!=null)
+            dialogueSource.SetDialogue(dialogueToUse);
 
         timesInteracted++;
     }
