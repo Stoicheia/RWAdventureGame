@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
+  m_Name: Narrator_19
+  m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: b881df8ca7a841c4faade70d14eff052, type: 3}
+  subtitles: "(Hearty laughter) All jokes aside though, it is good to see you. The
+    only conversation I get out there are the birds squawking.\r"
