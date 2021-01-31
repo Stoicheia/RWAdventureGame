@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShedDoorClose_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 832b9c92b7f9c7742b51c234dd262bf3, type: 3}
-  subtitles: (Door closing)
+  subtitles: 

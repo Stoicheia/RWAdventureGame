@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Annoyed_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: d608d0d2da99bfe44b115b163726cd03, type: 3}
-  subtitles: Aw!
+  subtitles: 

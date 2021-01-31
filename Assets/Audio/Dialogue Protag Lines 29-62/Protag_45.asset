@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_45
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "So, how do I actually keep this\r thing alive. I'm no plant whisperer\r
-    like you.\r"
+  subtitles: "Protagonist:\nSo, how do I actually keep this\r thing alive. I'm no
+    plant whisperer\r like you.\r"

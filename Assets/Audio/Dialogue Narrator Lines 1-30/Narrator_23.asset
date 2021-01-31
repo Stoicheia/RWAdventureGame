@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Narrator_23
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 33966cbe6f6e2ff46849473dfcac42b9, type: 3}
-  subtitles: 'Calm down! I was actually wrestling with some rope and wood. I strung
-    up a few bridges so I could get across the river easier. The stilts were a pain
-    to keep steady but a few hits with a hammer did the job. Anyway, I thought it
-    was about time I set up traps further out, ya know?
+  subtitles: 'Narrator:
+
+    Calm down! I was actually wrestling with some rope and
+    wood. I strung up a few bridges so I could get across the river easier. The stilts
+    were a pain to keep steady but a few hits with a hammer did the job. Anyway,
+    I thought it was about time I set up traps further out, ya know?
 
 '

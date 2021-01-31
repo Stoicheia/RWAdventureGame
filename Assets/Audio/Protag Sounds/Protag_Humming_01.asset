@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Humming_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: a3944a1296b2204429d9213df894b6a1, type: 3}
-  subtitles: (Hummning)
+  subtitles: 

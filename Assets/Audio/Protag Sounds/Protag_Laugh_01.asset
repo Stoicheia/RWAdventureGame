@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_Laugh_01
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 286adbafc6468fc4881f22f7ad80dcac, type: 3}
-  subtitles: (Laughter)
+  subtitles: 

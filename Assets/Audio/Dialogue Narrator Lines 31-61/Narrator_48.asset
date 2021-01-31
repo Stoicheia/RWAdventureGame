@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_48
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 04157fd3ff285d240abd61ccb2e07c2a, type: 3}
-  subtitles: 'Alright, c''mon let''s get back to
+  audio: {fileID: 8300000, guid: 943084c992d7d264e9b60beb3d9ff9ce, type: 3}
+  subtitles: 'Narrator:
 
-    it.'
+    Alright, c''mon let''s get back to it.'

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Narrator_06
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 212364ee910cbe340aa839850a8107e4, type: 3}
-  subtitles: "Do you know how expensive this brand is?! Are you sure this is for
-    me?\r"
+  subtitles: "Narrator:\nDo you know how expensive this brand is?! Are you sure this
+    is for me?\r"

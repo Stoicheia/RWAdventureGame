@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_55
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: e3ed93294eaeed748bd59776bcaac917, type: 3}
-  subtitles: (chuckle) You got this noodle arms!
+  audio: {fileID: 8300000, guid: c30838dd36a3a694f8e29962e1715b36, type: 3}
+  subtitles: 'Narrator:
+
+    (Chuckle) You got this noodle arms!'

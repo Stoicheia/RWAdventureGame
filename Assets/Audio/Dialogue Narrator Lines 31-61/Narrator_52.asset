@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_52
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: a48683b98c796e844992df72061c4ebe, type: 3}
-  subtitles: "(Sigh) Look, let's worry about that later.\r\nThe garden is our main
-    focus right\r\nnow, yeah?\r"
+  audio: {fileID: 8300000, guid: 5457553cf7ded98429d5bbcfdac32352, type: 3}
+  subtitles: "Narrator:\n(Sigh) Look, let's worry about that later.\r The garden
+    is our main focus right\r now, yeah?\r"

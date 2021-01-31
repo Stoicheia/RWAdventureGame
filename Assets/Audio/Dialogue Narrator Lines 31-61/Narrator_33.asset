@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_33
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 6f69a3d7a382c0f4ea13f25bfb1a8324, type: 3}
-  subtitles: "Good sleuthing! Now I hope you're\r\nready to get wet.\r"
+  audio: {fileID: 8300000, guid: 0c140f4ca122f8a48974f9b109f2a1fe, type: 3}
+  subtitles: "Narrator:\nGood sleuthing! Now I hope you're\r ready to get wet.\r"

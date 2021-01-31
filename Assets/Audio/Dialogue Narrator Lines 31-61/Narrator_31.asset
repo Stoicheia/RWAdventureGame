@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_31
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 4f51d4fd2cb7b4a4d8142738c28d5471, type: 3}
-  subtitles: "Looking good there, Thor.\r"
+  audio: {fileID: 8300000, guid: ec400e9d1a81b4b429ca29138f2554bd, type: 3}
+  subtitles: "Narrator:\nLooking good there, Thor.\r"

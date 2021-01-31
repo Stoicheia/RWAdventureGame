@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_43
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Every time I see photos of the land\r and how happy you are now...It\r
-    makes me wonder if I'm not\r listening to myself.\r"
+  subtitles: "Protagonist:\nEvery time I see photos of the land\r and how happy you
+    are now...It\r makes me wonder if I'm not\r listening to myself.\r"

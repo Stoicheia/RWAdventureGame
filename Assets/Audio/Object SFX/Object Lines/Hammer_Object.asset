@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hammer_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 502be70cf5d33c24ea506f0d72a490fb, type: 3}
-  subtitles: (Hammer hitting wood)
+  subtitles: 

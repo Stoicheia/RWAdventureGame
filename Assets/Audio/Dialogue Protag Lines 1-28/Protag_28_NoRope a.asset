@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Protag_28_NoRope a
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Alright, I'm gonna need a hammer and rope. \r"
+  subtitles: "Protagonist:\nAlright, I'm gonna need a hammer and rope. \r"

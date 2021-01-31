@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_50
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 7e91e944578b0aa4c9865dbc17e66889, type: 3}
-  subtitles: 'Are you serious? How old are you,
+  audio: {fileID: 8300000, guid: 17ac2a06a31fb604cb383d1ca446b48d, type: 3}
+  subtitles: 'Narrator:
 
-    five?! Be careful!'
+    Are you serious? How old are you, five?! Be careful!'

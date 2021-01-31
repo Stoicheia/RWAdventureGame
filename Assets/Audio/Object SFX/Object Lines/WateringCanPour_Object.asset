@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WateringCanPour_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: f6cc02b502e03974793bbe700d6f98f1, type: 3}
-  subtitles: (Water pouring)
+  subtitles: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_54
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "He must've traded a lot of his\r intelligence for strength to do all\r
-    this.\r"
+  subtitles: "Protagonist:\nHe must've traded a lot of his\r intelligence for strength
+    to do all\r this.\r"

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_28
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 75e8c1a6b245e5e49a349440879bace5, type: 3}
-  subtitles: "There's the rope. Go grab it!\r"
+  subtitles: "Narrator:\nThere's the rope. Go grab it!\r"

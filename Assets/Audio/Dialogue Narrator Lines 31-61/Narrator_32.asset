@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_32
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 670d11af91888b343ab7bb319586c1ff, type: 3}
-  subtitles: "Huh, did you wake up on the wrong side\r\nof the bed this morning?\r"
+  audio: {fileID: 8300000, guid: d639d14088a10f746baa2e660cde5712, type: 3}
+  subtitles: "Narrator:\nHuh, did you wake up on the wrong side\r of the bed this
+    morning?\r"

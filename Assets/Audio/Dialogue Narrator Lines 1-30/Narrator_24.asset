@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Narrator_24
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 0aad08be77cc2514d95bf99bf1d03907, type: 3}
-  subtitles: Eaten, seriously? You watch way too many movies. You should come up
-    with me next time!
+  subtitles: 'Narrator:
+
+    Eaten, seriously? You watch way too many movies. You
+    should come up with me next time!'

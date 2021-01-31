@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_60
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 05b97408a1ae6d94d8d48515c5acd917, type: 3}
-  subtitles: "There's no rush, ya know? I\r\nunderstand.\r"
+  audio: {fileID: 8300000, guid: decdf664c5dc532469d311631eeec239, type: 3}
+  subtitles: "Narrator:\nThere's no rush, ya know? I\r understand.\r"

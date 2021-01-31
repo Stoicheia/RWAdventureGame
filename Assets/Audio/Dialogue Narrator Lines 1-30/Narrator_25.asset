@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_25
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: d898ea163a0aa0c49b8a4312d16e8a37, type: 3}
-  subtitles: "Whatever you say, city slicker.\r"
+  subtitles: "Narrator:\nWhatever you say, city slicker.\r"

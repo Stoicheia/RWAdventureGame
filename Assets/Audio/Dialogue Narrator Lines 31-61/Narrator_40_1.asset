@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Narrator_40_1
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: f50985ad0db9797469e30f245e2936e9, type: 3}
-  subtitles: "I know I\r can be a stubborn-ass sometimes,\r but you were the one
-    who pushed me\r to follow my dreams and get that\r\ncabin.\r You always listened
-    to me go on and\r on about the fireplace and the\r bridge and took the time to
-    get\r something that helped me get out there.\r"
+  subtitles: "Narrator:\nI know I\r can be a stubborn-ass sometimes,\r but you were
+    the one who pushed me\r to follow my dreams and get that\r cabin.\r You always
+    listened to me go on and\r on about the fireplace and the\r bridge and took the
+    time to get\r something that helped me get out there.\r"

@@ -13,14 +13,8 @@ MonoBehaviour:
   m_Name: Narrator_38_1
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 26379eb1f8c078640b19eca2e6b7e63a, type: 3}
-  subtitles: ' I know these kind of
+  subtitles: 'Narrator:
 
-    gifts ain''t for everyone and end
-
-    up
-    being more of a responsibility than
-
-    something to just put on a shelf
-
-    and
-    forget about but I-'
+    I know these kind of gifts ain''t for everyone and end
+    up being more of a responsibility than something to just put on a shelf and forget
+    about but I-'

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Protag_Thinking_01
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
-  subtitles: Hmm?
+  audio: {fileID: 8300000, guid: 533b150736faf424c9a261644224aa05, type: 3}
+  subtitles: 

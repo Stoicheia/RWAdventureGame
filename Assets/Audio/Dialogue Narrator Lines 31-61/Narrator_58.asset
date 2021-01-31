@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_58
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 2641b55fa9e4d304abd3210621971757, type: 3}
-  subtitles: 'Oh. Guess we couldn''t avoid it
+  audio: {fileID: 8300000, guid: 68ccf8026ba0549449d5811ca664cfaf, type: 3}
+  subtitles: 'Narrator:
 
-    forever.'
+    Oh. Guess we couldn''t avoid it forever.'

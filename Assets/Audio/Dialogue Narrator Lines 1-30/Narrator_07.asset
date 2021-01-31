@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator_07
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 831b6e926600c19409514411dcc493c0, type: 3}
-  subtitles: "(Laugh) These are amazing! You're amazing!\r"
+  subtitles: "Narrator:\n(Laugh) These are amazing! You're amazing!\r"

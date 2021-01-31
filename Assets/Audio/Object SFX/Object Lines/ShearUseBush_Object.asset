@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShearUseBush_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 1659f30292d4e15468312ff70275604f, type: 3}
-  subtitles: (Cut away at foliage)
+  subtitles: 

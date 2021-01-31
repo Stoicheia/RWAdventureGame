@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_59
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 10322a91974ca1c46ae1a71e65a711ca, type: 3}
-  subtitles: 'Flowers? Isn''t that a little too
+  audio: {fileID: 8300000, guid: 2eb4ab812b707504cb5a21cdf897f051, type: 3}
+  subtitles: 'Narrator:
 
-    formal?'
+    Flowers? Isn''t that a little too formal?'

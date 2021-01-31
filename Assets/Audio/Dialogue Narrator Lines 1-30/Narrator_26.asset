@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Narrator_26
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 3335143b8194a384191ebff5c4f7b2f4, type: 3}
-  subtitles: 'Good thinking, city slicker! You just might be cut out for this life.
+  subtitles: 'Narrator:
+
+    Good thinking, city slicker! You just might be cut out
+    for this life.
 
 '

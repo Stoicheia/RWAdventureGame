@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Narrator_10
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: c13da881f9eadef45b0cd726c82a8f8c, type: 3}
-  subtitles: (Hearty laughter)
+  subtitles: 'Narrator:
+
+    (Hearty laughter)'

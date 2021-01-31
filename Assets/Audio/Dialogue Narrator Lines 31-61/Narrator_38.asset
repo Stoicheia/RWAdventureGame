@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: Narrator_38
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: d04c2d4d420a619409b71a927f874fba, type: 3}
-  subtitles: 'Now, I wasn''t sure what you''d like
+  subtitles: 'Narrator:
 
-    but I thought this would
-    be a nice
-
-    thing to have. If you don''t want
-
-    it, it''s ok.'
+    Now, I wasn''t sure what you''d like but I thought this
+    would be a nice thing to have. If you don''t want it, it''s ok.'

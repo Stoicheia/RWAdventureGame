@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_46
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 26e880d3ded001241aba39d317ed282d, type: 3}
-  subtitles: (hearty laughter)
+  audio: {fileID: 8300000, guid: a6d7335204e26734abd973519d0a84a1, type: 3}
+  subtitles: 'Narrator:
+
+    (Hearty laughter)'

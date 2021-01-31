@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Protag_Wow_02
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
-  subtitles: Whoa~
+  audio: {fileID: 8300000, guid: 07bd5403bb0985046a851edbd0f62777, type: 3}
+  subtitles: 

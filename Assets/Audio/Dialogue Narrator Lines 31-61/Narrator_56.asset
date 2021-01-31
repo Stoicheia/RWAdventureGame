@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_56
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: f3096a387ed70564f9e9432b074e5c4d, type: 3}
-  subtitles: So mean.
+  audio: {fileID: 8300000, guid: 918b6081d0b45ec42a4ff743c417a6cb, type: 3}
+  subtitles: 'Narrator:
+
+    So mean.'

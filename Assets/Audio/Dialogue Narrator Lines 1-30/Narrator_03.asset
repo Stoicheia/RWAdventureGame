@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Narrator_03
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: a8e06e33e799acf42b5b45de4e95f13e, type: 3}
-  subtitles: Uh, my birthday was a few months ago.
+  subtitles: 'Narrator:
+
+    Uh, my birthday was a few months ago.'

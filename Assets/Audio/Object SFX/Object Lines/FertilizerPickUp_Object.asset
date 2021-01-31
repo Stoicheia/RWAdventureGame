@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FertilizerPickUp_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 12753c18311931847a3d1a21bb9cef61, type: 3}
-  subtitles: (Pick up bag)
+  subtitles: 

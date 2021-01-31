@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606f05701fc2f5b42895f080279fd272, type: 3}
   m_Name: Narrator_35
   m_EditorClassIdentifier: 
-  audio: {fileID: 8300000, guid: 26022e4a83ee74b43a3e8be463812ead, type: 3}
-  subtitles: "Damn right it is! At least this\r\nplace hasn't fallen to pieces.\r"
+  audio: {fileID: 8300000, guid: 9ec26a552fdb70b4f86d1f5774b2af23, type: 3}
+  subtitles: "Narrator:\nDamn right it is! At least this\r place hasn't fallen to
+    pieces.\r"

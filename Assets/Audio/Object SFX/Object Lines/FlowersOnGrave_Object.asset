@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FlowersOnGrave_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 84fbddb468b387c4abaf1c35dfe6d110, type: 3}
-  subtitles: (Puts flowers down)
+  subtitles: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Protag_63
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "But after taking care of the\r place...I can see why you put so\r much
-    work into it. If anything, it\r made me feel closer to you."
+  subtitles: "Protagonist:\nBut after taking care of the\r place...I can see why
+    you put so\r much work into it. If anything, it\r made me feel closer to you."

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Protag_62.1
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 6c3bf11989711ac4eb7d87da7e01847c, type: 3}
-  subtitles: "Hi, I thought I'd give the place a\r bit of a touch-up before I saw
-    you.\r I can see why you love this place\r so much. It really is beautiful...\r"
+  subtitles: "Protagonist:\nHi, I thought I'd give the place a\r bit of a touch-up
+    before I saw you.\r I can see why you love this place\r so much. It really is
+    beautiful...\r"

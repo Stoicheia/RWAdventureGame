@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Rope_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 27d9dcd9eaac299428c4a1f39b6e2144, type: 3}
-  subtitles: (Use rope)
+  subtitles: 

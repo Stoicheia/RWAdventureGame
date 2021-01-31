@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BootsEquip_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: d8caebaaaf8fa7643a6a658788756e1d, type: 3}
-  subtitles: (Slipping boots on)
+  subtitles: 

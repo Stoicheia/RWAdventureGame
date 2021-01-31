@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FertilizerUse_Object
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: e12ecb4657c5d054ab791c1ccc09a1d2, type: 3}
-  subtitles: (Throws fertilizer seeds)
+  subtitles: 
