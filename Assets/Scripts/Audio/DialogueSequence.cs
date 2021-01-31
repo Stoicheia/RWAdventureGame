@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue Sequence", menuName = "Dialogue Sequence")]
-public class DialogueSequence : MonoBehaviour
+public class DialogueSequence : ScriptableObject
 {
     [SerializeField] public List<DialogueLine> lines;
 }
