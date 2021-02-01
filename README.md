@@ -1,6 +1,6 @@
-#Anamnesis
+# Anamnesis
 
-##Info:
+## Info:
 
 In this isometric point-and-click puzzle game, you control an unnamed and silent protagonist who is accompanied by a disembodied narrator. 
 
@@ -11,7 +11,7 @@ The protagonist has traveled to a remote cabin to tend to the land in the absenc
 As you complete these tasks and explore the beautiful area you will get to experience the memories our protagonist has of their friend. 
 
 
-##Instructions:
+## Instructions:
 
 To interact with items, objects, menu, and dialogue: Left Mouse Button
 To use items in your inventory: Drag and drop them into the world with the left mouse button (Some interactions need you to be close to the object you're trying to interact the item with).
@@ -21,7 +21,7 @@ Have fun, fill up your watering can and make sure to put your shoes on!
 
 
 
-##Credits:
+## Credits:
 
 Adele Fairchild - 2D Environment Artist, 2D Character Artist
 Anniemay Parker - Narrative Designer, Writer, Concept Artist, Project Manager
