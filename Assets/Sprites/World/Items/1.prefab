@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &888860730223959915
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -279,5 +279,5 @@ MonoBehaviour:
   sfx: {fileID: 0}
   playerNoises: []
   associatedItem: {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
-  associatedDialogue: {fileID: 0}
+  associatedDialogue: {fileID: 11400000, guid: 0e91ea541b25030458c3d0b883e9eb4c, type: 2}
   destroyWorldObject: 1

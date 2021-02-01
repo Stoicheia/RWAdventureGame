@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     private ClickToMoveController player;
 
     public PostProcessVolume memoryFilter;
+    private MemoryNoises mNoises;
 
     private float lastSkipTime;
 
@@ -37,6 +38,7 @@ public class DialogueManager : MonoBehaviour
         player = FindObjectOfType<ClickToMoveController>();
         KillDialogue();
         dialogueSource.loop = false;
+        mNoises = memoryFilter.GetComponent<MemoryNoises>();
     }
 
     private void OnEnable()
@@ -99,6 +101,12 @@ public class DialogueManager : MonoBehaviour
 
         if (lines.memory)
         {
+            if (mNoises != null)
+            {
+                mNoises.Begin();
+                mNoises.Play();
+            }
+
             memoryFilter.weight = 1;
         }
         
@@ -112,6 +120,7 @@ public class DialogueManager : MonoBehaviour
 
     public void KillDialogue()
     {
+        if(mNoises!=null) mNoises.End();
         player.moveEnabled = true;
         StartCoroutine(TimeToExitDialogue(0.01f));
         memoryFilter.weight = 0;
