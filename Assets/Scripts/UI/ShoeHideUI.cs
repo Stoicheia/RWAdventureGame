@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class ShoeHideUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Sprite showNeutral;
@@ -12,8 +13,18 @@ public class ShoeHideUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public Sprite hideNeutral;
     public Sprite hideActive;
 
+    public AudioClip showSound;
+    public AudioClip hideSound;
+
     private Image target;
     private bool shown;
+
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -34,12 +45,14 @@ public class ShoeHideUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void OnShow()
     {
         shown = true;
+        source.PlayOneShot(showSound);
         target.sprite = hideNeutral;
     }
 
     public void OnHide()
     {
         shown = false;
+        source.PlayOneShot(hideSound);
         target.sprite = showNeutral;
     }
 }
