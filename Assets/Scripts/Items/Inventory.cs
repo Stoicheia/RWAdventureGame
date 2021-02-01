@@ -82,8 +82,7 @@ public class Inventory : MonoBehaviour
                 OnUpdate?.Invoke();
                 return;
             }
-        }
-        print("5");
+        }   
         itemSlots.Add(new InventorySlot(item, numberToAdd));
         OnUpdate?.Invoke();
     }

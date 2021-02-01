@@ -81,6 +81,13 @@ public class InventoryUI : MonoBehaviour
         myTransparentHighlighter = Instantiate(transparentHighlighter, canvas.transform);
         myTransparentHighlighter.gameObject.SetActive(false);
 
+        inventory = GlobalStats.instance.PlayerInventory;
+
+        DisplayInventory();
+    }
+
+    private void Update()
+    {
         DisplayInventory();
     }
 
@@ -119,6 +126,7 @@ public class InventoryUI : MonoBehaviour
         {
             if (inventory.ItemSlots.Count <= i){return;}
             if (itemsToDisplay.Count <= i){return;}
+            
             itemsToDisplay[i].Display(inventory.ItemSlots[i]);
         }
     }

@@ -91,7 +91,8 @@ namespace IsoHacks
             _ourSprite.sortingOrder += sortLift;
             foreach (SpriteRenderer overlappedRenderer in _overlapping)
             {
-                overlappedRenderer.sortingOrder += sortLift;
+                if(overlappedRenderer!=null)
+                    overlappedRenderer.sortingOrder += sortLift;
             }
         }
 
