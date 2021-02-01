@@ -121,6 +121,7 @@ public class BlackCover : MonoBehaviour
             endPicture.color = new Color(1, 1, 1,(Time.time-init)/t);
             yield return null;
         }
+        print("shoudl work");
         FindObjectOfType<DialogueSystem>().SetDialogue(endDialogue);
         endButton.enabled = true;
         cover.color = new Color(0, 0, 0,1);
