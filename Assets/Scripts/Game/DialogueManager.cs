@@ -36,20 +36,22 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<ClickToMoveController>();
-        KillDialogue();
         dialogueSource.loop = false;
-        mNoises = memoryFilter.GetComponent<MemoryNoises>();
+        if(mNoises!=null)
+            mNoises = memoryFilter.GetComponent<MemoryNoises>();
     }
 
     private void OnEnable()
     {
         currentPlayIndex = 0;
-        nextLineButton.onClick.AddListener(TryPlayNext);
+        if(nextLineButton!=null)
+            nextLineButton.onClick.AddListener(TryPlayNext);
     }
 
     private void OnDisable()
     {
-        nextLineButton.onClick.RemoveAllListeners();
+        if(nextLineButton!=null)
+            nextLineButton.onClick.RemoveAllListeners();
     }
 
     public void PlayDialogue(DialogueLine dialogue)
@@ -110,11 +112,13 @@ public class DialogueManager : MonoBehaviour
             memoryFilter.weight = 1;
         }
         
-        player.moveEnabled = false;
+        if(player!=null)
+            player.moveEnabled = false;
         currentPlayIndex = 0;
         toPlay = lines;
         inDialogue = true;
-        nextLineButton.gameObject.SetActive(true);
+        if(nextLineButton!=null)
+            nextLineButton.gameObject.SetActive(true);
         PlayNext();
     }
 
@@ -124,7 +128,8 @@ public class DialogueManager : MonoBehaviour
         player.moveEnabled = true;
         StartCoroutine(TimeToExitDialogue(0.01f));
         memoryFilter.weight = 0;
-        nextLineButton.gameObject.SetActive(false);
+        if(nextLineButton!=null)
+            nextLineButton.gameObject.SetActive(false);
         dialogueSubtitles.DeleteText();
     }
 

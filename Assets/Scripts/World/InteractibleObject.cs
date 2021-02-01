@@ -15,7 +15,7 @@ public class InteractibleObject : MonoBehaviour
     protected Collider2D myCol;
 
     protected int timesInteracted;
-    [SerializeField] private DialogueSequence firstTimeDialogue;
+    [SerializeField] protected DialogueSequence firstTimeDialogue;
     [SerializeField] private Item criticalItem;
     [SerializeField] private DialogueSequence noItemDialogue;
     [SerializeField] private DialogueSequence otherTimeDialogue;
@@ -23,7 +23,7 @@ public class InteractibleObject : MonoBehaviour
     [SerializeField] private List<AudioClip> playerNoises;
 
     private AudioSource objectAudio;
-    private DialogueSystem dialogueSource;
+    protected DialogueSystem dialogueSource;
 
     private Camera camera;
 
