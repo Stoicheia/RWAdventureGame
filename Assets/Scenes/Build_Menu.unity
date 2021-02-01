@@ -339,21 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19655bb946cbe934ebd1be47b4f7b180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSlots:
-  - item: {fileID: 11400000, guid: 884ed546ebd51f54a9985917ed975ab1, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: c217a777a5ea0ac4887ac5f7022242ed, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: b3f81453a6fd8f6439553eccf5cfff23, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: c4d03e8fe0b9fda498b06954c9380504, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: 75bf10014095806499bd93e0c0902ec6, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: 74ffbfd5efea4bc4599d701230a15b75, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: e64c644b786d03d4cb2b67dfd224c78b, type: 2}
-    quantity: 1
+  itemSlots: []
   maxItems: 500
 --- !u!4 &168024054
 Transform:
