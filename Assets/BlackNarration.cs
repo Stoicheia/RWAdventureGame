@@ -10,7 +10,6 @@ public class BlackNarration : MonoBehaviour
     public float fadeTime = 1.2f;
     [SerializeField] private DialogueSequence blackSequence;
     [SerializeField] private Image blackPanel;
-    [SerializeField] private Button goToGameButton;
 
     private DialogueSystem dialogueSource;
 
@@ -18,7 +17,6 @@ public class BlackNarration : MonoBehaviour
     {
         dialogueSource = FindObjectOfType<DialogueSystem>();
         blackPanel.gameObject.SetActive(false);
-        goToGameButton.gameObject.SetActive(false);
     }
 
     public void Act()
@@ -31,8 +29,8 @@ public class BlackNarration : MonoBehaviour
         StartCoroutine(FadePanelIn(t));
         yield return new WaitForSeconds(t + 0.2f);
         dialogueSource.SetDialogue(blackSequence);
-        yield return new WaitForSeconds(6);
-        goToGameButton.gameObject.SetActive(true);
+        yield return new WaitForSeconds(blackSequence.lines[0].Audio.length);
+        GlobalStats.instance.GoToScene(1);
     }
 
     IEnumerator FadePanelIn(float t)

@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     {
         player = FindObjectOfType<ClickToMoveController>();
         dialogueSource.loop = false;
-        if(mNoises!=null)
+        if(memoryFilter!=null)
             mNoises = memoryFilter.GetComponent<MemoryNoises>();
     }
 
@@ -105,6 +105,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (mNoises != null)
             {
+                print("sdsdsd");
                 mNoises.Begin();
                 mNoises.Play();
             }

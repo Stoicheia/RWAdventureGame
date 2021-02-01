@@ -17,7 +17,7 @@ public class Bridge : SwappableObject
 
     public override void InteractWithObject()
     {
-        if (!firstDia)
+        if (!firstDia && !swapped)
         {
             FindObjectOfType<DialogueSystem>().SetDialogue(bridgeFirstDia);
             taskComp.Act(this);

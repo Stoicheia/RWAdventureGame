@@ -106,11 +106,11 @@ public class InventoryUI : MonoBehaviour
         if (selectedItem.DisplayedItem == null)
         {
             selectedItem = null;
-            myHighlighter.gameObject.SetActive(true);
-            myHighlighter.position = selectedItem.transform.position;
-            myHighlighter.SetParent(toHighlight.transform);
             return;
         }
+        myHighlighter.gameObject.SetActive(true);
+        myHighlighter.position = selectedItem.transform.position;
+        myHighlighter.SetParent(toHighlight.transform);
     }
 
     public void UnselectAll()
@@ -142,6 +142,7 @@ public class InventoryUI : MonoBehaviour
     void Rearrange(ItemUI ui)
     {
         if (ItemDragHandler.from == null) return;
+        UnselectAll();
         int oldSlot = ItemDragHandler.from.SlotID;
         
         inventory.Swap(oldSlot, ui.SlotID);

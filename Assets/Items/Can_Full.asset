@@ -23,6 +23,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: dffce6677798b634faa2661f0c2b0549, type: 2}
     - {fileID: 11400000, guid: b9186d79223c7a44ba15e80da316aba5, type: 2}
     - {fileID: 11400000, guid: ef4ebb6657a087e49b91eba37038a368, type: 2}
+    - {fileID: 11400000, guid: 00fe73c1a549e9a49ba8d4ccf36b383a, type: 2}
   - interactibleObject: {fileID: 788464404846533650, guid: b9e57c6af516cf24fbcc69d7d2eb4b73, type: 3}
     interactions:
     - {fileID: 11400000, guid: dffce6677798b634faa2661f0c2b0549, type: 2}

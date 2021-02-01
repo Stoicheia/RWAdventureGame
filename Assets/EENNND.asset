@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f4ea699c0d30b48a09aac0517458f5, type: 3}
   m_Name: EENNND
   m_EditorClassIdentifier: 
-  cooldown: 6.3
-  time: 3
+  cooldown: 0.5
+  time: 2

@@ -71,6 +71,34 @@ public class TaskManager : MonoBehaviour
         return taskStatuses.Count - 1;
     }
 
+    public bool TaskCompleted(Task task)
+    {
+        if (task == null) return true;
+        foreach (TaskStatus t in taskStatuses)
+        {
+            if (t.task.taskName == task.taskName)
+            {
+                if (t.complete) return true;
+                else return false;
+            }
+        }
+
+        return false;
+    }
+    
+    public bool TasksCompleted(List<Task> tasks)
+    {
+        foreach (Task t in tasks)
+        {
+            if (!TaskCompleted(t))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public int TotalTasks => taskStatuses.Count;
 }
 

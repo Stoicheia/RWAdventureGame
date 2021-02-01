@@ -18,7 +18,11 @@ MonoBehaviour:
     of them. But they are beautiful.\r\n\r\nForget-me-not, I don\u2019t think I ever
     could.\r\n\r\nI can\u2019t put this off any longer. \u201CYou can do this, city
     slicker\u201D he always says. He\u2019s right, I can do this."
-  itemInteractions: []
+  itemInteractions:
+  - interactibleObject: {fileID: 660672174890427331, guid: a832a7df51baebe40b19b85a015e5246, type: 3}
+    interactions:
+    - {fileID: 11400000, guid: e81f7547a7913fc4aa1c0c6bbd64a5ab, type: 2}
+  itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: fc0b9646be63adf459b0edf365434cf6, type: 3}
   sketchSprite: {fileID: 21300000, guid: 43ad24840095e9442b246111426b373d, type: 3}

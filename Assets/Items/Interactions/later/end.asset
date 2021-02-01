@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: end
   m_EditorClassIdentifier: 
   itemToRemove: {fileID: 0}
-  removeInteractedObject: 1
+  removeInteractedObject: 0
   objectsToSpawn: []
-  swapObject: 0
+  swapObject: 1
   toPlay: {fileID: 8300000, guid: 5216f589db0fc3d4e85d141c6700ae70, type: 3}
   toPlayAfter: {fileID: 8300000, guid: 2f00737ec89e34343a5cf8d028a7a994, type: 3}
-  newPlayerSprite: {fileID: 0}
+  giveShoes: 0

@@ -42,6 +42,9 @@ namespace Player
 
         public float rotateAngle;
 
+        public float walkSpeed = 2;
+        public float runSpeed = 3.5f;
+
         public bool EnRoute
         {
             get => enRoute;
@@ -145,6 +148,11 @@ namespace Player
             if (_navMeshAgent.velocity == Vector3.zero)
                 return;
             rotateAngle = Mathf.Atan2(_navMeshAgent.velocity.x,_navMeshAgent.velocity.y)*Mathf.Rad2Deg;
+        }
+
+        public void SetSpeed(float f)
+        {
+            _navMeshAgent.speed = f;
         }
         
     }

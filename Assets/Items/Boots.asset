@@ -21,7 +21,6 @@ MonoBehaviour:
   - interactibleObject: {fileID: 405845072300981769, guid: e9b94031c8049a8488c939838e565418, type: 3}
     interactions:
     - {fileID: 11400000, guid: fa41e6f80248b924eacc4306fde99a8d, type: 2}
-    - {fileID: 11400000, guid: c7f8cae742c2d81458fa605a7917e005, type: 2}
   itemClickInteractions: []
   narrationAudio: {fileID: 11400000, guid: 3b70f5858a24f164b977e5dfab3ce22b, type: 2}
   inventorySprite: {fileID: 21300000, guid: 14f28761ede54f749b0c7106c9405d57, type: 3}

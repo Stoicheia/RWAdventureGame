@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,8 @@ public class BlackCover : MonoBehaviour
 
     public Image endButton;
     public Image endPicture;
+    public AudioClip endAudio;
+    public DialogueSequence endDialogue;
 
     private void Awake()
     {
@@ -48,8 +51,6 @@ public class BlackCover : MonoBehaviour
 
     public void End(float t, float c)
     {
-        endButton.gameObject.SetActive(true);
-        endPicture.gameObject.SetActive(true);
         StartCoroutine(FadeAllInEffect(t,c));
     }
 
@@ -106,14 +107,22 @@ public class BlackCover : MonoBehaviour
     IEnumerator FadeAllInEffect(float t, float c)
     {
         yield return new WaitForSeconds(c);
+        source.clip = endAudio;
+        source.Play();
+        endButton.gameObject.SetActive(true);
+        endButton.enabled = false;
+        endPicture.gameObject.SetActive(true);
         float init = Time.time;
         while (Time.time <= init + t)
         {
             cover.color = new Color(0, 0, 0,(Time.time-init)/t);
             endButton.color = new Color(1, 1, 1,(Time.time-init)/t);
+            endButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1, 1, 1,(Time.time-init)/t);
             endPicture.color = new Color(1, 1, 1,(Time.time-init)/t);
             yield return null;
         }
+        FindObjectOfType<DialogueSystem>().SetDialogue(endDialogue);
+        endButton.enabled = true;
         cover.color = new Color(0, 0, 0,1);
     }
     
