@@ -9,6 +9,7 @@ public class InventoryUser : MonoBehaviour
 
     [SerializeField] public float interactionRadius;
     public bool hasShoes; //whatever
+    public Item putShoesHere;
 
     private void Start()
     {
@@ -18,5 +19,10 @@ public class InventoryUser : MonoBehaviour
         {
             Debug.LogError("Player inventory not found", this);
         }
+    }
+
+    private void Update()
+    {
+        hasShoes = playerInventory.HasItem(putShoesHere);
     }
 }

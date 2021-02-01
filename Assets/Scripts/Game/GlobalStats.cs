@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalStats : MonoBehaviour
 {
@@ -29,5 +30,10 @@ public class GlobalStats : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void GoToScene(int s)
+    {
+        
     }
 }

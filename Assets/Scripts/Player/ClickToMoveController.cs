@@ -38,6 +38,10 @@ namespace Player
 
         public bool moveEnabled;
 
+        public float timeSinceLastAct;
+
+        public float rotateAngle;
+
         public bool EnRoute
         {
             get => enRoute;
@@ -49,6 +53,7 @@ namespace Player
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _handledClick = false;
             moveEnabled = true;
+            timeSinceLastAct = 0;
         }
 
         // Start is called before the first frame update
@@ -68,6 +73,7 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
+            UpdateVelocityParams();
             if (enRoute &&
                 _navMeshAgent.remainingDistance < navIconDismissDistance)
             {
@@ -108,6 +114,7 @@ namespace Player
                     }
 
                     _handledClick = true;
+                    timeSinceLastAct = Time.time - timeSinceLastAct;
                 }
             }
             else
@@ -132,5 +139,13 @@ namespace Player
                 _activeNavigationIcon = null;
             }
         }
+
+        void UpdateVelocityParams()
+        {
+            if (_navMeshAgent.velocity == Vector3.zero)
+                return;
+            rotateAngle = Mathf.Atan2(_navMeshAgent.velocity.x,_navMeshAgent.velocity.y)*Mathf.Rad2Deg;
+        }
+        
     }
 }

@@ -14,7 +14,7 @@ public class SlideUpUI : MonoBehaviour
     private Vector3 originalPosition;
     private Vector3 targetPosition;
 
-    private bool up;
+    public bool up;
     private bool enRoute;
 
     public BookNavigationUI navUI;

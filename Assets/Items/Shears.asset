@@ -26,11 +26,12 @@ MonoBehaviour:
   - interactibleObject: {fileID: 1986310807697963908, guid: aefc1b8def6513f4b90ed18e8754744e, type: 3}
     interactions:
     - {fileID: 11400000, guid: 7b9c722a5a0b10a47b37ccc614421f40, type: 2}
-  - interactibleObject: {fileID: 5705570583089823294, guid: 782f84ae1744b1e4c8cd1a741fe45c9f, type: 3}
+  - interactibleObject: {fileID: 6969157207124912543, guid: 782f84ae1744b1e4c8cd1a741fe45c9f, type: 3}
     interactions:
     - {fileID: 11400000, guid: 7b9c722a5a0b10a47b37ccc614421f40, type: 2}
     - {fileID: 11400000, guid: c94cb1c7129c8e849aa23607bdd136b9, type: 2}
     - {fileID: 11400000, guid: d217db27593a7244695b788bb52b9444, type: 2}
+    - {fileID: 11400000, guid: e81f7547a7913fc4aa1c0c6bbd64a5ab, type: 2}
   itemClickInteractions: []
   narrationAudio: {fileID: 0}
   inventorySprite: {fileID: 21300000, guid: 62d69bd6199f39b4b9e63fd3a82008de, type: 3}

@@ -15,6 +15,9 @@ public class BlackCover : MonoBehaviour
     private AudioSource source;
     private Inventory inventory;
 
+    public Image endButton;
+    public Image endPicture;
+
     private void Awake()
     {
         cover = GetComponent<Image>();
@@ -41,6 +44,13 @@ public class BlackCover : MonoBehaviour
     public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> toSpawn, AudioClip tp, AudioClip tpa, Sprite newPlayerSprite)
     {
         StartCoroutine(Sequence(f, toRemove, removeObject, swapObject, toSpawn,tp, tpa, newPlayerSprite));
+    }
+
+    public void End(float t, float c)
+    {
+        endButton.gameObject.SetActive(true);
+        endPicture.gameObject.SetActive(true);
+        StartCoroutine(FadeAllInEffect(t,c));
     }
 
     IEnumerator FadeInEffect(float t)
@@ -90,6 +100,21 @@ public class BlackCover : MonoBehaviour
         yield return new WaitForSeconds(toPlay.length + 0.1f);
         FadeOut();
         source.PlayOneShot(toPlayAfter);
+    }
+
+
+    IEnumerator FadeAllInEffect(float t, float c)
+    {
+        yield return new WaitForSeconds(c);
+        float init = Time.time;
+        while (Time.time <= init + t)
+        {
+            cover.color = new Color(0, 0, 0,(Time.time-init)/t);
+            endButton.color = new Color(1, 1, 1,(Time.time-init)/t);
+            endPicture.color = new Color(1, 1, 1,(Time.time-init)/t);
+            yield return null;
+        }
+        cover.color = new Color(0, 0, 0,1);
     }
     
 }
