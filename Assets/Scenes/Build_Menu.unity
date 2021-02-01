@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309791491379214563, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -247
+      value: -279
       objectReference: {fileID: 0}
     - target: {fileID: 8309791491648050339, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309791492383668381, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -374
+      value: -395
       objectReference: {fileID: 0}
     - target: {fileID: 8309791492533035380, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_Name
@@ -958,11 +958,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 6.37
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: NoiseModule.strength.scalar
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
+      propertyPath: ExternalForcesModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: NoiseModule.strengthY.scalar
@@ -983,6 +987,14 @@ PrefabInstance:
     - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795125, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -1014,11 +1026,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795127, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795127, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 3348602806041795127, guid: cc25a31104bdcfb4987bcafa54791135, type: 3}
       propertyPath: m_LocalPosition.z
