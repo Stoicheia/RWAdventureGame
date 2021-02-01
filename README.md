@@ -1,5 +1,7 @@
 # Anamnesis
 
+<img src="Assets/Protagonist's Cabin.png" align="right" />
+
 ## Info:
 
 In this isometric point-and-click puzzle game, you control an unnamed and silent protagonist who is accompanied by a disembodied narrator. 
