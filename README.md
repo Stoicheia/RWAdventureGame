@@ -14,7 +14,9 @@ As you complete these tasks and explore the beautiful area you will get to exper
 ## Instructions:
 
 To interact with items, objects, menu, and dialogue: Left Mouse Button
+
 To move: Point and click with the left mouse button.
+
 To use items in your inventory: Drag and drop them into the world with the left mouse button
 
 Have fun, fill up your watering can and make sure to put your shoes on!
