@@ -3515,30 +3515,6 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!1 &399270920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5914197051541793749, guid: 913a113dca95bbe4894cfde9c9c29320, type: 3}
-  m_PrefabInstance: {fileID: 5914197051243220957}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &399270921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399270920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1a03ac9a92a3d49b213f30290ee269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: player
-  firstTimeDialogue: {fileID: 0}
-  criticalItem: {fileID: 0}
-  noItemDialogue: {fileID: 0}
-  otherTimeDialogue: {fileID: 0}
-  sfx: {fileID: 0}
-  playerNoises: []
 --- !u!1 &402545357
 GameObject:
   m_ObjectHideFlags: 0
@@ -40519,6 +40495,7 @@ MonoBehaviour:
   - {fileID: 1645454122}
   playIntervalMin: 9
   playIntervalMax: 35
+  defaultRegion: {fileID: 1571971625}
 --- !u!1 &800679050
 GameObject:
   m_ObjectHideFlags: 0

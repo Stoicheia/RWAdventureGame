@@ -41,8 +41,11 @@ public class FootstepsAudio : MonoBehaviour
             {
                 if(!inv.hasShoes)
                     speaker.PlayOneShot("Barefoot");
-                else if(stepper.currentRegion.regionType.regionName == "Cabin")
-                    speaker.PlayOneShot("Wood");
+                else if (stepper.currentRegion != null)
+                {
+                    if (stepper.currentRegion.regionType.regionName == "Cabin")
+                        speaker.PlayOneShot("Wood");
+                }
                 else
                 {
                     speaker.PlayOneShot("Grass");
