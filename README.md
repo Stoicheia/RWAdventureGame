@@ -1,6 +1,6 @@
 # Anamnesis
 
-<img src="Assets/Protagonist's Cabin.png" align="right" />
+<img src="Assets/Protagonist's_Cabin.png" align="center" />
 
 ## Info:
 
