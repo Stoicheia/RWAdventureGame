@@ -99,11 +99,11 @@ public class InventoryUI : MonoBehaviour
         if (selectedItem.DisplayedItem == null)
         {
             selectedItem = null;
+            myHighlighter.gameObject.SetActive(true);
+            myHighlighter.position = selectedItem.transform.position;
+            myHighlighter.SetParent(toHighlight.transform);
             return;
         }
-        myHighlighter.gameObject.SetActive(true);
-        myHighlighter.position = selectedItem.transform.position;
-        myHighlighter.SetParent(toHighlight.transform);
     }
 
     public void UnselectAll()
@@ -150,6 +150,7 @@ public class InventoryUI : MonoBehaviour
     void HoverSelect(ItemUI ui)
     {
         if (ui.DisplayedItem == null) return;
+        if (ui.DisplayedItem.item == null) return;
         myTransparentHighlighter.gameObject.SetActive(true);
         myTransparentHighlighter.position = ui.transform.position;
         myTransparentHighlighter.SetParent(ui.transform);
