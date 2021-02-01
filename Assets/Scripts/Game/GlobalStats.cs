@@ -34,6 +34,11 @@ public class GlobalStats : MonoBehaviour
 
     public void GoToScene(int s)
     {
-        
+        SceneManager.LoadScene(s);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
