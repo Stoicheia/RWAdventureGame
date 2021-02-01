@@ -9,6 +9,8 @@ using UnityEngine.Audio;
 public class FootstepsAudio : MonoBehaviour
 {
     private ClickToMoveController controller;
+    private InventoryUser inv;
+    private RegionStepper stepper;
     private Speaker speaker;
     [SerializeField] private float stepsPerSecond;
     private float secondsPerStep;
@@ -19,6 +21,7 @@ public class FootstepsAudio : MonoBehaviour
     private void Awake()
     {
         speaker = GetComponent<Speaker>();
+        stepper = GetComponent<RegionStepper>();
         secondsPerStep = 1 / stepsPerSecond;
         timeOfLastStep = Time.time;
     }
@@ -26,6 +29,7 @@ public class FootstepsAudio : MonoBehaviour
     private void Start()
     {
         controller = transform.parent.GetComponent<ClickToMoveController>();
+        inv = controller.GetComponent<InventoryUser>();
         if (controller == null) Debug.LogError("PLease set this object as a child of the player controller", this);
     }
 
@@ -35,7 +39,17 @@ public class FootstepsAudio : MonoBehaviour
         {
             if (Time.time > timeOfLastStep + secondsPerStep)
             {
-                speaker.PlayOneShot("Barefoot");
+                if(!inv.hasShoes)
+                    speaker.PlayOneShot("Barefoot");
+                else if (stepper.currentRegion != null)
+                {
+                    if (stepper.currentRegion.regionType.regionName == "Cabin")
+                        speaker.PlayOneShot("Wood");
+                }
+                else
+                {
+                    speaker.PlayOneShot("Grass");
+                }
                 timeOfLastStep = Time.time;
             }
         }

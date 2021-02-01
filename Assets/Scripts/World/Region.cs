@@ -15,13 +15,14 @@ public class Region : MonoBehaviour
     private ClickToMoveController activePlayer;
 
     public RegionType regionType;
-    
+
     public static Region ActiveRegion;
     
     private void Start()
     {
         col = GetComponent<Collider2D>();
         activePlayer = FindObjectOfType<ClickToMoveController>();
+        ActiveRegion = FindObjectOfType<RegionalAudioManager>().defaultRegion;
     }
 
     private void Update()
