@@ -86910,6 +86910,10 @@ PrefabInstance:
       propertyPath: m_Acceleration
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5914197051541793748, guid: 913a113dca95bbe4894cfde9c9c29320, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.496
+      objectReference: {fileID: 0}
     - target: {fileID: 5914197052113272984, guid: 913a113dca95bbe4894cfde9c9c29320, type: 3}
       propertyPath: m_Sprite
       value: 
