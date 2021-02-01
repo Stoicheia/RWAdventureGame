@@ -9,7 +9,6 @@ public class InventoryUser : MonoBehaviour
 
     [SerializeField] public float interactionRadius;
     public bool hasShoes; //whatever
-    public Item putShoesHere;
 
     private void Start()
     {
@@ -23,6 +22,6 @@ public class InventoryUser : MonoBehaviour
 
     private void Update()
     {
-        hasShoes = playerInventory.HasItem(putShoesHere);
+        
     }
 }

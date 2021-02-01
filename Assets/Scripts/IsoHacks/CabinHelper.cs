@@ -62,6 +62,7 @@ namespace IsoHacks
 
         bool AnyTouching()
         {
+            if (internalCol == null) return false;
             foreach (var col in playerCol)
             {
                 if (col.IsTouching(internalCol))

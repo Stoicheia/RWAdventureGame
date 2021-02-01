@@ -41,9 +41,9 @@ public class BlackCover : MonoBehaviour
         StartCoroutine(FadeOutEffect(fadeTime));
     }
 
-    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> toSpawn, AudioClip tp, AudioClip tpa, Sprite newPlayerSprite)
+    public void StartSequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> toSpawn, AudioClip tp, AudioClip tpa, bool giveShoes)
     {
-        StartCoroutine(Sequence(f, toRemove, removeObject, swapObject, toSpawn,tp, tpa, newPlayerSprite));
+        StartCoroutine(Sequence(f, toRemove, removeObject, swapObject, toSpawn,tp, tpa, giveShoes));
     }
 
     public void End(float t, float c)
@@ -75,7 +75,7 @@ public class BlackCover : MonoBehaviour
         cover.color = new Color(0, 0, 0,0);
     }
     
-    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> spawning, AudioClip toPlay, AudioClip toPlayAfter, Sprite newPlayerSprite)
+    IEnumerator Sequence(InteractibleObject f, Item toRemove, bool removeObject, bool swapObject, List<Spawnable> spawning, AudioClip toPlay, AudioClip toPlayAfter, bool giveShoes)
     {
         FadeIn();
         yield return new WaitForSeconds(fadeTime + 0.1f);
@@ -91,10 +91,10 @@ public class BlackCover : MonoBehaviour
             f.GetComponent<SwappableObject>().Swap();
         }
 
-        if (newPlayerSprite != null)
+        if (giveShoes)
         {
-            ClickToMoveController player = FindObjectOfType<ClickToMoveController>();
-            player.GetComponentInChildren<SpriteRenderer>().sprite = newPlayerSprite;
+            InventoryUser player = FindObjectOfType<InventoryUser>();
+            player.hasShoes = true;
         }
         source.PlayOneShot(toPlay);
         yield return new WaitForSeconds(toPlay.length + 0.1f);

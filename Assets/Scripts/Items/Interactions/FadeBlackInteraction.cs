@@ -15,13 +15,13 @@ public class FadeBlackInteraction : ItemObjectInteraction
     [SerializeField] private bool swapObject;
     [SerializeField] public AudioClip toPlay;
     [SerializeField] public AudioClip toPlayAfter;
-    [SerializeField] private Sprite newPlayerSprite;
+    [SerializeField] private bool giveShoes;
 
     public override void Act(InteractibleObject from)
     {
         cover = FindObjectOfType<BlackCover>();
         if (from == null) removeInteractedObject = false;
-        cover.StartSequence(from, itemToRemove, removeInteractedObject, swapObject, objectsToSpawn, toPlay, toPlayAfter, newPlayerSprite);
+        cover.StartSequence(from, itemToRemove, removeInteractedObject, swapObject, objectsToSpawn, toPlay, toPlayAfter, giveShoes);
     }
 
     
