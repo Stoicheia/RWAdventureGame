@@ -7,9 +7,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class RegionStepper : MonoBehaviour
 {
+    public Region currentRegion;
     private void OnCollisionStay2D(Collision2D other)
     {
         Region region = other.gameObject.GetComponent<Region>();
+        currentRegion = region;
         if (region != null && region!=Region.ActiveRegion)
         {
             Region.UpdateActiveRegion(region);

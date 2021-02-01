@@ -80,6 +80,8 @@ MonoBehaviour:
   _navigationIcon: {fileID: 3541643515539009790, guid: 68c5c4828459d6e4aa006d227ea46f36, type: 3}
   navIconDismissDistance: 0.1
   moveEnabled: 0
+  timeSinceLastAct: 0
+  rotateAngle: 0
 --- !u!114 &5914197051319059737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionRadius: 1
   hasShoes: 0
+  putShoesHere: {fileID: 0}
 --- !u!114 &5914197051319059736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animations: {fileID: 0}
+  journalTreshold: 9
 --- !u!1 &5914197051541793749
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +562,30 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 80e98d00b7f51f54bbb8697174439575, type: 3}
     - {fileID: 8300000, guid: 6d37a1b903e7c2e46a4b866e17fcffce, type: 3}
     - {fileID: 8300000, guid: 12c4420cf815c56428b4ba20e7e3c664, type: 3}
+  - clipName: Grass
+    clips:
+    - {fileID: 8300000, guid: 97b1ee8d83c9c1a4ca3881cddd98c781, type: 3}
+    - {fileID: 8300000, guid: 376727d82ce2482419aa8a697c621ae2, type: 3}
+    - {fileID: 8300000, guid: 70cd9e67207b8f74fa6332ace4a4b8d0, type: 3}
+    - {fileID: 8300000, guid: ed09353b213e427458e259b12791b90c, type: 3}
+    - {fileID: 8300000, guid: c0a337539a95a5c48be7e79c6903a0ff, type: 3}
+    - {fileID: 8300000, guid: 4b50bac6ebd5ca14793eacc93980e46f, type: 3}
+    - {fileID: 8300000, guid: e8ab751a75e439548ab3f179df87487f, type: 3}
+    - {fileID: 8300000, guid: 547b237db1293b84a9fff5ae789e8215, type: 3}
+    - {fileID: 8300000, guid: a10288b243824ac4fb5a2e666220a7a9, type: 3}
+    - {fileID: 8300000, guid: 0b48552729ebd574b88a90ef477154c3, type: 3}
+  - clipName: Wood
+    clips:
+    - {fileID: 8300000, guid: 8c72f1bcf90e5ca468fafa0a4a8ab38d, type: 3}
+    - {fileID: 8300000, guid: 6d071ed367591e94d81d619123f95565, type: 3}
+    - {fileID: 8300000, guid: 6755023099af7404f87fc8b1e6cd26bf, type: 3}
+    - {fileID: 8300000, guid: f2734107d9771c948973b6f8e6c932a4, type: 3}
+    - {fileID: 8300000, guid: 562f040938ac1454b8e8551e7ee634f4, type: 3}
+    - {fileID: 8300000, guid: d4ac10936bf03e5488bc5f1c984ba64b, type: 3}
+    - {fileID: 8300000, guid: 21ed59eaf69d78c468c66af1f5acd9ca, type: 3}
+    - {fileID: 8300000, guid: 1e12bd725cd9ca64fa3971fe6ef8812c, type: 3}
+    - {fileID: 8300000, guid: ce714cd2cc5dbf7448ed5aae7839b3d6, type: 3}
+    - {fileID: 8300000, guid: e32154c7a5d082342ac13de3600ed3a5, type: 3}
 --- !u!50 &5914197051541793747
 Rigidbody2D:
   serializedVersion: 4

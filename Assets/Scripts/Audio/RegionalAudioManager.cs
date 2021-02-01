@@ -18,6 +18,8 @@ public class RegionalAudioManager : MonoBehaviour
     [SerializeField] private float playIntervalMin;
     [SerializeField] private float playIntervalMax;
 
+    public Region defaultRegion;
+
     private float lastPlay;
     private float nextPlay;
     private Region activeRegion;
