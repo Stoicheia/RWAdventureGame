@@ -13,7 +13,6 @@ public class InventoryChangeInteraction : ItemObjectInteraction
     public override void Act(InteractibleObject @from)
     {
         Inventory mainInv = GlobalStats.instance.PlayerInventory;
-        Debug.Log(mainInv.ItemSlots.Count);
 
         foreach (var item in toRemove)
         {

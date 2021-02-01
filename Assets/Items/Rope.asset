@@ -31,7 +31,7 @@ MonoBehaviour:
   successfulItemIneraction:
   - interactibleObject: {fileID: 8025690941549529667, guid: aea4abe0d33eb5c4a999874fa0c8ad46, type: 3}
     interactions:
-    - {fileID: 11400000, guid: 418c65290b7e072478905f078a1ebf48, type: 2}
+    - {fileID: 11400000, guid: 9370f9bfe2f418944a4ee6eb3342cfea, type: 2}
     - {fileID: 11400000, guid: 3c1a33c56ccd3184ea1f7004ff2f7302, type: 2}
     - {fileID: 11400000, guid: a44f0b191e2abb44f92a6d3246cd2f21, type: 2}
   - interactibleObject: {fileID: 0}

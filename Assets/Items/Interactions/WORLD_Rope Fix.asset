@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5e7c1ca4a758145a7fff29cdc3592c, type: 3}
+  m_Name: WORLD_Rope Fix
+  m_EditorClassIdentifier: 
+  itemToRemove: {fileID: 0}
+  removeInteractedObject: 0
+  objectsToSpawn: []
+  swapObject: 1
+  toPlay: {fileID: 8300000, guid: 27d9dcd9eaac299428c4a1f39b6e2144, type: 3}
+  toPlayAfter: {fileID: 8300000, guid: 173a4ed6720567c4ab9085242b18c7dc, type: 3}
+  giveShoes: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
     I should know, keeping that singular succulent alive has driven me up the wall
     many times.
   itemInteractions:
-  - interactibleObject: {fileID: 883689167900418066, guid: f17ca0b611f28874792d45fb12ed38da, type: 3}
+  - interactibleObject: {fileID: 1891186496147643478, guid: af76b62918fed2c4ea596fe3cf0a2574, type: 3}
     interactions:
     - {fileID: 11400000, guid: 177b03b72eb87c74698939c50971ff8f, type: 2}
     - {fileID: 11400000, guid: 3d46d4d8ca44c8543a026688bf05fbe0, type: 2}

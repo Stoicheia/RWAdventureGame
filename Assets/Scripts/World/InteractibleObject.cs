@@ -111,7 +111,7 @@ public class InteractibleObject : MonoBehaviour
                     }
 
                     return;
-                }
+                }   
 
                 foreach (var interactible in selectedItem.ItemInteractions)
                 {
