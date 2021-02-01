@@ -1811,9 +1811,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Adele Fairchild - 2D Environment Artist, 2D Character Artist \nAnniemay
     Parker - Narrative Designer, Writer, Concept Artist \nChris Collins - Programmer
-    \nMark Tan - 2D UI Artist Michael Barbagallo - Sound Designer \nOlin Gao - Programmer
-    \nSarah Baradhi - Composer \n\nRobyn Barry-Cotter - Protagonist Voice Actor \nBrendan
-    Barry-Cotter - Narrator Voice Actor"
+    \nMark Tan - 2D UI Artist \nMichael Barbagallo - Sound Designer \nOlin Gao -
+    Programmer \nSarah Baradhi - Composer \n\nRobyn Barry-Cotter - Protagonist Voice
+    Actor \nBrendan Barry-Cotter - Narrator Voice Actor"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14bc1331178e1f94e98e54c3921a0c47, type: 2}
   m_sharedMaterial: {fileID: -1323199639123790923, guid: 14bc1331178e1f94e98e54c3921a0c47, type: 2}
