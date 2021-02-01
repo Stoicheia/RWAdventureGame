@@ -40,7 +40,6 @@ public class PlayerAnimations : MonoBehaviour
 
     int GetDirection(float z)
     {
-        print(player.rotateAngle);
         if (z < 45 && z > -45) return 0;
         if (z >= 45 && z < 135) return 1;
         if (z >= 135 || z <= -135) return 2;
