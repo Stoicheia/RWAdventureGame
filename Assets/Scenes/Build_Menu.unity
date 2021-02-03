@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bafe4cf33bd48744b531952e167b47e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipOnClick: {fileID: 0}
+  clipOnClick: {fileID: 8300000, guid: e057aa71c4e2dac4f80de999d2844d9e, type: 3}
 --- !u!82 &38000470
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1215,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 8309791491648050339, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 168024052}
+      objectReference: {fileID: 2068133785}
     - target: {fileID: 8309791491648050339, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1226,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309791491648050339, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GlobalStats, Assembly-CSharp
+      value: SceneTraveller, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8309791491648050339, guid: 8d388147abd988144800a4a48c1b0047, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2917,3 +2917,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2068133785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068133781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e6b4cd9434468428da1c6e2f307707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

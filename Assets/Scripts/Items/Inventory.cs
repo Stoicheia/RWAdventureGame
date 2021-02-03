@@ -122,6 +122,11 @@ public class Inventory : MonoBehaviour
     {
         DeleteItem(itemID, 1);
     }
+
+    public void DeleteAll()
+    {
+        itemSlots = new List<InventorySlot>();
+    }
     
     public void DeleteItem(Item item, int quantity)
     {

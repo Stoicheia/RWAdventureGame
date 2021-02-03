@@ -110,7 +110,6 @@ public class BlackCover : MonoBehaviour
         source.clip = endAudio;
         source.Play();
         endButton.gameObject.SetActive(true);
-        endButton.enabled = false;
         endPicture.gameObject.SetActive(true);
         float init = Time.time;
         while (Time.time <= init + t)
@@ -123,7 +122,6 @@ public class BlackCover : MonoBehaviour
         }
         print("shoudl work");
         FindObjectOfType<DialogueSystem>().SetDialogue(endDialogue);
-        endButton.enabled = true;
         cover.color = new Color(0, 0, 0,1);
     }
     
