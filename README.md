@@ -1,6 +1,6 @@
 # Anamnesis
 
-<img src="SplashFull.png" align="center" />
+<img src="Splash.png" align="center" />
 
 
 ## Info:
